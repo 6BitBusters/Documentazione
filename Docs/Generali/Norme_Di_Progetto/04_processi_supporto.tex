@@ -1,0 +1,70 @@
+\section{Processi di Supporto}
+I processi di supporto supportano quelli primari in modo da renderli pi`u efficienti ed efficaci.
+    \subsection{Documentazione}
+        \subsubsection{Descrizione}
+        \subsubsection{Ciclo di vita di un documento}
+        \subsubsection{Struttura}
+        % + tutte le convenzioni
+        \subsubsection{Strumenti per la stesura}
+        \subsubsection{Documentazione interna}
+        \subsubsection{Documentazione esterna}
+
+    \subsection{Gestione delle configurazione}
+        \subsubsection{Scopo}
+        La gestione della configurazione `e un processo che mira a gestire e controllare i cambiamenti apportati
+        a un prodotto software o a un sistema durante il suo ciclo di vita. La gestione della configurazione per
+        la documentazione descrive come vengono identificate, controllate, tracciate e gestite le versioni di un
+        documento.
+        \subsubsection{Versionamento}
+        Ogni versione del documento `e identificata da un codice di versione nel formato \textbf{Z.Y.X} dove:
+        \begin{enumerate}
+            \item \textbf{Z}: s
+            \item \textbf{Y}: s
+            \item \textbf{X}: s
+        \end{enumerate}
+
+            \paragraph{Software per il versionamento}
+            Per il versionamento il gruppo ha deciso di utilizzare un singolo repository GitHub sia per la documentazione che per il. Per informazioni
+            più approfondite sulla struttura e la gestione del repository si veda sezione 4.2.3 GitHub
+
+    \subsection{Accertamento della qualità}
+    \subsection{Verifica}
+        \subsubsection{Scopo}
+        Lo scopo del processo di verifica `e quello di accertare che non siano stati commessi errori nello svolgimento
+        delle attività prefissate. Questo processo viene applicato costantemente sia durante la stesura
+        della documentazione, che durante lo sviluppo del software.
+        \subsubsection{Verifica della documentazione}
+        \begin{enumerate}
+            \item   \textbf{Analisi statica}:questo tipo di analisi va a valutare la documentazione o il software senza bisogno
+                                            di esecuzione. Si controlla che il prodotto sia corretto rispetto a determinate regole dettate da una checklist.
+            \item   \textbf{Analisi dinamica}:questo tipo di analisi invece richiede esecuzione, e può essere
+                                            applicata solo al codice. Si tratta di verificare se il comportamento del prodotto software durante
+                                            la compilazione `e corretto.
+        \end{enumerate}
+        La verifica viene svolta da due verificatori prima del merge con il branch main all'apertura di
+        una pull request su un branch riservato al documento. Il primo verificatore sarà quello che esaminerà il documento seguendo una checklist.
+        Il documento verrà esaminato a partire dalle modifiche fatte dopo l'ultima versione verificata, deducibili
+        tramite il registro delle modifiche.
+
+        La verifica di un documento prevede di seguire la seguente checklist:
+        \begin{enumerate}
+            \item Lettura del documento iniziale
+            \item Seconda lettura del documento per capirne meglio i concetti
+            \item Valutare se il testo è scritto in maniera corretta rispetto all'ortografia e in caso segnalare le righe contenenti tali errori
+            \item Valutare se il testo è organizzato in maniera opportuna secondo le \textit{Norme di Progetto}
+            \item Valutare se ci sono parti mancanti e in caso segnalarle
+            \item Valutare se tutti i termini citati del glossario hanno il pedice
+            \item Valutare se il nome del documento rispetta le regole indicate in \textit{Norme di Progetto}
+        \end{enumerate}
+        In caso non ci sia nulla da segnalare e nel caso in cui l'analisi dinamica vada a buon fine il verificatore dovrà spuntare come approvata la Pull Request nella
+        sezione dedicata su GitHub e quindi confermare il merge sul main e quindi si passerà alla compilazione ufficiale del documento che successivamente
+        verrà pubblicata in automatico nella page del progetto.
+
+        \subsubsection{Verifica del codice}
+    
+    \subsection{Validazione}
+        \subsubsection{Scopo}
+        Lo scopo del processo di validazione è quello di determinare se il prodotto finale sia conforme con le
+        aspettative preposte e rispetti i requisiti minimi concordati con il proponente. Questo processo avviene
+        dopo quello ultima verifica e sarà il responsabile a stabilire se il prodotto `e accettabile o ha bisogno di
+        ulteriori verifiche.
