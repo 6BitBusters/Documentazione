@@ -1,38 +1,438 @@
 \section{Processi organizzativi}
+Questa sezione mira a gestire i processi e il loro miglioramento, l'organizzazione degli strumenti
+di supporto e la gestione del personale.
+
+
     \subsection{Pianificazione}
         \subsubsection{Metodo di Lavoro}
-        % agile o altro
+        Il team ha adottato un modello di lavoro Agile, nello specifico il modello Scrum.
+        Di conseguenza seguendo questo modello, i compiti derivanti dai processi di sviluppo vengono suddivisi in sprint dalla
+        durata di due settimana.\\
+        Questo rende l'avanzamento del prodotto più gestibile e più rapido, avendo comunque un tempo abbastanza lungo per implementare diverse
+        feature e redarre i documenti necessari.
+            \paragraph*{Sprint} ~\\\\
+            Per ogni sprint il responsabile assegna i ruoli ad ogni membro creando un diagramma delle attività per stimare le ore necessarie, tenendo traccia, per ogni membro, i giorni
+            in cui può lavorare al progetto. Successivamente l'amministratore si occuperà di creare le issue associate allo sprint in modo da rendere il lavoro degli altri membri più semplice e veloce.
+            Infine è compito dell'amministratore quello di assicurarsi che sia avvenuta la verifica,in caso di modifica, del Piano
+            di Progetto e delle Norme di Progetto prima dell'inizio dello sprint successivo, in modo da avere la
+            documentazione adatta ad affrontare il periodo successivo.\\\\
+            Le attività dello sprint sono le seguenti:
+            \begin{itemize}
+                \item Sprint planning:
+                \begin{itemize}
+                    \item Si stabiliscono in gruppo quali sono le attività da svolgere durante lo sprint;
+                    \item Ogni componente del gruppo, durante la riunione, segnala le ore che può mettere a disposizione;
+                    \item Il responsabile assegna i ruoli e definisce gli obiettivi dello sprint nel documento \textit{Piano di progetto};
+                \end{itemize}
+                \item Daily Scrum:
+                \item Sprint review:
+                \begin{itemize}
+                    \item Ogni membro, durante la riunione, riferisce quello che ha svolto e gli eventuali dubbi che ha riscontrato.
+                    \item Viene fatta una lista degli obiettivi raggiunti e quelli non raggiunti.
+                \end{itemize}
+                \item Sprint retrospective: si fa una valutazione di quello che `e andato bene durante lo sprint e di
+                quello che `e da migliorare, per capire cosa continuare o smettere di fare allo sprint successivo.
+            \end{itemize}
         \subsubsection{Ruoli e responsabilità}
+            I membri team \textit{Six Bit Busters} ricopriranno i ruoli principali 
+            di un ciclo di vita del prodotto software, ovvero analista, 
+            progettista, programmatore, verificatore, amministratore di sistema e responsabile. 
+            \\Al fine di garantire una comprensione completa delle diverse fasi 
+            e competenze richieste nello sviluppo di un progetto, i membri del team 
+            ruoteranno periodicamente tra i ruoli ogni due settimane. Questa rotazione 
+            periodica è finalizzata a scopi didattici, permettendo a ciascun membro di 
+            acquisire una visione globale del ciclo di vita del prodotto e di sviluppare 
+            abilità pratiche in ogni area.
+            \begin{itemize}
+                \item \textbf{Responsabile}\\
+                Colui che possiede la visione d'insieme del progetto, coordina i membri fra i vari sprint e condensa tutte le voci del team
+                dialogando con il proponente per rappresentare il progetto.\\
+                    \begin{itemize}
+                        \item Ad ogni iterazione si ha solo un Responsabile
+                        \item Presenta il Diario di Bordo in aula
+                        \item Suddivide le attività del gruppo
+                        \item Approva i documenti prima di mandarli in produzione
+                    \end{itemize}
+                \item \textbf{Amministratore di sistema}\\
+                Colui che si occupa del funzionamento, mantenimento e sviluppo degli strumenti e ambienti tecnologici
+                usati dal gruppo.
+                    \begin{itemize}
+                        \item Ad ogni iterazione si hanno al massimo due Amministratori
+                        \item Gestione delle segnalazioni e problemi dei membri del gruppo riguardanti problemi e malfunzionamenti
+                        con gli strumenti tecnologici
+                        \item Valuta l'utilizzo di nuove tecnologie e ne fa uno studio preliminare per poter presentare al
+                        gruppo i pro e i contro del suo utilizzo;
+                        \item Controllo giornaliero della board e issue per garantire una buona organizzazione.
+                        \item Controllo se la documentazione è aggiornata.
+                    \end{itemize}
+                \item \textbf{Analista}\\
+                Colui che si occupa di analizzare a fondo il capitolato e le richieste del proponente per estrarne i requisiti.
+                    \begin{itemize}
+                        \item Ad ogni iterazione si hanno almeno 2 Analisti
+                        \item Studiare le risposte del proponente per identificare i requisiti e redarre l' Analisi dei Requisiti.
+                    \end{itemize}
+                \item \textbf{Progettista}\\
+                Colui che trasforma i requisiti, ricavati degli analisti, in una soluzione, determinando una buona 
+                architettura. 
+                    \begin{itemize}
+                        \item Scegliere eventuali pattern architetturali da implementare
+                        \item Sviluppa lo schema UML delle classi
+                    \end{itemize}
+                \item \textbf{Programmatore}\\
+                Colui che si occupa di realizzare tramite codice il design presentato dal progettista.
+                    \begin{itemize}
+                        \item Scrivere il codice atto a implementare lo schema delle classi
+                        \item Scrivere eventuali test
+                        \item Scrivere la documentazione per la comprensione del codice che scrive.
+                    \end{itemize}
+                \item \textbf{Verificatore}\\
+                Colui che mette in esame tutto ciò che viene fatto  prima che l'oggetto in question non sia caricato in un branch protetto.
+                    \begin{itemize}
+                        \item Controlla che la documentazione e il codice scritto siano conformi alle \textit{Norme di progetto}
+                        \item Propone possibili migliorie da apportare a documenti e/o codice tramite dei commenti, non può modificare direttamente
+                    \end{itemize}
+            \end{itemize}
+
+            Per l'analisi dei ruoli e la rendicontazione delle ore preventivate si faccia riferimento al documento \textit{Dichiarazione degli impegni}.
+
     \subsection{Modalità di comunicazione}
         \subsubsection{Interne}
+        Si svolgono tra i componenti del gruppo tramite diversi canali di comunicazione.\\
+        Si è deciso di utilizzare:
+
+        \begin{itemize}
+            \item Telegram: canale di comunicazione asincrono per comunicazioni brevi e poco importanti
+            \item Discord: canale di comunicazione sincrono per le riunioni con i soli membri del team.\\ 
+        \end{itemize}
+        Le comunicazioni con il fornitore verranno invece gestite in modo asincrono 
+        utilizzando Google Chat
         \subsubsection{Esterne}
-        % come di dialoga con il proponente
+        Si svolgono tra il gruppo e una persona esterna, generalmente il proponente.
+        Si è deciso di utilizzare:
+
+        \begin{itemize}
+            \item Google Chat: Per messaggi brevi e per organizzare delle riunioni, scritti dal responsabile
+            \item Google Meet: Per riunioni in videochiamata. Queste riunioni dovranno essere richieste
+            dal gruppo e al termine verrà redatto un Verbale.
+        \end{itemize}
+
 
     \subsection{Modalità di riunione}
         \subsubsection{Interne}
-        % come esprimiamo le nostre idee e ogni quanto ci vediamo
+        Una riunione interna si svolge esclusivamente tra i membri del gruppo utilizzando il canale apposito
+        del server Discord. Per ogni riunione il responsabile sarà incaricato di
+
+        \begin{itemize}
+            \item Preparare una scaletta degli argomenti da trattare, che potranno essere poi integrati da eventuali
+            punti di discussione portati dagli altri membri del gruppo
+            \item A fine riunione scrivere il Verbale. In caso fosse impossibilitato
+        \end{itemize}
+
+        Le riunioni si svolgeranno a cadenza settimanale, cercando di trovare giorni e orari agevoli a tutti i
+        membri del gruppo.
         \subsubsection{Esterne}
-        % come esprimiamo le nostre idee e ogni quanto ci vediamo
+        Le riunioni esterne si svolgono tra i membri del gruppo e il proponente. Possono essere richieste
+        dal team con un tempo abbastanza ampio di preavviso. Al termine della riunione verrà redatto un Verbale.
+
 
     \subsection{Gestione di Infrastrutture}
         \subsubsection{Descrizione}
+        In questa sezione sono riportate le norme relative alla gestione delle infrastrutture. Vengono stabiliti gli
+        strumenti di cui il gruppo far`a uso e le relative regole di utilizzo.
         \subsubsection{GitHub}
-        % spiegare come ci lavoriamo singolarmente e in modo asincrono
+        Servizio di hosting per progetti software che implementa lo strumento di controllo versione Git. 
+        Oltre alla copia in remoto del repository di progetto ogni componente del gruppo ha una propria
+        copia in locale nella quale può testare e fare prove senza compromettere la struttura del progetto.
+        Per prove più complesse è consigliabile eseguire un fork della repository in modo tale da avere una copia uno ad uno anche in 
+        remoto sul proprio account personale.\\
+        Per ottenere una copia del repository ogni componente ha scaricato lo strumento Git ed eseguendo il
+        comando:
+        \begin{verbatim}
+            git clone <git@github.com:6BitBusters/6BitBusters.github.io.git>
+
+            oppure
+            
+            git clone <https://github.com/6BitBusters/6BitBusters.github.io.git>
+        \end{verbatim}
+        da git bash o terminale windows viene creata una cartella collegata alla repository di progetto.
+        I componenti del gruppo abituati ad interagire con GitHub da interfaccia grafica possono continuare a
+        farne uso.
+        
+        
         \subsubsection{Overleaf}
-        % spiegare come ci lavoriamo singolarmente, che uso ne facciamo o abbiamo fatto e com`e` organizzato
+        Inizialmente il team si era deciso ad utilizzare Overleaf come ide per la scrittura di documenti online utilizzando latex, successivamente ci siamo accorti
+        che non era un modo ottimale per creare documenti avendo implementato un'automazione di build di quest'ultimi direttamente su GitHub.
+        In questo momento Overleaf è utilizzato solamente come ide online, di appoggio, per chi non vuole installare LiveTex in locale.
+        
+        
         \subsubsection{Repository}
-        %  com`e` organizzato e un link al progetto
+        Il repository si può trovare all'indirizzo https://githubg.com/6bitbusters/6bitbusters.github.io ed è pubblico.
+        I collaboratori sono i componenti del gruppo 6BitBusters che utilizzano il proprio account GitHubg
+        personale per collaborare al progetto.
+        La struttura del repository è formata in questo modo:
+            \begin{itemize}
+                \item .github: Cartella che contiene i file sorgente delle GitHub Action e template per le Issue
+                \item 3Dataviz: Cartella che contiene i file sorgente del prodotto
+                \item Docs: Cartella che contiene i file di documentazione relativi ai verbali interni ed esterni e alla candidatura al progetto
+                    \begin{itemize}
+                        \item Candidatura: Cartella che contiene i documenti da presentare durante la candidatura
+                        \item Generali: Cartella che contiene tutta la documentazione esterna e interna tranne i verbali
+                        \item Verbali esterni: Cartella contenente i verbali esterni, che riportano gli incontri con i proponenti
+                        \item Verbali interni: Cartella contenente i verbali interni, relativi agli incontri tra membri del gruppo
+                    \end{itemize}
+                \item website: Cartella che contiene i file sorgente del sito web in GitHub Pages
+            \end{itemize}
+        Infine il repository è dotato di sistema di auto-build per la documentazione grazie alle Actions di GitHub. Nello specifico sono stati scritti 2 tipi di Action
+        \begin{itemize}
+            \item Per il push sul branch "main" che ha il compito di compilare tutta la documentazione creata fino a quel momento e di creare la page
+            \item Per un test di compilazione solamente della parte aggiunta nel branch derivato, che deve essere passato con successo in modo da sbloccare l'azione di merge
+        \end{itemize}
+        Per maggiori informazioni riguardanti i branch seguire le regole descritte nella sezione 4.2.3.3 Commits
+
         \subsubsection{Branching}
-        %  a cosa ci servono e come lavoriamo su di essi
+        I branch si dividono in:
+        \begin{itemize}
+            \item Branches protetti: 
+            \begin{itemize}
+                \item main: Branch principale che contiene le documentazione e codice approvato del responsabile, non che la parte che viene mostrata sulla page
+                \item docs/NOME-DOCUMENTO: Sono più branch che contengono solamente le versioni di documenti verificate\\
+                Il nome di questi branch deve essere:
+                \begin{center}
+                    docs/[NOME-DOCUMENTO]
+                \end{center}
+            \end{itemize}
+            \item Branches derivati: Sono branch utilizzati per aggiungere modifiche e aggiornare un documento o una parte di codice che poi dovrà essere verificata
+            attraverso una pull request verso il branch derivato.\\
+            I nomi di questi branch derivati si suddividono in 2 casi deve essere:
+            \begin{itemize}
+                \item Per Verbali e Glossario
+                \begin{center}
+                    docs/[NOME-DOCUMENTO]-[COGNOME-ASSEGNATARIO]
+                \end{center}
+                \item Per tutto il resto della documentazione
+                \begin{center}
+                    docs/[NOME-DOCUMENTO]-[ID-ISSUE]
+                \end{center}
+            \end{itemize}
+            dove:
+    
+            \begin{itemize}
+                \item NOME-DOCUMENTO: indica il nome del documento sul quale se sta lavorando
+                \item ID-ISSUE: indica il numero identificativo associato alla issue in questione
+                \item COGNOME-ASSEGNATARIO: indica il cognome del membro che ha redatto il documento
+            \end{itemize}
+            \item branch di hotfix: Sono branch dedicati al hotfix e quindi a correzioni minime, sia per la documentazione che per il codice. Valgono le stesse regole dei
+            branch protetti, quindi le modifiche devono comunque essere verificate e approvate.
+            Il nome per questi branch deve essere:
+            \begin{center}
+                hotfix/[NOME-DOCUMENTO] oppure [NOME-FEATURE]
+            \end{center}
+            dove:
+
+            \begin{itemize}
+                \item NOME-DOCUMENTO: indica il nome del documento che viene modificata
+                \item NOME-FEATURE: indica la parte di codice che viene modificata
+            \end{itemize}
+        \end{itemize}
+
+        In ogni branch derivato può lavorarci al massimo un componente del gruppo, al quale
+        viene assegnata una issue da risolvere. Una volta che la issue viene risolta il componente deve richiedere una pull request
+        verso il branch da cui è stato derivato.
+        Notare che se il branch in questione è:
+        \begin{itemize}
+            \item main $\rightarrow$ il documento deve essere approvato
+            \item branch docs/NOME-DOCUMENTO $\rightarrow$ il documento deve essere verificato e successivamente viene eliminato il branch derivato
+        \end{itemize}
+
         \subsubsection{Commits}
-        %  modifiche che si apportano per commit, sintassi di messaggio e come iteragiscono e vengono gestiti
+        E'preferibile che ogni commit abbia una singola responsabilità per cambiamento.
+        I commits non possono essere effettuati direttamente sui branch protetti ma per integrare delle aggiunte o
+        modifiche sarà necessario aprire una Pull Request, motivo per il quale abbiamo introdotto i branch derivati.
+        I messaggi di commit dovranno seguire la seguenti strutture sintattiche:
+        \begin{center}
+            add: [NOME-DOCUMENTO]-[NOME-SEZIONE]\\
+            change: [COSA]\\
+            restructure: [COSA]
+        \end{center}
+        dove: 
+        \begin{itemize}
+            \item add: viene utilizzto per il primo un primo commit e push nella repository remota
+            \item change: per i successivi commit, nei quali si va a modificare il documento
+            \item restructure: indica una ristrutturazione del branch main per quanto riguarda l'organizzazione delle cartelle o la modifica di action o template di issues
+            \item NOME-DOCUMENTO: indica il nome del documento sul quale se sta lavorando
+            \item NOME-SEZIONE: indica la sezione relativa al documento
+            \item COSA: indica una breve descrizione di cosa di è aggiunto e/o fatto
+        \end{itemize}
+
+        
+        Notare però che all'approvazione di una Pull Request tutti i commit
+        relativi verranno raggruppati in un unico commit, il quale titolo deve rispettare la struttura sintattica descritta in
+        seguito.
+        \begin{center}
+            Update: [NOME-DOCUMENTO]-[VERSONE]
+        \end{center}
+        dove:
+
+        \begin{itemize}
+            \item NOME-DOCUMENTO: indica il nome del documento sul quale se sta lavorando
+            \item VERSIONE: indica il numero di versione aggiornata
+        \end{itemize}
+        per quanto riguarda invece il commento facoltativo si lascia quello di default proposto da GitHub, ovvero un elenco puntato di tutte le commit che verranno raggruppate\\
+        
+        N.B\\
+        Per aggiornare direttamente il main si è deciso di disabilitare temporaneamente
+        il protection, eseguire un commit delle modifiche con la struttura sintattica elencata sopra e in fine attivare nuovamente il protection.
+        Questa soluzione è stata adottata perché il team ritiene sia veloce e semplice apportare modifiche a template e action in questo modo
+        rispetto alla creazione di un branch e ad un successivo Pull Request, inoltre il branch main una volta ultimate le automazioni non verrà più modificato se non dai merge
+        scatenati delle Pull Request.
+
         \subsubsection{Pull requests}
-        %  Come le utilizzamo per versionare il codice e come funzionano + sintassi di titolo desc e le sue proprieta` come label etc
+        Per effettuare un merge su un branch protetto si deve aprire da GitHub una Pull Request. La Pull
+        Request permette di verificare il lavoro svolto prima di integrarlo con il branch desiderato ed eseguire un veloce test di compilazione sulla sezione aggiunta.
+        Alla creazione di una Pull Request bisogna associare:
+        \begin{itemize}
+            \item Title: [NOME-DOCUMENTO] o [NOME-CASO-USO] -[VERSIONE]
+            \item verificatori in carica hanno il compito di trovare eventuali errori o mancanze e fornire un feedback
+            riguardante il contenuto direttamente su GitHub attraverso un commento sulla stessa Pull Request.
+            Non sarà possibile effettuare il merge finchè tutti i commenti di revisione non saranno stati risolti
+            e la Pull Request approvata da due verificatori e il test non dia un esito positivo;
+            \item Descrizione contenente una lista riassuntiva di cio' che è stato fatto includendo le issue completate, e quindi da chiudere
+            con la sintassi 
+            \begin{center}
+                close ID-ISSUE
+            \end{center}
+            in modo tale che vengano tutte chiuse quando la Pull request sarà accettata
+            \item Gli assegnatari che hanno anche il compito di apportare le modifiche necessarie in fase di verifica;
+            \item Le labels associate
+        \end{itemize}
+        dove:
+
+        \begin{itemize}
+            \item NOME-DOCUMENTO: indica il nome del documento sul quale se sta lavorando
+            \item NOME-CASO-USO: indica il nomde del caso d'uso nel quale si sta lavorando
+            \item VERSIONE: indica il numero di versione aggiornata
+            \item ID-ISSUE: indica il numero identificativo associato alla issue in questione
+        \end{itemize}
+
+        Per i commit relativi alle Pull Requests seguire le regole descritte nella sezione 4.2.3.3 Commits per i
+        branch protetti.
+
         \subsubsection{Milestones}
-        %  quali sono, quando, possibili motivi e come vengono create
+        Esistono 2 tipi di milestone:
+        \begin{itemize}
+            \item Interne: indicano uno sprint
+            \item Esterne: indicano un traguardo intermedio significativo per il progetto
+        \end{itemize}
+        Ad entrambe le milestones possono essere assegnate delle issues per verificarne il raggiungimento e per tenere traccia
+        della percentuale di progressione.
+        Ogni milestone ha una scadenza che viene fissata da tutto il gruppo. Una delle prime milestone esterne create dal gruppo è
+        relativa alla Requirements and Tecnology Baseline e di conseguenza la realizzazione di un PoC
+
+
         \subsubsection{Project board}
-        %  com`e' organizzata la board e cosa ci contiene + workflow
+        Viene utilizzata un unica project board per tracciare tutte le issues della repository, fungendo da backlog del progetto.
+        La project board è divisa nelle seguenti sezioni:
+        \begin{itemize}
+            \item backlog: issue che non sono ancora state iniziate o assegnate
+            \item In progress: issue che sono state assegnate e a cui almeno un membro, tra gli assegnatari, ha iniziato a lavorarci
+            \item In review: issue che sono state completate ma il documento o il codice richiede la verifica da parte del verificatore
+            \item Done: issue terminate e chiuse, con documenti o codice verificati.
+        \end{itemize}
+        Esempio di work-flow issues:
+        \begin{enumerate}
+            \item Viene creata l'issue ed inserita all'interno della sezione ”Backlog” della project board
+            \item Quando viene presa in carico, l'issue viene spostata nella sezione ”In Progress” fino al suo completamento
+            \item L'incaricato, una volta risolta, apre una pull request a cui assegna la issue, come descritto nella sezione "Pull Request", in modo che
+                venga chiusa in automatico.
+            \item Dopo la verifica la pull request viene approvata la issue verrà chiusa e spostata nella sezione ”Done”;
+        \end{enumerate}
+
+
         \subsubsection{Issue Tracking System}
-        %  elenco di tutte le proprieta` o template di issue (lables, titolo, desc etc)
+        Il gruppo utilizza l'issue tracking system di Github per tenere traccia delle issue create. Le issues verranno
+        determinate dall'amministratore, ma la loro assegnazione verrà effettuata dai membri del gruppo, in base
+        alla priorità, i ruoli e disponibilità.
+        Per marcare le issues secondo criteri di interesse vengono utilizzate delle labels.
+        \begin{itemize}
+            \item P1: indica una issue o pull request a priorità alta
+            \item P2: indica una issue o pull request a priorità media
+            \item P3: indica una issue o pull request a priorità bassa
+            \item bug: indica una issue o pull request relativa ad un errore/bug nel codice
+            \item code: indica una issue o pull request relativa al codice
+            \item documentation: indica una issue o pull request relativa alla documentazione
+            \item enhancement: indica una issue o pull request relativa al miglioramento di scrittura documentazione o codice
+            \item wontfix: indica una issue che verrà ignorata per motivi di tempo o perchè punta ad una azione facoltativa
+        \end{itemize}
+        Nel caso un membro del gruppo dovesse rendersi conto che l'issue che sta svolgendo potrebbe essere
+        suddivisa in ulteriori issue, dovrà rivolgersi al responsabile,per notificarlo di ciò, il quale, se d'accordo,
+        darà il compito all'amministratore di modificare/aggiungere delle issue.
+        Per rendere la creazione di issue più veloce si sono creati dei template in base al tipo di issue che si vuole inserire, e che richiedono degli input
+        specifici per la loro creazione.
+        \begin{itemize}
+            \item  TO-DO per documenti
+            \begin{itemize}
+                \item Titolo : [NOME-DOCUMENTO]-[NOME-SEZIONE]
+                \item Oggetto di discussione : [NOME-DOCUMENTO]
+                \item Codice verbale: il codice del tracciamento delle decisioni riportato a fine di ogni verbale
+                \item Link verbale: un collegamento ipertestuale al documento per accedervi direttamente
+                \item Ruolo: il ruolo che l'attività puntata della issue richiede
+                \item Ore stimate: una stima delle ore totali per completare l'attività
+                \item Informazione da implementare: lista in Markdown di tutte le sezioni/funzioni da implementare
+            \end{itemize}
+            \item  To-DO per codice
+            \begin{itemize}
+                \item Titolo : [CODICE-CASO-USO]-[NOME-FEATURES]
+                \item Oggetto di discussione : [NOME-DOCUMENTO]
+                \item Ruolo: il ruolo che l'attività puntata della issue richiede
+                \item Ore stimate: una stima delle ore totali per completare l'attività
+                \item Informazione da implementare: breve descrizione di cosa la feature aggiunta deve fare o quali requisiti deve implementare
+            \end{itemize}
+            \item  Bug nel codice
+            \begin{itemize}
+                \item Titolo : [CODICE-CASO-USO]-[NOME-CASO-USO]
+                \item Descrizione bug: breve descrizione del bug in questione
+                \item Passi per riprodurlo: lista numerata in Markdown per riassumere i passi da eseguire in modo tale che un'altro programmatore lo possa replicare
+                \item Comportamento aspettato: breve descrizione del comportamento aspettato 
+                \item Idea sul motivo: se esiste, una veloce descrizione di un possibile motivo in modo tale da accelerare il processo di debug e correzione
+            \end{itemize}
+            \item  Correzione della documentazione
+            \begin{itemize}
+                \item Titolo : [NOME-DOCUMENTO]-[NOME-SEZIONE]
+                \item Descrizione: breve descrizione di cosa correggere nella sezione indicata
+            \end{itemize}
+            \item  Miglioramento della documentazione
+            \begin{itemize}
+                \item Titolo : [NOME-DOCUMENTO]-[NOME-SEZIONE]
+                \item Descrizione: breve descrizione di cosa modificare/migliorare e come nella sezione indicata
+            \end{itemize}
+            \item  Miglioramento del codice
+            \begin{itemize}
+                 \item Titolo : [CODICE-CASO-USO]-[NOME-CASO-USO]
+                 \item Descrizione: breve descrizione di cosa modificare/migliorare e come nella relativa parte di codice indicata
+            \end{itemize}
+        \end{itemize}
+        dove:
+
+        \begin{itemize}
+            \item NOME-DOCUMENTO: indica il nome del documento sul quale se sta lavorando
+            \item NOME-SEZIONE: indica la sezione relativa al documento
+            \item CODICE-CASO-USO: indica il nome del caso d'uso nel quale si sta lavorando
+            \item NOME-FEATURES: indica il nome della feature relativa al caso d'uso
+        \end{itemize}
+
+
+        \subsubsection{Discord}
+        Strumento utilizzato per la comunicazione tra i componenti del gruppo. Sono creati diversi canali:
+        \begin{itemize}
+            \item Link : canale testuale per avere dei collegamenti ipertestuali a risorse e riferimenti utili
+            \item Utility : canale testuale per la condivisione di media generale come loghi, disegni illustrativi per determinati workflow da adottare e appunti riguardanti le riunioni
+            \item General: canale vocale dedicato alle riunioni, al termine delle quali verrà redatto un Verbale
+        \end{itemize}
 
     \subsection{Gestione dei dubbi e conflitti}
+        Nel caso sorgano dubbi, questi verranno risolti, in base all'urgenza, 
+        tramite comunicazione nel canale Telegram o riunione interna 
+        settimanale. \\
+        Eventuali conflitti verranno prevalentemente discussi in sede di riunione 
+        interna, con l'obiettivo di trovare una soluzione condivisa che consenta 
+        al progetto di progredire secondo una visione comune.
