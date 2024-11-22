@@ -4,7 +4,7 @@ di supporto e la gestione del personale.
 
     \subsection{Pianificazione}
         \subsubsection{Metodo di Lavoro}
-        Il team ha adottato un modello di lavoro Agile, nello specifico il modello Scrum.
+        Il team ha adottato il metodo di lavoro Scrum, una delle metodologie Agile più diffuse.
         Di conseguenza seguendo questo modello, i compiti derivanti dai processi di sviluppo vengono suddivisi in sprint che il team ha deciso
         durare di due settimane.\\
         Questo rende l'avanzamento del prodotto più gestibile e più rapido, avendo però un tempo abbastanza longevo per implementare diverse
@@ -20,7 +20,7 @@ di supporto e la gestione del personale.
             \begin{itemize}
                 \item \textbf{Sprint planning}:
                 \begin{itemize}
-                    \item Si stabiliscono in gruppo quali sono le attività da svolgere durante lo sprint;
+                    \item Il team definisce collettivamente le attività da svolgere durante lo sprint;
                     \item Ogni componente del gruppo, durante la riunione, segnala le ore che può mettere a disposizione;
                     \item Il responsabile assegna i ruoli e definisce gli obiettivi dello sprint nel documento \textit{Piano di progetto};
                 \end{itemize}
@@ -50,7 +50,7 @@ di supporto e la gestione del personale.
                 dialogando con il proponente per rappresentare il progetto.
                 Le sue competenze sono:
                 \begin{itemize}
-                    \item Ad ogni iterazione si ha solo un Responsabile;
+                    \item Ad ogni sprint si ha solo un Responsabile;
                     \item Presenta il Diario di Bordo in aula;
                     \item Suddivide le attività del gruppo;
                     \item Approva i documenti prima di eseguire il merge nel branch "main", aggiornando la versione del documento e quindi andando ad incrementare il numero più a sinistra;
@@ -61,7 +61,7 @@ di supporto e la gestione del personale.
                 usati dal gruppo.
                 Le sue competenze sono:
                 \begin{itemize}
-                    \item Ad ogni iterazione si hanno al massimo due Amministratori;
+                    \item Ad ogni sprint si hanno al massimo due Amministratori;
                     \item Gestione delle segnalazioni e problemi dei membri del gruppo riguardanti problemi e malfunzionamenti
                     con gli strumenti tecnologici;
                     \item Valuta l'utilizzo di nuove tecnologie e ne fa uno studio preliminare per poter presentare al
@@ -74,7 +74,7 @@ di supporto e la gestione del personale.
                     Colui che si occupa di analizzare a fondo il capitolato e le richieste del proponente per estrarne i requisiti.
                     Le sue competenze sono:
                     \begin{itemize}
-                        \item Ad ogni iterazione si hanno almeno 2 Analisti;
+                        \item Ad ogni sprint si hanno almeno 2 Analisti;
                         \item Studiare le risposte e richieste del proponente per identificare i requisiti e redarre l' Analisi dei Requisiti.
                     \end{itemize}
                     \item \textbf{Progettista}\\
@@ -136,8 +136,8 @@ di supporto e la gestione del personale.
         membri del gruppo.
 
         \subsubsection{Esterne}
-        Le riunioni esterne si svolgono tra i membri del gruppo e il proponente. Possono essere richieste
-        dal team con un tempo abbastanza ampio di preavviso. Al termine della riunione verrà redatto un verbale esterno.
+        Le riunioni esterne si svolgono tra i membri del gruppo e il proponente a cadenza bisettimanale,
+        dove al termine della riunione verrà redatto un verbale esterno.
 
     \subsection{Gestione di Infrastrutture}
         \subsubsection{Descrizione}
@@ -228,8 +228,8 @@ di supporto e la gestione del personale.
                 \item \textbf{COGNOME-ASSEGNATARIO}: Indica il cognome del membro che ha redatto il documento;
             \end{itemize}
             Nel caso un componente volesse richiedere una Pull Request ma il branch di destinazione fosse più aggiornato di quello di partenza o derivato, il branch protection
-            impone che avvenga un merge dal branch di destinazione a quello di partenza in modo tale da applicare le modifiche delle versioni già approvate al documento che ne contiene
-            altre e che quindi deve passare ad una versione successiva.
+            impone che avvenga un merge dal branch di destinazione a quello di partenza in modo tale da applicare le modifiche delle versioni già approvate, al documento, che ne contiene
+            altre e che di conseguenza deve passare ad una versione successiva.
             \item \textbf{Branch di hotfix}: Sono branch dedicati all'hotfix e quindi a correzioni minime, sia per la documentazione che per il codice. Valgono le stesse regole dei
             branch protetti, quindi le modifiche devono essere sempre verificate e in caso approvate.
             Il nome per questi branch deve essere:
@@ -243,8 +243,12 @@ di supporto e la gestione del personale.
             \end{itemize}
         \end{itemize}
 
-        In ogni branch derivato può lavorarci al massimo un componente del gruppo, dopo aver preso in carico
-        una issue da risolvere. Una volta che la issue viene risolta il componente deve richiedere una Pull Request
+        In ogni branch secondario il lavoro può essere svolto da un solo componente del gruppo, specificatamente colui che ha preso in carico l'issue alla cui risoluzione quel branch è dedicato.
+        E' tuttavia possibile che una issue sia assegnata a più persone: in tal caso ogni assegnatario avrà a disposizione un branch dedicato su cui lavorare. Al termine delle modifiche, prima di procedere all'apertura della
+        Pull Request che ha scopo di verificare quanto effettuato, sarà necessario eseguire un merge dei vari branch secondari mediante una Pull Request dedicata, che tuttavia non richiederà attività
+        di verifica in quanto svolta dall'apposita Pull Request adibita allo scopo.
+         
+        Una volta che la issue viene risolta il componente deve richiedere una Pull Request
         verso il branch da cui esso è stato derivato.
         Notare che se il branch di destinazione è:
         \begin{itemize}
@@ -252,9 +256,9 @@ di supporto e la gestione del personale.
             \item \textbf{docs/NOME-DOCUMENTO} $\rightarrow$ il documento deve essere verificato e successivamente viene eliminato il branch derivato;
         \end{itemize}
 
-        Di seguito si riporta un semplice ma eseusivo forkflow tramite imamgine:
+        Di seguito si riporta un semplice ma esaustivo workflow tramite immagine:
         \begin{center}
-            \includegraphics{template/images/logo-circle.png}
+            \includegraphics[scale = 0.07]{template/images/workflow.jpg}
         \end{center}
 
         \subsubsection{Commits}\label{inf:comm}
@@ -271,7 +275,7 @@ di supporto e la gestione del personale.
         \begin{itemize}
             \item \textbf{add}: Viene utilizzato per il primo un primo commit;
             \item \textbf{change}: Per i successivi commit, nei quali si va a modificare il documento già esistente;
-            \item \textbf{restructure}: Indica una ristrutturazione del branch main per quanto riguarda l'organizzazione delle cartelle e/o la modifica di action o template di issues;
+            \item \textbf{restructure}: Indica una ristrutturazione del branch main per quanto riguarda l'organizzazione delle cartelle e/o la modifica di action o template di issue;
             \item \textbf{NOME-DOCUMENTO}: Indica il nome del documento creato;
             \item \textbf{NOME-SEZIONE}: Indica la sezione relativa al documento creato;
             \item \textbf{COSA}: Breve descrizione di cosa di è aggiunto e/o fatto
@@ -311,7 +315,7 @@ di supporto e la gestione del personale.
             \item \textbf{Descrizione}: Contiene una lista riassuntiva di cio' che è stato fatto includendo le issue completate, e quindi da chiudere,
             con la sintassi
             \begin{center}
-                \textbf{close ID-ISSUE}
+                \textbf{\textit{close ID-ISSUE}}
             \end{center}
             in modo tale che vengano tutte chiuse in automatico quando la Pull request verrà accettata;
             \item \textbf{Gli assegnatari}: Coloro che hanno anche il compito di apportare le modifiche necessarie al documento;
@@ -335,20 +339,19 @@ di supporto e la gestione del personale.
             \item \textbf{Interne}: Indicano uno sprint;
             \item \textbf{Esterne}: Indicano un traguardo intermedio significativo per il progetto;
         \end{itemize}
-        Ad entrambe le milestones possono essere assegnate delle issues per verificarne il raggiungimento e per tenere traccia
+        Ad entrambe le milestones possono essere assegnate delle issue per verificarne il raggiungimento e per tenere traccia
         della percentuale di progressione dello sprint.
         Ogni milestone ha una scadenza che viene fissata da tutto il gruppo. Una delle prime milestone esterne create è
         relativa alla \textit{Requirements and Tecnology Baseline} e di conseguenza la realizzazione di un \textit{PoC}.
 
 
         \subsubsection{Project board}
-        Viene utilizzata un unica project board per tracciare tutte le issues della repository, fungendo da backlog del progetto.
+        Viene utilizzata un unica project board per tracciare tutte le issue della repository, fungendo da backlog del progetto.
         La project board è divisa nelle seguenti sezioni:
         \begin{itemize}
-            \item \textbf{Backlog}: Issues che non sono ancora state iniziate o assegnate;
-            \item \textbf{In progress}: Issues che sono state assegnate e a cui almeno un membro, tra gli assegnatari, ha iniziato a lavorarci;
-            \item \textbf{In review}: Issues che sono state completate ma il documento o il codice richiede la verifica da parte del verificatore;
-            \item \textbf{Done}: Issues terminate e chiuse, con documenti o codice verificati;
+            \item \textbf{Backlog}: issue che non sono ancora state iniziate o assegnate;
+            \item \textbf{In progress}: issue che sono state assegnate e a cui almeno un membro, tra gli assegnatari, ha iniziato a lavorarci;
+            \item \textbf{Done}: issue terminate e chiuse, con documenti o codice verificati;
         \end{itemize}
         Esempio di workflow potrebbe essere il seguente:
         \begin{enumerate}
@@ -360,10 +363,10 @@ di supporto e la gestione del personale.
 
 
         \subsubsection{Issue Tracking System}\label{inf:its}
-        Il gruppo utilizza l'issue tracking system di Github per tenere traccia delle issues create. Le issues verranno
+        Il gruppo utilizza l'issue tracking system di Github per tenere traccia delle issue create. Le issue verranno
         create dall'amministratore, ma la loro assegnazione verrà effettuata dai membri del gruppo in modo autonomo, in base
         alla priorità, ruoli e disponibilità.
-        Per marcare le issues secondo criteri di interesse vengono utilizzate delle labels.
+        Per marcare le issue secondo criteri di interesse vengono utilizzate delle labels.
         \begin{itemize}
             \item \textbf{P1}: Indica una issue o pull request a priorità alta;
             \item \textbf{P2}: Indica una issue o pull request a priorità media;
@@ -402,7 +405,7 @@ di supporto e la gestione del personale.
             \begin{itemize}
                 \item \textbf{Titolo} : [CODICE-CASO-USO]-[NOME-FEATURES];
                 \item \textbf{Descrizione bug}: Breve descrizione del bug;
-                \item \textbf{Passi per riprodurlo}: Lista numerata in \textit{Markdown} per riassumere i passi da eseguire in modo tale che un'altro programmatore lo possa replicare e debuggare;
+                \item \textbf{Passi per riprodurlo}: Lista numerata in \textit{Markdown} per riassumere i passi da eseguire in modo tale che un'altro programmatore lo possa replicare;
                 \item \textbf{Comportamento aspettato}: Breve descrizione del comportamento aspettato;
                 \item \textbf{Idea sul motivo} (facoltativo): Se esiste, una veloce descrizione di un possibile motivo in modo tale da accelerare il processo di debug e correzione;
             \end{itemize}
