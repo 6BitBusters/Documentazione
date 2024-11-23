@@ -9,7 +9,7 @@ di supporto e la gestione del personale.
         durare di due settimane.\\
         Questo rende l'avanzamento del prodotto più gestibile e più rapido, avendo però un tempo abbastanza longevo per implementare diverse
         feature e redarre i documenti necessari.
-            \paragraph*{Sprint} ~\\\\
+            \paragraph*{Sprint}\label{inf:sprint} ~\\\\
             Per ogni sprint il responsabile assegna i ruoli ad ogni membro creando un diagramma delle attività per stimare le ore necessarie, tenendo traccia per ogni membro, i giorni
             in cui può contribuire alla realizzazione del progetto.
             Successivamente l'amministratore si occuperà di creare le issue associate allo sprint in modo da rendere il lavoro degli altri membri più semplice e veloce.
@@ -18,13 +18,16 @@ di supporto e la gestione del personale.
             documentazione adatta e aggiornata sotto mano.\\\\
             Le attività dello sprint sono le seguenti:
             \begin{itemize}
-                \item \textbf{Sprint planning}:
+                \item \textbf{Sprint planning}: 
                 \begin{itemize}
                     \item Il team definisce collettivamente le attività da svolgere durante lo sprint;
                     \item Ogni componente del gruppo, durante la riunione, segnala le ore che può mettere a disposizione;
                     \item Il responsabile assegna i ruoli e definisce gli obiettivi dello sprint nel documento \textit{Piano di progetto};
                 \end{itemize}
-                \item \textbf{Daily Scrum}:
+                \item \textbf{Daily Scrum}: ogni giorno, i membri del team sono tenuti a condividere, attraverso il gruppo \textit{Telegram} dedicato,
+                un report dettagliato delle attività svolte il giorno precedente,
+                quelle pianificate per la giornata in corso e segnalando eventuali ostacoli che potrebbero compromettere il lavoro.
+                Il responsabile controlla l'andamento dello sprint contattando i componenti del gruppo.
                 \item \textbf{Sprint review}:
                 \begin{itemize}
                     \item Ogni membro, durante la riunione, riferisce quello che ha svolto nel periodo precedente e gli eventuali dubbi che ha riscontrato.
@@ -108,15 +111,15 @@ di supporto e la gestione del personale.
         Si svolgono tra i componenti del gruppo tramite diversi canali di comunicazione.\\
         Si è deciso di utilizzare:
         \begin{itemize}
-            \item \textbf{Telegram}: Canale di comunicazione asincrono per comunicazioni brevi e poco importanti;
-            \item \textbf{Discord}: Canale di comunicazione sincrono per le riunioni con i soli membri del team;\\ 
+            \item \textbf{Telegram}: canale di comunicazione asincrono per comunicazioni brevi e poco importanti;
+            \item \textbf{Discord}: canale di comunicazione sincrono per le riunioni con i soli membri del team;\\ 
         \end{itemize}
         \subsubsection{Esterne}
         Si svolgono tra il gruppo e una persona esterna, generalmente il proponente.
         Si è deciso di utilizzare:
         \begin{itemize}
-            \item \textbf{Google Chat}: Per messaggi brevi e per organizzare delle riunioni, scritti dal responsabile;
-            \item \textbf{Google Meet}: Per riunioni in videochiamata. Queste riunioni dovranno essere richieste
+            \item \textbf{Google Chat}: per messaggi brevi e per organizzare delle riunioni, scritti dal responsabile;
+            \item \textbf{Google Meet}: per riunioni in videochiamata. Queste riunioni dovranno essere richieste
             dal gruppo e al termine verrà redatto un Verbale;
         \end{itemize}
 
@@ -173,16 +176,16 @@ di supporto e la gestione del personale.
         personale per collaborare al progetto.
         La struttura del repository è formata in questo modo:
             \begin{itemize}
-                \item \textbf{ .github}: Cartella che contiene i file sorgenti delle GitHub Action e template per le issue;
-                \item \textbf{3Dataviz}: Cartella che contiene i file sorgente del prodotto;
-                \item \textbf{Docs}: Cartella che contiene la documentazione, si divide ulteriormente in:
+                \item \textbf{ .github}: cartella che contiene i file sorgenti delle GitHub Action e template per le issue;
+                \item \textbf{3Dataviz}: cartella che contiene i file sorgente del prodotto;
+                \item \textbf{Docs}: cartella che contiene la documentazione, si divide ulteriormente in:
                     \begin{itemize}
-                        \item \textbf{Candidatura}: Cartella che contiene i documenti da presentare per la candidatura;
-                        \item \textbf{Generali}: Cartella che contiene tutta la documentazione esterna e interna tranne i verbali;
-                        \item \textbf{Verbali esterni}: Cartella contenente i verbali esterni, che riportano gli incontri con i proponenti;
-                        \item \textbf{Verbali interni}: Cartella contenente i verbali interni, relativi agli incontri tra membri del gruppo;
+                        \item \textbf{Candidatura}: cartella che contiene i documenti da presentare per la candidatura;
+                        \item \textbf{Generali}: cartella che contiene tutta la documentazione esterna e interna tranne i verbali;
+                        \item \textbf{Verbali esterni}: cartella contenente i verbali esterni, che riportano gli incontri con i proponenti;
+                        \item \textbf{Verbali interni}: cartella contenente i verbali interni, relativi agli incontri tra membri del gruppo;
                     \end{itemize}
-                \item \textbf{website}: Cartella che contiene i file sorgente del sito web che successivamente verrà pubblicato utilizzando GitHub Pages;
+                \item \textbf{website}: cartella che contiene i file sorgente del sito web che successivamente verrà pubblicato utilizzando GitHub Pages;
             \end{itemize}
         Infine il repository è dotato di sistema di auto-build per la documentazione grazie alle GitHub Actions. Nello specifico sono stati scritti 2 tipi di Action
         \begin{itemize}
@@ -196,8 +199,8 @@ di supporto e la gestione del personale.
         \begin{itemize}
             \item \textbf{Branches protetti}: 
             \begin{itemize}
-                \item \textbf{main}: Branch principale che contiene le documentazione e codice approvato del responsabile, non che la parte che viene mostrata sulla page;
-                \item \textbf{docs/NOME-DOCUMENTO}: Sono più branch che contengono solamente le versioni di documenti verificate\\
+                \item \textbf{main}: branch principale che contiene le documentazione e codice approvato del responsabile, non che la parte che viene mostrata sulla page;
+                \item \textbf{docs/NOME-DOCUMENTO}: sono più branch che contengono solamente le versioni di documenti verificate\\
                 Il nome di questi branch deve essere:
                 \begin{center}
                     \textbf{\textit{docs/[NOME-DOCUMENTO]}}
@@ -207,7 +210,7 @@ di supporto e la gestione del personale.
                     \item \textbf{NOME-DOCUMENTO}: indica il nome del documento in questione;
                 \end{itemize}
             \end{itemize}
-            \item \textbf{Branches derivati}: Sono branch utilizzati per aggiungere modifiche e aggiornare un documento o una parte di codice che poi dovrà essere verificata
+            \item \textbf{Branches derivati}: sono branch utilizzati per aggiungere modifiche e aggiornare un documento o una parte di codice che poi dovrà essere verificata
             attraverso una Pull Request verso il branch da cui esso è stato derivato.\\
             I nomi di questi branch, per quanto riguarda la documentazione, si suddividono in 2 casi:
             \begin{itemize}
@@ -223,14 +226,14 @@ di supporto e la gestione del personale.
             dove:
     
             \begin{itemize}
-                \item \textbf{NOME-DOCUMENTO}: Indica il nome del documento sul quale si sta lavorando;
-                \item \textbf{ID-ISSUE}: Indica il numero identificativo associato alla issue relativa alla modifica del documento;
-                \item \textbf{COGNOME-ASSEGNATARIO}: Indica il cognome del membro che ha redatto il documento;
+                \item \textbf{NOME-DOCUMENTO}: indica il nome del documento sul quale si sta lavorando;
+                \item \textbf{ID-ISSUE}: indica il numero identificativo associato alla issue relativa alla modifica del documento;
+                \item \textbf{COGNOME-ASSEGNATARIO}: indica il cognome del membro che ha redatto il documento;
             \end{itemize}
             Nel caso un componente volesse richiedere una Pull Request ma il branch di destinazione fosse più aggiornato di quello di partenza o derivato, il branch protection
             impone che avvenga un merge dal branch di destinazione a quello di partenza in modo tale da applicare le modifiche delle versioni già approvate, al documento, che ne contiene
             altre e che di conseguenza deve passare ad una versione successiva.
-            \item \textbf{Branch di hotfix}: Sono branch dedicati all'hotfix e quindi a correzioni minime, sia per la documentazione che per il codice. Valgono le stesse regole dei
+            \item \textbf{Branch di hotfix}: sono branch dedicati all'hotfix e quindi a correzioni minime, sia per la documentazione che per il codice. Valgono le stesse regole dei
             branch protetti, quindi le modifiche devono essere sempre verificate e in caso approvate.
             Il nome per questi branch deve essere:
             \begin{center}
@@ -239,7 +242,7 @@ di supporto e la gestione del personale.
             dove:
 
             \begin{itemize}
-                \item \textbf{NOME-DOCUMENTO}: Indica il nome del documento che viene modificata;
+                \item \textbf{NOME-DOCUMENTO}: indica il nome del documento che viene modificata;
             \end{itemize}
         \end{itemize}
 
@@ -267,31 +270,31 @@ di supporto e la gestione del personale.
         modifiche sarà necessario aprire una Pull Request, motivo per il quale abbiamo introdotto dei branch derivati.
         I messaggi di commit dovranno seguire la seguenti strutture sintattiche:
         \begin{center}
-            \textbf{add: [NOME-DOCUMENTO]-[NOME-SEZIONE]\\
+            \textbf{add: [NOME-DOCUMENTO]-[ID-ISSUE]\\
             change: [COSA]\\
             restructure: [COSA]}
         \end{center}
         dove: 
         \begin{itemize}
-            \item \textbf{add}: Viene utilizzato per il primo un primo commit;
-            \item \textbf{change}: Per i successivi commit, nei quali si va a modificare il documento già esistente;
-            \item \textbf{restructure}: Indica una ristrutturazione del branch main per quanto riguarda l'organizzazione delle cartelle e/o la modifica di action o template di issue;
-            \item \textbf{NOME-DOCUMENTO}: Indica il nome del documento creato;
-            \item \textbf{NOME-SEZIONE}: Indica la sezione relativa al documento creato;
-            \item \textbf{COSA}: Breve descrizione di cosa di è aggiunto e/o fatto
+            \item \textbf{add}: viene utilizzato per il primo un primo commit;
+            \item \textbf{change}: per i successivi commit, nei quali si va a modificare il documento già esistente;
+            \item \textbf{restructure}: indica una ristrutturazione del branch main per quanto riguarda l'organizzazione delle cartelle e/o la modifica di action o template di issue;
+            \item \textbf{NOME-DOCUMENTO}: indica il nome del documento creato;
+            \item \textbf{NOME-SEZIONE}: indica la sezione relativa al documento creato;
+            \item \textbf{COSA}: breve descrizione di cosa di è aggiunto e/o fatto
         \end{itemize}
 
         Notare però che dopo l'approvazione di una Pull Request tutti i commit
         relativi verranno raggruppati in un unico commit, il quale titolo deve rispettare la struttura sintattica descritta in
         seguito.
         \begin{center}
-            \textbf{Update: [NOME-DOCUMENTO]-[VERSONE]}
+            \textbf{Update: [NOME-DOCUMENTO] to [VERSONE]}
         \end{center}
         dove:
 
         \begin{itemize}
-            \item \textbf{NOME-DOCUMENTO}: Indica il nome del documento nel quale sono state verificate le modifiche;
-            \item \textbf{VERSIONE}: Indica il numero di versione aggiornata;
+            \item \textbf{NOME-DOCUMENTO}: indica il nome del documento nel quale sono state verificate le modifiche;
+            \item \textbf{VERSIONE}: indica il numero di versione aggiornata;
         \end{itemize}
         Per quanto riguarda il commento facoltativo, si lascia quello di default proposto da GitHub, ovvero un elenco puntato di tutte le commit che verranno raggruppate.\\
         
@@ -308,25 +311,25 @@ di supporto e la gestione del personale.
         Alla creazione di una Pull Request bisogna associare:
         \begin{itemize}
             \item \textbf{Title}: [NOME-DOCUMENTO]-[NOME-SEZIONE];
-            \item \textbf{Verificatori in carica}: Hanno il compito di trovare eventuali errori o mancanze e fornire un feedback
+            \item \textbf{Verificatori in carica}: hanno il compito di trovare eventuali errori o mancanze e fornire un feedback
             riguardante il contenuto direttamente su GitHub attraverso un commento, sulla stessa Pull Request.
-            Non sarà possibile effettuare il merge finchè tutti i commenti di revisione non saranno stati risolti
+            Non sarà possibile effettuare il merge finché tutti i commenti di revisione non saranno stati risolti
             con,al termine, l'approvazione di almeno uno dei verificatori e il test di build non dia esito positivo;
-            \item \textbf{Descrizione}: Contiene una lista riassuntiva di cio' che è stato fatto includendo le issue completate, e quindi da chiudere,
+            \item \textbf{Descrizione}: contiene una lista riassuntiva di cio' che è stato fatto includendo le issue completate, e quindi da chiudere,
             con la sintassi
             \begin{center}
                 \textbf{\textit{close ID-ISSUE}}
             \end{center}
             in modo tale che vengano tutte chiuse in automatico quando la Pull request verrà accettata;
-            \item \textbf{Gli assegnatari}: Coloro che hanno anche il compito di apportare le modifiche necessarie al documento;
-            \item \textbf{Labels}: Che riassumono di che natura è la Pull Request;
+            \item \textbf{Gli assegnatari}: coloro che hanno anche il compito di apportare le modifiche necessarie al documento;
+            \item \textbf{Labels}: che riassumono di che natura è la Pull Request;
         \end{itemize}
         dove:
 
         \begin{itemize}
-            \item \textbf{NOME-DOCUMENTO}: Indica il nome del documento sul quale se sta lavorando e richiedendo l'approvazione;
-            \item \textbf{NOME-SEZIONE}: Indica la sezione relativa al documento creato;
-            \item \textbf{ID-ISSUE}: Indica il numero identificativo associato alla issue relativa alla modifica del documento;
+            \item \textbf{NOME-DOCUMENTO}: indica il nome del documento sul quale se sta lavorando e richiedendo l'approvazione;
+            \item \textbf{NOME-SEZIONE}: indica la sezione relativa al documento creato;
+            \item \textbf{ID-ISSUE}: indica il numero identificativo associato alla issue relativa alla modifica del documento;
         \end{itemize}
 
         Per una descrizione più dettagliata delle issue si faccia riferimento a \nameref{inf:its}
@@ -336,13 +339,13 @@ di supporto e la gestione del personale.
         \subsubsection{Milestones}
         Esistono 2 tipi di milestone:
         \begin{itemize}
-            \item \textbf{Interne}: Indicano uno sprint;
-            \item \textbf{Esterne}: Indicano un traguardo intermedio significativo per il progetto;
+            \item \textbf{Interne}: indicano uno sprint;
+            \item \textbf{Esterne}: indicano un traguardo intermedio significativo per il progetto;
         \end{itemize}
         Ad entrambe le milestones possono essere assegnate delle issue per verificarne il raggiungimento e per tenere traccia
         della percentuale di progressione dello sprint.
         Ogni milestone ha una scadenza che viene fissata da tutto il gruppo. Una delle prime milestone esterne create è
-        relativa alla \textit{Requirements and Tecnology Baseline} e di conseguenza la realizzazione di un \textit{PoC}.
+        relativa alla \textit{Requirements and Technology Baseline} e di conseguenza la realizzazione di un \textit{PoC}.
 
 
         \subsubsection{Project board}
@@ -368,14 +371,14 @@ di supporto e la gestione del personale.
         alla priorità, ruoli e disponibilità.
         Per marcare le issue secondo criteri di interesse vengono utilizzate delle labels.
         \begin{itemize}
-            \item \textbf{P1}: Indica una issue o pull request a priorità alta;
-            \item \textbf{P2}: Indica una issue o pull request a priorità media;
-            \item \textbf{P3}: Indica una issue o pull request a priorità bassa;
-            \item \textbf{bug}: Indica una issue o pull request relativa ad un errore/bug nel codice;
-            \item \textbf{code}: Indica una issue o pull request relativa al codice;
-            \item \textbf{documentation}: Indica una issue o pull request relativa alla documentazione;
-            \item \textbf{enhancement}: Indica una issue o pull request relativa al miglioramento di scrittura documentazione o codice;
-            \item \textbf{wontfix}: Indica una issue che verrà ignorata per motivi di tempo o perché punta ad una azione facoltativa;
+            \item \textbf{P1}: indica una issue o pull request a priorità alta;
+            \item \textbf{P2}: indica una issue o pull request a priorità media;
+            \item \textbf{P3}: indica una issue o pull request a priorità bassa;
+            \item \textbf{bug}: indica una issue o pull request relativa ad un errore/bug nel codice;
+            \item \textbf{code}: indica una issue o pull request relativa al codice;
+            \item \textbf{documentation}: indica una issue o pull request relativa alla documentazione;
+            \item \textbf{enhancement}: indica una issue o pull request relativa al miglioramento di scrittura documentazione o codice;
+            \item \textbf{wontfix}: indica una issue che verrà ignorata per motivi di tempo o perché punta ad una azione facoltativa;
         \end{itemize}
         Nel caso un membro del gruppo dovesse rendersi conto che l'issue che sta svolgendo potrebbe essere
         suddivisa in ulteriori issue, dovrà rivolgersi al responsabile per notificarlo di ciò, il quale, se d'accordo,
@@ -387,62 +390,70 @@ di supporto e la gestione del personale.
             \begin{itemize}
                 \item \textbf{Titolo} : [NOME-DOCUMENTO]-[NOME-SEZIONE];
                 \item \textbf{Oggetto di discussione} (facoltativo): [NOME-VERBALE];
-                \item \textbf{Codice verbale}: Il codice del \textit{tracciamento delle decisioni} riportato a fine di ogni verbale;
-                \item \textbf{Link verbale}: Un collegamento ipertestuale al documento per accedervi direttamente;
-                \item \textbf{Ruolo}: Il ruolo che l'attività puntata della issue richiede;
-                \item \textbf{Ore stimate}: Una stima delle ore totali per completare l'attività;
-                \item \textbf{Informazione da implementare}: Lista in \textit{Markdown} di tutte le possibili parti della sezione da implementare;
+                \item \textbf{Codice verbale}: il codice del \textit{tracciamento delle decisioni} riportato a fine di ogni verbale;
+                \item \textbf{Link verbale}: un collegamento ipertestuale al documento per accedervi direttamente;
+                \item \textbf{Ruolo}: il ruolo che l'attività puntata della issue richiede;
+                \item \textbf{Ore stimate}: una stima delle ore totali per completare l'attività;
+                \item \textbf{Informazione da implementare}: lista in \textit{Markdown} di tutte le possibili parti della sezione da implementare;
             \end{itemize}
             \item  \textbf{To-DO per codice}
             \begin{itemize}
                 \item \textbf{Titolo} : [CODICE-CASO-USO]-[NOME-FEATURES];
                 \item \textbf{Oggetto di discussione} (facoltativo): [NOME-VERBALE];
-                \item \textbf{Ruolo}: Il ruolo che l'attività puntata della issue richiede;
-                \item \textbf{Ore stimate}: Una stima delle ore totali per completare l'attività;
-                \item \textbf{Informazione da implementare}: Breve descrizione di cosa, la feature aggiunta, deve fare o quali requisiti deve soddisfare;
+                \item \textbf{Ruolo}: il ruolo che l'attività puntata della issue richiede;
+                \item \textbf{Ore stimate}: una stima delle ore totali per completare l'attività;
+                \item \textbf{Informazione da implementare}: breve descrizione di cosa, la feature aggiunta, deve fare o quali requisiti deve soddisfare;
             \end{itemize}
             \item  \textbf{Bug nel codice}
             \begin{itemize}
                 \item \textbf{Titolo} : [CODICE-CASO-USO]-[NOME-FEATURES];
-                \item \textbf{Descrizione bug}: Breve descrizione del bug;
-                \item \textbf{Passi per riprodurlo}: Lista numerata in \textit{Markdown} per riassumere i passi da eseguire in modo tale che un'altro programmatore lo possa replicare;
-                \item \textbf{Comportamento aspettato}: Breve descrizione del comportamento aspettato;
-                \item \textbf{Idea sul motivo} (facoltativo): Se esiste, una veloce descrizione di un possibile motivo in modo tale da accelerare il processo di debug e correzione;
+                \item \textbf{Descrizione bug}: breve descrizione del bug;
+                \item \textbf{Passi per riprodurlo}: lista numerata in \textit{Markdown} per riassumere i passi da eseguire in modo tale che un'altro programmatore lo possa replicare;
+                \item \textbf{Comportamento aspettato}: breve descrizione del comportamento aspettato;
+                \item \textbf{Idea sul motivo} (facoltativo): se esiste, una veloce descrizione di un possibile motivo in modo tale da accelerare il processo di debug e correzione;
             \end{itemize}
             \item  \textbf{Correzione della documentazione}
             \begin{itemize}
                 \item \textbf{Titolo} : [NOME-DOCUMENTO]-[NOME-SEZIONE]
-                \item \textbf{Descrizione}: Breve descrizione di cosa correggere nella sezione indicata;
+                \item \textbf{Descrizione}: breve descrizione di cosa correggere nella sezione indicata;
             \end{itemize}
             \item  \textbf{Miglioramento della documentazione}
             \begin{itemize}
                 \item \textbf{Titolo} : [NOME-DOCUMENTO]-[NOME-SEZIONE]
-                \item \textbf{Descrizione}: Breve descrizione di cosa modificare/migliorare e come, nella sezione indicata;
+                \item \textbf{Descrizione}: breve descrizione di cosa modificare/migliorare e come, nella sezione indicata;
             \end{itemize}
             \item  \textbf{Miglioramento del codice}
             \begin{itemize}
                  \item \textbf{Titolo} : [CODICE-CASO-USO]-[NOME-CASO-USO]
-                 \item \textbf{Descrizione}: Breve descrizione di cosa modificare/migliorare e come, nella relativa parte di codice indicata
+                 \item \textbf{Descrizione}: breve descrizione di cosa modificare/migliorare e come, nella relativa parte di codice indicata
             \end{itemize}
         \end{itemize}
         dove:
 
         \begin{itemize}
-            \item \textbf{NOME-DOCUMENTO}: Indica il nome del documento sul quale se sta lavorando;
-            \item \textbf{NOME-VERBALE}: Indica il nome del verbale nel quale si è discusso della relativa attività rappresentata successivamente tramite una issue;
-            \item \textbf{NOME-SEZIONE}: Indica la sezione relativa al documento;
-            \item \textbf{CODICE-CASO-USO}: Indica il nome del caso d'uso nel quale si sta lavorando;
-            \item \textbf{NOME-FEATURES}: Indica il nome della feature relativa al caso d'uso;
+            \item \textbf{NOME-DOCUMENTO}: indica il nome del documento sul quale se sta lavorando;
+            \item \textbf{NOME-VERBALE}: indica il nome del verbale nel quale si è discusso della relativa attività rappresentata successivamente tramite una issue;
+            \item \textbf{NOME-SEZIONE}: indica la sezione relativa al documento;
+            \item \textbf{CODICE-CASO-USO}: indica il nome del caso d'uso nel quale si sta lavorando;
+            \item \textbf{NOME-FEATURES}: indica il nome della feature relativa al caso d'uso;
         \end{itemize}
 
 
         \subsubsection{Discord}
-        Strumento utilizzato per la comunicazione tra i componenti del gruppo.\\
+        Strumento utilizzato per la comunicazione,in modo sincrono, tra i componenti del gruppo.\\
         Sono creati diversi canali:
         \begin{itemize}
-            \item \textbf{Link} : Canale testuale per avere dei collegamenti ipertestuali a risorse e riferimenti utili;
-            \item \textbf{Utility} : Canale testuale per la condivisione di media generici come loghi, disegni illustrativi per determinati workflow e appunti riguardanti le riunioni;
-            \item \textbf{General}: Canale vocale dedicato alle riunioni interne, al termine delle quali verrà redatto un verbale;
+            \item \textbf{Link} : canale testuale per avere dei collegamenti ipertestuali a risorse e riferimenti utili;
+            \item \textbf{Utility} : canale testuale per la condivisione di media generici come loghi, disegni illustrativi per determinati workflow e appunti riguardanti le riunioni;
+            \item \textbf{General}: canale vocale dedicato alle riunioni interne, al termine delle quali verrà redatto un verbale;
+        \end{itemize}
+
+        \subsubsection{Telegram}
+        Strumento utilizzato per la comunicazione,in modo asincrono, tra i componenti del gruppo.\\
+        Sono creati 2 distinti gruppi:
+        \begin{itemize}
+            \item \textbf{Generale} : gruppo dedicato alle comunicazioni brevi e poco importanti;
+            \item \textbf{Daily Scrum} : gruppo dedicato all' attivita di Daily Scrum, descritto nella sezione \nameref{inf:sprint};
         \end{itemize}
 
     \subsection{Gestione dei dubbi e conflitti}
