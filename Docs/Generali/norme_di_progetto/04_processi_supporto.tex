@@ -1,29 +1,241 @@
 \section{Processi di Supporto}
+I processi di supporto contribuiscono a rendere i processi primari più efficienti ed efficaci.
     \subsection{Documentazione}
         \subsubsection{Descrizione}
+        Questa sezione contiene tutte le norme che ogni membro del gruppo dovrà seguire durante 
+        la stesura della documentazione.\\
+        Fornisce le indicazioni utili per ottenere una forma uniforme dei documenti e permette di operare seguendo linee guida durante tutte le fasi del ciclo di vita di un documento: creazione, stesura, verifica\textsubscript{g} ed 
+        eventuali modifiche, fino ad arrivare all'approvazione\textsubscript{g} e quindi alla pubblicazione del documento.
         \subsubsection{Ciclo di vita di un documento}
+        \begin{itemize}
+            \item \textbf{Creazione}: viene creato un nuovo branch\textsubscript{g}, che prende il nome del documento stesso, e qui verrà caricato il template, in questo branch\textsubscript{g} ci saranno solamente le versioni verificate del documento;
+            \item \textbf{Stesura}: per la stesura verrà creato un sotto-branch\textsubscript{g}, caratterizzato dal numero della issue che richiede la stesura, in seguito si procede con la stesura delle sezioni necessarie, tracciando i cambiamenti nel registro delle modifiche e aggiornando la versione;
+            \item \textbf{Verifica\textsubscript{g}}: prima di considerarsi completata, ogni modifica al documento deve essere verificata da un verificatore in carica, tramite una Pull Request\textsubscript{g} viene messo in esame quanto aggiunto al documento rispetto alla versione precedente, si presentano due casi:
+            \begin{itemize}
+                \item \textbf{Pull Request\textsubscript{g} accettata}: il verificatore non trova errori e considera il lavoro 'verificato', viene accettata la Pull Request\textsubscript{g} e viene fatto il merge tra il branch\textsubscript{g} di lavoro e il branch\textsubscript{g} del documento, viene così chiusa la issue assegnata e chiuso il branch di lavoro;
+                \item \textbf{Pull Request\textsubscript{g} rifiutata}: il verificatore non considera la stesura adeguata e procede a segnalare errori ed eventuali correzioni, la Pull Request\textsubscript{g} viene rifiutata e si continua a lavorare nel sotto-branch\textsubscript{g};
+            \end{itemize}
+            \item \textbf{Approvazione\textsubscript{g}}: Una volta che tutte le sezioni sono state verificate, e il documento è pronto per essere pubblicato, si procede con l'approvazione\textsubscript{g}, effettuata dal responsabile, utilizziamo questa procedura:
+            \begin{itemize}
+                \item Viene aperta una Pull Request\textsubscript{g} per fare il merge del branch\textsubscript{g} dedicato al documento con il main;
+                \item Il responsabile rilegge ed analizza il documento nella sua interezza, se riscontra errori o problematiche, rifiuta la Pull Request\textsubscript{g}, segnala ai verificatori le modifiche necessarie e si procede come descritto sopra;
+                \item Nel caso andasse tutto bene, il responsabile aggiorna il registro delle modifiche aggiungendo una riga con la versione di pubblicazione, e contrassegna il documento come 'Approvato';
+                \item Il documento viene quindi pubblicato nel ramo main, e reso disponibile pubblicamente.
+            \end{itemize}
+        \end{itemize}
+        Solo alla pubblicazione nel ramo main il documento verrà compilato e reso disponibile in formato '.pdf'.
+        \newpage
         \subsubsection{Struttura}
+        Ogni documento è caratterizzato da un template, che presenta queste caratteristiche:
+        \begin{itemize}
+            \item \textbf{Intestazione}: la prima pagina di ogni documento, contiene:
+            \begin{itemize}
+                \item Logo del gruppo;
+                \item Indirizzo email del gruppo;
+                \item Titolo del documento;
+                \item Informazioni sul documento, che comprendono:
+                \begin{itemize}
+                    \item Versione;
+                    \item Stato: in redazione oppure approvato;
+                    \item Uso: interno o esterno;
+                    \item Approvazione\textsubscript{g}: indica il nome dell'elemento del gruppo che ha approvato il documento;
+                    \item Redazione: indica il nome o i nomi di chi si è occupato della stesura;
+                    \item Verifica\textsubscript{g}: indica il nome del verificatore o dei verificatori;
+                    \item Distribuzione: elenco delle persone o organizzazioni a cui è destinato il documento.
+                \end{itemize}
+                \item Descrizione: una breve descrizione di cosa contiene il documento;
+            \end{itemize}
+            \item \textbf{Registro delle modifiche}: contiene la tabella dove verranno registrati i cambiamenti e le versioni che un documento attraversa prima di giungere alla versione finale, include le seguenti colonne:
+            \begin{itemize}
+                \item Versione;
+                \item Data;
+                \item Autore;
+                \item Descrizione: una descrizione riassuntiva di ciò che è stato aggiunto o modificato;
+                \item Verificatore.
+            \end{itemize}
+            \item \textbf{Indice}: elenco ordinato dei titoli dei capitoli, per facilitare la navigazione;
+            \item \textbf{Contenuto}: varia a seconda del documento.
+        \end{itemize}
         % + tutte le convenzioni
+        \subsubsection{Convenzioni}
+        Al fine di ottenere una stesura della documentazione omogenea, e quindi più professionale, verranno seguite queste convenzioni:
+        \paragraph{Date}
+        Per garantire un ordinamento in ordine cronologico in fase di pubblicazione, dal più recente al meno recente, verrà utilizzato il formato \textbf{yyyy-mm-dd} nel caso la data debba essere indicata nel nome del documento (vale per verbali interni/esterni), 
+        per indicare una data all'interno del documento, verrà utilizzato il formato \textbf{dd-mm-yyyy}.
+        \paragraph{Nomi di persona} 
+        All'interno dei documenti i nomi di persona saranno rappresentati da cognome e nome.
+        \paragraph{Elenchi puntati}
+        Gli elenchi puntati saranno gestiti in questo modo:
+        \begin{itemize}
+            \item Ogni elemento dell'elenco deve iniziare con la lettera maiuscola;
+            \item Ogni elemento dell'elenco deve terminare con ';', ad eccezione dell'ultimo che terminerà con '.';
+            \item Dopo i due punti la prima parola deve iniziare con la lettera minuscola.
+        \end{itemize}
+        \paragraph{Stile del testo}
+        \begin{itemize}
+            \item \textbf{Grassetto}: utilizzato per i titoli delle sezioni, per i sottotitoli e per i paragrafi, oltre alle parole ritenute particolarmente significative;
+            \item \textbf{Corsivo}: utilizzato quando vengono scritti nomi di documenti, nome del gruppo o indirizzo email del gruppo.
+        \end{itemize}
         \subsubsection{Strumenti per la stesura}
+        Per la stesura dei documenti verrà usato il linguaggio Latex, un linguaggio di marcatura per la preparazione di testi, basato sul programma di
+        composizione tipografica TEX, tutta la documentazione prodotta è contenuta nella cartella 'Docs'. I documenti seguono una struttura comune:
+        \begin{itemize}
+            \item Cartella 'config' contenente il file 'changelog\_input' che permette di compilare i campi della tabella di registrazione delle modifiche;
+            \item Cartella 'template' contenente:
+            \begin{itemize}
+                \item File 'changelog': questo file contiene la definizione di un comando chiamato \texttt{\char`\\changelogTable}, che serve per generare la tabella formattata;
+                \item File 'package': configura pacchetti e comandi per personalizzare l'impaginazione, le tabelle, le intestazioni, la numerazione e la formattazione di testo, inclusi glossari e codici;
+                \item Cartella 'Images' contenente le immagini inserite nel documento.
+            \end{itemize}
+            \item File 'main' include i file e i pacchetti necessari a comporre il file;
+            \item File 'titlepage' contenente il template della pagina di intestazione.
+        \end{itemize}
+        Oltre a questi files, verrà creato un file per ogni sezione, per garantire maggiore ordine all'organizzazione del documento, e facilitare la suddivisione dei compiti.
         \subsubsection{Documentazione interna}
+        La documentazione interna è composta da tutti i documenti che contengono informazioni utili per il gruppo,  
+        ma saranno comunque resi pubblici all'interno del repository, e nella schermata creata tramite GitHub Pages\textsubscript{g}.\\
+        La documentazione interna è composta da:
+        \begin{itemize}
+            \item \textit{\textbf{Verbali Interni}}: hanno lo scopo di riportare ciò che viene detto e discusso durante la riunione interna, ossia tra i soli membri del gruppo, 
+            rispetta la struttura generale dei documenti e le convenzioni, il nome del file deve avere la forma 'VI\_yyyy-mm-dd', per garantire l'ordinamento.
+            \\Nei \textit{verbali interni} la struttura del contenuto assume questa forma:
+            \begin{itemize}
+                \item \textbf{Informazioni generali}: contiene informazioni circa i dettagli sull'incontro, nello specifico:
+                \begin{itemize}
+                    \item Luogo;
+                    \item Data;
+                    \item Ora di inizio;
+                    \item Ora di fine;
+                    \item Partecipanti.
+                \end{itemize}
+                \item \textbf{Motivo della riunione}: breve descrizione narrativa di cosa è stato trattato in quell'incontro, descrive i motivi per cui è stata fatta la riunione;
+                \item \textbf{Resoconto}: descrive i temi trattati nel dettaglio, partendo dal motivo per il quale sono stati sollevati e arrivando alla decisione presa dal gruppo a seguito di una discussione;
+                \item \textbf{Prossimi obiettivi}: elenco puntato che descrive gli obiettivi che il gruppo si impegna a portare a termine nel breve periodo, indicativamente prima della riunione successiva;
+                \item \textbf{Tracciamento delle decisioni}: tabella che riassume le decisioni prese in quella riunione indicandone:
+                \begin{itemize}
+                    \item \textbf{Codice}: in formato VI Y.Z, dove Y indica il numero del \textit{verbale} (incrementale rispetto agli altri), Z indica il numero dell'argomento trattato (non per importanza, ma per ordine di discussione);
+                    \item \textbf{Descrizione}: descrizione in poche parole dell'argomento trattato.
+                \end{itemize} 
+                \end{itemize}
+        \item \textit{\textbf{Studio di fattibilità}}: documento interno di valutazione dei capitolati proposti dalle aziende per il progetto didattico, con lo scopo di selezionare il progetto migliore a cui candidarsi secondo valutazioni 
+        prese da parte del gruppo.\\
+        Il documento, per ogni capitolato, espone una breve descrizione del prodotto che l'azienda chiede di sviluppare, seguito da una serie di pro e contro emersi in base a criteri soggettivi dei membri del gruppo.
+        \\La valutazione è fatta sulla base di:
+        \begin{itemize}
+            \item \textbf{Presentazione del capitolato}: una presentazione più curata e dettagliata riscontra maggiore successo in fase di valutazione;
+            \item \textbf{Interesse del gruppo al tema del progetto}: un capitolato porta con se un tema, viene valutato quanto ogni capitolato sia interessante, per apportare un impatto positivo allo svolgimento da parte del gruppo;
+            \item \textbf{Tecnologie da utilizzare}: il contesto tecnologico di comune interesse porta maggiore produttività ed entusiasmo all'interno del gruppo;
+            \item \textbf{Conoscenze pregresse}: un capitolato può risultare più o meno complicato da svolgere a seconda delle conoscenze acquisite nel percorso dai membri del gruppo;
+            \item \textbf{Supporto da parte dell'azienda}: maggiore è il supporto offerto dall'azienda, migliore sarà la valutazione del capitolato.
+        \end{itemize}  
+        Il documento offre una panoramica completa di tutti i capitolati, potendoli valutare minuziosamente prima di esprimere una valutazione.
+        \item \textit{\textbf{Norme di progetto}}: documento interno che contiene le norme applicate dai membri del gruppo durante il ciclo di vita del prodotto, rispetta la struttura generale della documentazione, il corpo di questo documento è composto da:
+        \begin{itemize}
+            \item \textbf{Introduzione}: contiene una breve descrizione dello scopo del documento e del contesto in cui viene applicato.
+            \item \textbf{Processi organizzativi}: costituisce la definizione dei processi per quanto riguarda l'organizzazione del gruppo, in termini di:
+            \begin{itemize}
+                \item Pianificazione: viene definito il metodo di lavoro, i ruoli che verranno assegnati e le responsabilità che da essi ne derivano;
+                \item Modalità di comunicazione: vengono definite le modalità attraverso le quali il gruppo comunicherà internamente ed esternamente (qualsiasi comunicazione che comprenda un soggetto esterno al gruppo di lavoro);
+                \item Modalità di riunione: vengono definite le modalità con le quali si svolgeranno le riunioni, interne ed esterne;
+                \item Gestione di infrastrutture: descrizione delle infrastrutture utilizzate per lo sviluppo del progetto, affinchè venga garantita affidabilità e sicurezza;
+                \item Gestione dei dubbi o conflitti.
+            \end{itemize}
+            \item \textbf{Processi primari}: definizione dei processi primari, nel nostro caso:
+            \begin{itemize}
+                \item Fornitura: definizione e regole di fornitura e rapporto con il proponente;
+                \item Sviluppo: definizione e regole di sviluppo, per quanto riguarda analisi dei requisiti, progettazione e codifica.
+            \end{itemize}
+            \item \textbf{Processi di supporto}: definizione dei processi di supporto, nel nostro caso:
+            \begin{itemize}
+                \item Documentazione: descrive le regole e la struttura dei documenti, il ciclo di vita e le convenzioni da utilizzare durante la stesura. Vengono descritti i documenti presenti nel repository.
+                \item Gestione della configurazione: descrive come gestire il versionamento dei documenti.
+                \item Accertamento della qualità: descrive come vengono verificati i documenti;
+                \item Validazione: comprende le regole e la definizione di validazione.
+            \end{itemize} 
+        \end{itemize}
+        \end{itemize}
         \subsubsection{Documentazione esterna}
+        La documentazione esterna è composta da tutti i documenti che interessano anche al proponente e al committente.
+        \begin{itemize}
+            \item \textit{\textbf{Verbali esterni}}: verbali frutto di incontri fra i membri del gruppo e soggetti esterni ad esso.\\
+            Seguono la struttura dei verbali interni, il nome del file deve avere la forma 'VE\_yyyy-mm-dd', cambia il processo di approvazione\textsubscript{g} del documento, che oltre ad essere approvato internamente, viene approvato esternamente dal soggetto esterno con il quale 
+            si è svolto l'incontro, questo per rendere il documento più professionale e garantire coerenza tra il gruppo e il soggetto esterno.
+            \item \textit{\textbf{Lettera di candidatura}}: la \textit{Lettera di candidatura} serve per esprimere la volontà di candidarsi allo svolgimento del capitolato scelto dopo aver discusso e redatto lo \textit{Studio di fattibilità}, 
+            è composta da:
+            \begin{itemize}
+                \item Pagina iniziale: viene dichiarato il capitolato per il quale il gruppo ha deciso di candidarsi, elencando i capitolati che più hanno riscontrato interesse da parte del gruppo, 
+                inoltre espone una descrizione di cosa aspettarsi dal contenuto del documento;
+                \item Resoconto degli incontri: una breve descrizione degli incontri svolti con le aziende riguardo i capitolati elencati nella pagina iniziale;
+                \item Motivazione della scelta: espone il motivo per il quale il gruppo ha scelto il capitolato a cui candidarsi.
+            \end{itemize}
+            \item \textit{\textbf{Diario di bordo}}: documento informale ad uso esterno che permette di interagire settimanalmente con il committente per riportare aggiornamenti sullo stato di avanzamento del progetto, descrivendo tutto ciò che è stato fatto rispetto al \textit{diario di bordo} precedente, 
+            e quello che il gruppo si impegna a fare nel periodo successivo, vengono inoltre riportati dubbi e domande da porre al committente.
+            Vengono elaborati tramite la piattaforma online 'Canva.com', che permette di creare presentazioni collaborative, accessibili online.\\ 
+            La struttura del \textit{diario di bordo} è composta da 4 slides contenenti:
+            \begin{itemize}
+                \item \textbf{Slide 1}: slide di presentazione che contiene:
+                \begin{itemize}
+                    \item Logo;
+                    \item Nome del gruppo;
+                    \item Indirizzo email del guppo;
+                    \item Titolo del documento: il titolo del \textit{diario di bordo} segue una sintassi prefissata ovvero 'Diario di bordo \#N', dove N è un numero che incrementa ad ogni presentazione.
+                \end{itemize}
+                \item \textbf{Slide 2}: contiene ciò che è stato svolto nel periodo trascorso;
+                \item \textbf{Slide 3}: contiene ciò che il gruppo si impegna a portare a termine nel periodo successivo;
+                \item \textbf{Slide 4}: contiene dubbi da chiarire e difficoltà incontrate dal gruppo.
+            \end{itemize}
+            \item \textit{\textbf{Piano di progetto}}: il documento \textit{piano di progetto} ha lo scopo di supportare la gestione delle risorse per quanto riguarda l'avanzamento del progetto, per riuscire a portarlo a termine entro la data decisa.\\
+            Il \textit{piano di progetto} ha inoltre la funzione di descrivere il modello di sviluppo adottato, e di monitorarlo tramite la suddivisione in periodi, per analizzare il lavoro svolto e poter apportare miglioramenti con il passare del tempo.
+            \\La struttura del documento segue la struttura generale, per quanto riguarda il corpo, è composto da queste sezioni:
+            \begin{itemize}
+                \item \textbf{Introduzione}: breve introduzione che descrive cosa aspettarsi dal contenuto del documento;
+                \item \textbf{Analisi dei rischi}: sezione che riassume i rischi a cui il gruppo si espone a seguito dell'aggiudicazione del capitolato;
+                \item \textbf{Modello di sviluppo}: sezione che descrive il modello di sviluppo adottato dal gruppo;
+                \item \textbf{Pianificazione}: sezione che descrive lo svolgimento delle attività periodo per periodo;
+                \item \textbf{Preventivo}: sezione in cui viene pianificata in dettaglio la suddivisione dei ruoli con le corrispondenti ore di lavoro, per fornire un preventivo rispetto al periodo a cui ci si sta accingendo;
+                \item \textbf{Consuntivo}: sezione che riporta i dati raccolti al termine del periodo, per compararli con la previsione presente nella sezione di preventivo;
+                \item \textbf{Attualizzazione dei rischi}: sezione dove vengono riportati i rischi che si sono verificati durante lo svolgimento del progetto e le relative misure di mitigazione attuate.
+            \end{itemize}
+            \item \textit{\textbf{Glossario}}: documento che contiene il significato dei termini chiave utilizzati nel progetto (indicati con il pedice 'g'), organizzati in ordine alfabetico, utile per garantire una comprensione comune fornendo spiegazioni concise e precise.
+            \\La struttura del \textit{glossario} è composta da sezioni caratterizzate dalle lettere dell'alfabeto in ordine alfabetico, contenenti le parole che hanno come iniziale quella lettera.
+        \end{itemize}
 
     \subsection{Gestione delle configurazione}
         \subsubsection{Scopo}
+        La gestione della configurazione è un processo che mira a gestire e controllare i cambiamenti apportati
+        a un prodotto software o a un sistema durante il suo ciclo di vita. La gestione della configurazione per
+        la documentazione descrive come vengono identificate, controllate, tracciate e gestite le versioni di un
+        documento.
         \subsubsection{Versionamento}
-    
-            \paragraph{Software per il versionamento}
-            
+        Ogni versione del documento è identificata da un codice di versione nel formato \textbf{Z.Y.X} dove:
+        \begin{itemize}
+            \item \textbf{Z}: il documento è pronto per una delle revisioni, ovvero tutte le modifiche precedenti sono state approvate dal responsabile;
+            \item \textbf{Y}: la sezione aggiunta o modificata di un documento è stata verificata;
+            \item \textbf{X}: è stata corretta velocemente qualche incoerenza o errore minore.
+        \end{itemize}
 
     \subsection{Accertamento della qualità}
-    \subsection{Verifica}
+    \subsection{Verifica\textsubscript{g}}
         \subsubsection{Scopo}
-        
-        \subsubsection{Verifica della documentazione}
-        
+        Lo scopo del processo di verifica\textsubscript{g} è quello di accertare che non siano stati commessi errori nello svolgimento
+        delle attività prefissate. Questo processo viene applicato costantemente sia durante la stesura
+        della documentazione, che durante lo sviluppo del software.
+        \subsubsection{Verifica\textsubscript{g} della documentazione}
+        Al momento della necessità di modificare o aggiungere qualcosa a una sezione di un documento, si procederà in questo modo:
+        \begin{enumerate}
+            \item Verrà creata una issue che specifica l'attività di modifica o aggiunta da svolgere;
+            \item Verrà creato un sotto-branch\textsubscript{g} chiamato 'docs/\textit{nome\_del\_documento}-N' dove con N si intende il numero della issue di riferimento;
+            \item Rimanendo in questo sotto-branch\textsubscript{g}, verrà aggiornato il documento;
+            \item Una volta terminato, per iniziare il processo di verifica\textsubscript{g} verrà aperta una Pull Request\textsubscript{g};
+            \item Uno tra i verificatori in carica durante quello sprint si assegnerà la verifica del documento e modificherà il registro delle modifiche compilando il campo 'Verificatore';
+            \item Se la Pull Request\textsubscript{g} avrà esito positivo, ci sarà il merge tra il sotto-branch\textsubscript{g} e il branch\textsubscript{g} principale del documento, con conseguente chiusura della issue e del sotto-branch;
+            \item In caso di esito negativo, verranno segnalati gli errori da parte del verificatore tramite commenti, e il redattore si occuperà di risolverli continuando a lavorare nel sotto-branch\textsubscript{g}, fino ad avere il documento verificato.
+        \end{enumerate}
 
-        \subsubsection{Verifica del codice}
+        \subsubsection{Verifica\textsubscript{g} del codice}
     
     \subsection{Validazione}
         \subsubsection{Scopo}
-        
+        Per la documentazione la validazione corrisponde alla pubblicazione del documento nel branch\textsubscript{g} main.\\
+        Questo processo avviene dopo l'ultima verifica\textsubscript{g} e sarà il responsabile a stabilire se il prodotto è accettabile o ha bisogno di
+        ulteriori verifiche.
