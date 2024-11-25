@@ -1,5 +1,5 @@
 \section{Processi di Supporto}
-I processi di supporto supportano quelli primari in modo da renderli più efficienti ed efficaci.
+I processi di supporto contribuiscono a rendere i processi primari più efficienti ed efficaci.
     \subsection{Documentazione}
         \subsubsection{Descrizione}
         Questa sezione contiene tutte le norme che ogni membro del gruppo dovrà seguire durante 
@@ -10,10 +10,10 @@ I processi di supporto supportano quelli primari in modo da renderli più effici
         \begin{itemize}
             \item \textbf{Creazione}: viene creato un nuovo branch\textsubscript{g}, che prende il nome del documento stesso, e qui verrà caricato il template, in questo branch\textsubscript{g} ci saranno solamente le versioni verificate del documento;
             \item \textbf{Stesura}: per la stesura verrà creato un sotto-branch\textsubscript{g}, caratterizzato dal numero della issue che richiede la stesura, in seguito si procede con la stesura delle sezioni necessarie, tracciando i cambiamenti nel registro delle modifiche e aggiornando la versione;
-            \item \textbf{Verifica\textsubscript{g}}: prima di considerarsi completata, ogni modifica al documento deve essere verificata da due verificatori in carica, tramite una Pull Request\textsubscript{g} viene messo in esame quanto aggiunto al documento rispetto alla versione precedente, si presentano due casi:
+            \item \textbf{Verifica\textsubscript{g}}: prima di considerarsi completata, ogni modifica al documento deve essere verificata da un verificatore in carica, tramite una Pull Request\textsubscript{g} viene messo in esame quanto aggiunto al documento rispetto alla versione precedente, si presentano due casi:
             \begin{itemize}
-                \item \textbf{Pull Request\textsubscript{g} accettata}: i verificatori non trovano errori e considerano il lavoro 'verificato', viene accettata la Pull Request\textsubscript{g} e viene fatto il merge tra il branch\textsubscript{g} di lavoro e il branch\textsubscript{g} del documento, viene così chiusa la issue assegnata;
-                \item \textbf{Pull Request\textsubscript{g} rifiutata}: i verificatori non considerano la stesura adeguata e procedono a segnalare errori ed eventuali correzioni, la Pull Request\textsubscript{g} viene rifiutata e si continua a lavorare nel sotto-branch\textsubscript{g};
+                \item \textbf{Pull Request\textsubscript{g} accettata}: il verificatore non trova errori e considera il lavoro 'verificato', viene accettata la Pull Request\textsubscript{g} e viene fatto il merge tra il branch\textsubscript{g} di lavoro e il branch\textsubscript{g} del documento, viene così chiusa la issue assegnata e chiuso il branch di lavoro;
+                \item \textbf{Pull Request\textsubscript{g} rifiutata}: il verificatore non considera la stesura adeguata e procede a segnalare errori ed eventuali correzioni, la Pull Request\textsubscript{g} viene rifiutata e si continua a lavorare nel sotto-branch\textsubscript{g};
             \end{itemize}
             \item \textbf{Approvazione\textsubscript{g}}: Una volta che tutte le sezioni sono state verificate, e il documento è pronto per essere pubblicato, si procede con l'approvazione\textsubscript{g}, effettuata dal responsabile, utilizziamo questa procedura:
             \begin{itemize}
@@ -135,7 +135,7 @@ I processi di supporto supportano quelli primari in modo da renderli più effici
             \item \textbf{Processi organizzativi}: costituisce la definizione dei processi per quanto riguarda l'organizzazione del gruppo, in termini di:
             \begin{itemize}
                 \item Pianificazione: viene definito il metodo di lavoro, i ruoli che verranno assegnati e le responsabilità che da essi ne derivano;
-                \item Modalità di comunicazione: vengono definite le modalità attraverso le quali il gruppo comunicherà internamente, ed esternamente (qualsiasi comunicazione che comprenda un soggetto esterno al gruppo di lavoro);
+                \item Modalità di comunicazione: vengono definite le modalità attraverso le quali il gruppo comunicherà internamente ed esternamente (qualsiasi comunicazione che comprenda un soggetto esterno al gruppo di lavoro);
                 \item Modalità di riunione: vengono definite le modalità con le quali si svolgeranno le riunioni, interne ed esterne;
                 \item Gestione di infrastrutture: descrizione delle infrastrutture utilizzate per lo sviluppo del progetto, affinchè venga garantita affidabilità e sicurezza;
                 \item Gestione dei dubbi o conflitti.
@@ -227,9 +227,9 @@ I processi di supporto supportano quelli primari in modo da renderli più effici
             \item Verrà creato un sotto-branch\textsubscript{g} chiamato 'docs/\textit{nome\_del\_documento}-N' dove con N si intende il numero della issue di riferimento;
             \item Rimanendo in questo sotto-branch\textsubscript{g}, verrà aggiornato il documento;
             \item Una volta terminato, per iniziare il processo di verifica\textsubscript{g} verrà aperta una Pull Request\textsubscript{g};
-            \item I verificatori in carica esamineranno le modifiche apportate al documento;
-            \item Se la Pull Request\textsubscript{g} avrà esito positivo, ci sarà il merge tra il sotto-branch\textsubscript{g} e il branch\textsubscript{g} principale del documento, con conseguente chiusura della issue;
-            \item In caso di esito negativo, verranno segnalati gli errori da parte dei verificatori tramite commenti, e il redattore si occuperà di risolverli continuando a lavorare nel sotto-branch\textsubscript{g}, fino ad avere il documento verificato.
+            \item Uno tra i verificatori in carica durante quello sprint si assegnerà la verifica del documento e modificherà il registro delle modifiche compilando il campo 'Verificatore';
+            \item Se la Pull Request\textsubscript{g} avrà esito positivo, ci sarà il merge tra il sotto-branch\textsubscript{g} e il branch\textsubscript{g} principale del documento, con conseguente chiusura della issue e del sotto-branch;
+            \item In caso di esito negativo, verranno segnalati gli errori da parte del verificatore tramite commenti, e il redattore si occuperà di risolverli continuando a lavorare nel sotto-branch\textsubscript{g}, fino ad avere il documento verificato.
         \end{enumerate}
 
         \subsubsection{Verifica\textsubscript{g} del codice}
