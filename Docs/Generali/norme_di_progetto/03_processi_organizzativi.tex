@@ -259,9 +259,9 @@ di supporto e la gestione del personale.
             \item \textbf{docs/NOME-DOCUMENTO} $\rightarrow$ il documento deve essere verificato e successivamente viene eliminato il branch derivato.
         \end{itemize}
 
-        Di seguito si riporta un semplice ma esaustivo workflow tramite immagine:
+        Di seguito si riporta un semplice ma esaustivo esempio di workflow tramite immagine:
         \begin{center}
-            \includegraphics[scale = 0.07]{template/images/workflow.jpg}
+            \includegraphics[scale = 0.33]{template/images/workflow.png}
         \end{center}
 
         \subsubsection{Commits}\label{inf:comm}
@@ -288,7 +288,7 @@ di supporto e la gestione del personale.
         relativi verranno raggruppati in un unico commit, il quale titolo deve rispettare la struttura sintattica descritta in
         seguito.
         \begin{center}
-            \textbf{Update: [NOME-DOCUMENTO] to [VERSONE]}
+            \textbf{Update: [NOME-DOCUMENTO]-[VERSONE]}
         \end{center}
         dove:
 
@@ -310,8 +310,8 @@ di supporto e la gestione del personale.
         permette di verificare il lavoro svolto prima di integrarlo con un branch protetto ed eseguire un veloce test di compilazione della sezione aggiunta.
         Alla creazione di una Pull Request bisogna associare:
         \begin{itemize}
-            \item \textbf{Title}: [NOME-DOCUMENTO]-[NOME-SEZIONE];
-            \item \textbf{Verificatori in carica}: hanno il compito di trovare eventuali errori o mancanze e fornire un feedback
+            \item \textbf{Title}: [NOME-DOCUMENTO]-[ID-ISSUE];
+            \item \textbf{Verificatori in carica}: coloro che hanno il compito di trovare eventuali errori o mancanze e fornire un feedback
             riguardante il contenuto direttamente su GitHub attraverso un commento, sulla stessa Pull Request.
             Non sarà possibile effettuare il merge finché tutti i commenti di revisione non saranno stati risolti
             con, al termine, l'approvazione di almeno uno dei verificatori e il test di build non dia esito positivo;
@@ -322,13 +322,12 @@ di supporto e la gestione del personale.
             \end{center}
             in modo tale che vengano tutte chiuse in automatico quando la Pull request verrà accettata;
             \item \textbf{Gli assegnatari}: coloro che hanno anche il compito di apportare le modifiche necessarie al documento;
-            \item \textbf{Labels}: che riassumono di che natura è la Pull Request.
+            \item \textbf{Label}: riassume di che natura è la Pull Request.
         \end{itemize}
         dove:
 
         \begin{itemize}
             \item \textbf{NOME-DOCUMENTO}: indica il nome del documento sul quale si sta lavorando e richiedendo l'approvazione;
-            \item \textbf{NOME-SEZIONE}: indica la sezione relativa al documento creato;
             \item \textbf{ID-ISSUE}: indica il numero identificativo associato alla issue relativa alla modifica del documento.
         \end{itemize}
 
@@ -348,12 +347,22 @@ di supporto e la gestione del personale.
         relativa alla \textit{Requirements and Technology Baseline} e di conseguenza la realizzazione di un \textit{PoC}.
 
 
-        \subsubsection{Project board}
+        \subsubsection{Project board}\label{inf:pb}
         Viene utilizzata un' unica project board per tracciare tutte le issue della repository, fungendo da backlog del progetto.
-        La project board è divisa nelle seguenti sezioni:
+        La project board è divisa in 4 pannelli dove ogni uno raggruppa e mostra le issue in base alle proprie caratteristiche.
+        \begin{itemize}
+            \item \textbf{Board}: rappresenta le issue con un modello kanban;
+            \item \textbf{Priority board}: simile al Backlog ma ordina le issue in base alla loro priorità;
+            \item \textbf{Team items}: rappresenta le issue tramite una lista verticale e rende possibile la modifica delle loro proprietà in modo semplice e veloce;
+            \item \textbf{Roadmap}: rappresenta le issue seguendo un modello stile diagramma di Gantt, dove in questo caso le task sono le singole issue.
+        \end{itemize}
+        Ad ogni issue è legato, inoltre, uno stato che viene utilizzato specialmente dal panello Backlog e Priority board. 
+        Essi sono:
         \begin{itemize}
             \item \textbf{Backlog}: issue che non sono ancora state iniziate o assegnate;
             \item \textbf{In progress}: issue che sono state assegnate e a cui almeno un membro, tra gli assegnatari, ha iniziato a lavorarci;
+            \item \textbf{Waiting for review}: issue terminate e che potrebbero essere chiuse definitivamente dopo la verifica della modifiche apportate al documento;
+            \item \textbf{In review}: issue terminate e la verifica del documento è stata presa in carico da un verificatore;
             \item \textbf{Done}: issue terminate e chiuse, con documenti o codice verificati.
         \end{itemize}
         Esempio di workflow potrebbe essere il seguente:
@@ -369,17 +378,31 @@ di supporto e la gestione del personale.
         Il gruppo utilizza l'issue tracking system di Github per tenere traccia delle issue create. Le issue verranno
         create dall'amministratore, ma la loro assegnazione verrà effettuata dai membri del gruppo in modo autonomo, in base
         alla priorità, ruoli e disponibilità.
-        Per marcare le issue secondo criteri di interesse vengono utilizzate delle labels.
+        Per marcare le issue secondo criteri di interesse vengono utilizzate delle label.
         \begin{itemize}
-            \item \textbf{P1}: indica una issue o pull request a priorità alta;
-            \item \textbf{P2}: indica una issue o pull request a priorità media;
-            \item \textbf{P3}: indica una issue o pull request a priorità bassa;
             \item \textbf{bug}: indica una issue o pull request relativa ad un errore/bug nel codice;
             \item \textbf{code}: indica una issue o pull request relativa al codice;
             \item \textbf{documentation}: indica una issue o pull request relativa alla documentazione;
             \item \textbf{enhancement}: indica una issue o pull request relativa al miglioramento di scrittura documentazione o codice;
             \item \textbf{wontfix}: indica una issue che verrà ignorata per motivi di tempo o perché punta ad una azione facoltativa.
         \end{itemize}
+        Ogni issue, oltre alle label, possiede degli attributi aggiuntivi che permettono di arricchire
+        notevolmente la rappresentazione visiva sui pannelli, facilitando la comprensione e l'organizzazione del lavoro.
+        Si faccia riferimento alla sezione \nameref{inf:pb}.
+        Questi attributi sono:
+        \begin{itemize}
+            \item \textbf{Estimate}: indica le ore stimate per completare la task descritta dalla issue;
+            \item \textbf{Effective}: indica le ore effettive per completare la task descritta dalla issue;
+            \item \textbf{Priority}: indica la priorità di una issue;
+            \begin{itemize}
+                \item \textbf{P0}: priorità alta;
+                \item \textbf{P1}: priorità media;
+                \item \textbf{P2}: priorità bassa.
+            \end{itemize}
+            \item \textbf{Begin}: indica la data entro la quale si deve iniziare a svolgere la task descritta dalla issue;
+            \item \textbf{Due by}: indica la data entro la quale la task descritta dalla issue deve essere terminata.
+        \end{itemize}
+
         Nel caso un membro del gruppo dovesse rendersi conto che l'issue che sta svolgendo potrebbe essere
         suddivisa in ulteriori issue, dovrà rivolgersi al responsabile per notificarlo di ciò, il quale, se d'accordo,
         darà il compito all'amministratore di modificare/aggiungere delle issue.
@@ -388,7 +411,7 @@ di supporto e la gestione del personale.
         \begin{itemize}
             \item  \textbf{TO-DO per documenti}
             \begin{itemize}
-                \item \textbf{Titolo} : [NOME-DOCUMENTO]-[NOME-SEZIONE];
+                \item \textbf{Titolo}: [NOME-DOCUMENTO]-[NOME-SEZIONE];
                 \item \textbf{Oggetto di discussione} (facoltativo): [NOME-VERBALE];
                 \item \textbf{Codice verbale}: il codice del \textit{tracciamento delle decisioni} riportato a fine di ogni verbale;
                 \item \textbf{Link verbale}: un collegamento ipertestuale al documento per accedervi direttamente;
