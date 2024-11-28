@@ -14,24 +14,28 @@ jobs:
         run: |
           git remote set-branches --add origin main
           git fetch
-          changed_files=$(git diff --name-only origin/main | grep 'main.tex$') || true
-          if [ $(echo "$changed_files" | wc -l) -gt 1 ]; then
+          changed_files=$(git diff --name-only origin/$GITHUB_BASE_REF | grep '.tex$') || true
+          changed_document=$(echo "$changed_files" | cut -d/ -f1-3 | uniq) 
+          echo "$changed_files"
+          echo "$changed_document"
+          
+          if [ $(echo "$changed_document" | wc -l) -gt 1 ]; then
             echo "::error::You are supposed to modify one document per branch"
+            echo "::error::You modified: $changed_document"
             exit 1
-          elif [ -n $changed_files ]; then 
+          elif [ $(echo "$changed_document" | wc -l) -eq 0 ]; then 
             echo "No document was modified"
           fi
-          echo "file=$changed_files" >> $GITHUB_OUTPUT
+          echo "doc=$changed_document" >> $GITHUB_OUTPUT
       - name : Install dependencies
         run: |
-          if [ -n "${{ steps.find.outputs.file }}" ]; then
+          if [ -n "${{ steps.find.outputs.doc }}" ]; then
             sudo apt install -y texlive texlive-latex-extra texlive-lang-italian
           fi
       - name: Compile the modified LaTeX file
         run: |
-          if [ -n "${{ steps.find.outputs.file }}" ]; then
-            directory=$(dirname "${{ steps.find.outputs.file }}")
-            file=$(basename "${{ steps.find.outputs.file }}")
+          if [ -n "${{ steps.find.outputs.doc }}" ]; then
+            directory="${{ steps.find.outputs.doc }}"
             cd "$directory"
-            pdflatex "$file"        
+            pdflatex main.tex        
           fi
