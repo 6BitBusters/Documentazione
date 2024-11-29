@@ -270,7 +270,7 @@ di supporto e la gestione del personale.
         modifiche sarà necessario aprire una Pull Request, motivo per il quale abbiamo introdotto dei branch derivati.
         I messaggi di commit dovranno seguire la seguenti strutture sintattiche:
         \begin{center}
-            \textbf{add: [NOME-DOCUMENTO]-[ID-ISSUE]\\
+            \textbf{add: [NOME-DOCUMENTO]\\
             change: [COSA]\\
             restructure: [COSA]}
         \end{center}
@@ -280,7 +280,6 @@ di supporto e la gestione del personale.
             \item \textbf{change}: per i successivi commit, nei quali si va a modificare il documento già esistente;
             \item \textbf{restructure}: indica una ristrutturazione del branch main per quanto riguarda l'organizzazione delle cartelle e/o la modifica di action o template di issue;
             \item \textbf{NOME-DOCUMENTO}: indica il nome del documento creato;
-            \item \textbf{NOME-SEZIONE}: indica la sezione relativa al documento creato;
             \item \textbf{COSA}: breve descrizione di cosa di è aggiunto e/o fatto.
         \end{itemize}
 
@@ -349,7 +348,7 @@ di supporto e la gestione del personale.
 
         \subsubsection{Project board}\label{inf:pb}
         Viene utilizzata un' unica project board per tracciare tutte le issue della repository, fungendo da backlog del progetto.
-        La project board è divisa in 4 pannelli dove ogni uno raggruppa e mostra le issue in base alle proprie caratteristiche.
+        La project board è divisa in 4 pannelli i quali e mostrano e raggruppano le issue in base alle proprie caratteristiche.
         \begin{itemize}
             \item \textbf{Board}: rappresenta le issue con un modello kanban;
             \item \textbf{Priority board}: simile al Backlog ma ordina le issue in base alla loro priorità;
@@ -357,11 +356,11 @@ di supporto e la gestione del personale.
             \item \textbf{Roadmap}: rappresenta le issue seguendo un modello stile diagramma di Gantt, dove in questo caso le task sono le singole issue.
         \end{itemize}
         Ad ogni issue è legato, inoltre, uno stato che viene utilizzato specialmente dal panello Backlog e Priority board. 
-        Essi sono:
+        I possibili stati sono:
         \begin{itemize}
             \item \textbf{Backlog}: issue che non sono ancora state iniziate o assegnate;
             \item \textbf{In progress}: issue che sono state assegnate e a cui almeno un membro, tra gli assegnatari, ha iniziato a lavorarci;
-            \item \textbf{Waiting for review}: issue terminate e che potrebbero essere chiuse definitivamente dopo la verifica della modifiche apportate al documento;
+            \item \textbf{Waiting for review}: issue terminate e che potrebbero essere chiuse definitivamente dopo la verifica delle modifiche apportate al documento;
             \item \textbf{In review}: issue terminate e la verifica del documento è stata presa in carico da un verificatore;
             \item \textbf{Done}: issue terminate e chiuse, con documenti o codice verificati.
         \end{itemize}
@@ -378,7 +377,7 @@ di supporto e la gestione del personale.
         Il gruppo utilizza l'issue tracking system di Github per tenere traccia delle issue create. Le issue verranno
         create dall'amministratore, ma la loro assegnazione verrà effettuata dai membri del gruppo in modo autonomo, in base
         alla priorità, ruoli e disponibilità.
-        Per marcare le issue secondo criteri di interesse vengono utilizzate delle label.
+        Per marcare le issue secondo criteri di interesse vengono utilizzate delle label:
         \begin{itemize}
             \item \textbf{bug}: indica una issue o pull request relativa ad un errore/bug nel codice;
             \item \textbf{code}: indica una issue o pull request relativa al codice;
