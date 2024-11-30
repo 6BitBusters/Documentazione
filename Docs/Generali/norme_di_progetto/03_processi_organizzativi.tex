@@ -210,7 +210,7 @@ di supporto e la gestione del personale.
                 \end{itemize}
             \end{itemize}
             \item \textbf{Branches derivati}: sono branch utilizzati per aggiungere modifiche e aggiornare un documento o una parte di codice che poi dovrà essere verificata
-            attraverso una Pull Request verso il branch da cui esso è stato derivato;\\
+            attraverso una pull request verso il branch da cui esso è stato derivato;\\
             I nomi di questi branch, per quanto riguarda la documentazione, si suddividono in 2 casi:
             \begin{itemize}
                 \item \textbf{Per Verbali e Glossario}:
@@ -229,7 +229,7 @@ di supporto e la gestione del personale.
                 \item \textbf{ID-ISSUE}: indica il numero identificativo associato alla issue relativa alla modifica del documento;
                 \item \textbf{COGNOME-ASSEGNATARIO}: indica il cognome del membro che ha redatto il documento.
             \end{itemize}
-            Nel caso un componente volesse richiedere una Pull Request ma il branch di destinazione fosse più aggiornato di quello di partenza o derivato, il branch protection
+            Nel caso un componente volesse richiedere una pull request ma il branch di destinazione fosse più aggiornato di quello di partenza o derivato, il branch protection
             impone che avvenga un merge dal branch di destinazione a quello di partenza in modo tale da applicare le modifiche delle versioni già approvate, al documento, che ne contiene
             altre e che di conseguenza deve passare ad una versione successiva.
             \item \textbf{Branch di hotfix}: sono branch dedicati all'hotfix e quindi a correzioni minime, sia per la documentazione che per il codice. Valgono le stesse regole dei
@@ -246,12 +246,12 @@ di supporto e la gestione del personale.
         \end{itemize}
 
         In ogni branch secondario il lavoro può essere svolto da un solo componente del gruppo, specificatamente colui che ha preso in carico l'issue alla cui risoluzione quel branch è dedicato.
-        È tuttavia possibile assegnare una issue a più persone; in tal caso, a ciascun assegnatario verrà dedicato un branch su cui lavorare. Al termine delle modifiche, prima di aprire la Pull Request 
-        per la verifica del lavoro svolto, sarà necessario eseguire il merge dei vari branch secondari tramite una Pull Request specifica. Quest'ultima non richiederà ulteriori verifiche, poiché tali attività
-        saranno eseguite nell'apposita Pull Request destinata a questo scopo.
+        È tuttavia possibile assegnare una issue a più persone; in tal caso, a ciascun assegnatario verrà dedicato un branch su cui lavorare. Al termine delle modifiche, prima di aprire la pull request 
+        per la verifica del lavoro svolto, sarà necessario eseguire il merge dei vari branch secondari tramite una pull request specifica. Quest'ultima non richiederà ulteriori verifiche, poiché tali attività
+        saranno eseguite nell'apposita pull request destinata a questo scopo.
     
          
-        Una volta che la issue viene risolta il componente deve richiedere una Pull Request
+        Una volta che la issue viene risolta il componente deve richiedere una pull request
         verso il branch da cui esso è stato derivato.
         Notare che se il branch di destinazione è:
         \begin{itemize}
@@ -265,9 +265,9 @@ di supporto e la gestione del personale.
         \end{center}
 
         \subsubsection{Commits}\label{inf:comm}
-        E'preferibile che ogni commit abbia una singola responsabilità per cambiamento.
+        È preferibile che ogni commit abbia una singola responsabilità per cambiamento.
         I commits non possono essere effettuati direttamente sui branch protetti ma per contribuire con delle aggiunte o
-        modifiche sarà necessario aprire una Pull Request, motivo per il quale abbiamo introdotto dei branch derivati.
+        modifiche sarà necessario aprire una pull request, motivo per il quale abbiamo introdotto dei branch derivati.
         I messaggi di commit dovranno seguire la seguenti strutture sintattiche:
         \begin{center}
             \textbf{add: [NOME-DOCUMENTO]\\
@@ -283,11 +283,11 @@ di supporto e la gestione del personale.
             \item \textbf{COSA}: breve descrizione di cosa di è aggiunto e/o fatto.
         \end{itemize}
 
-        Notare però che dopo l'approvazione di una Pull Request tutti i commit
-        relativi verranno raggruppati in un unico commit, il quale titolo deve rispettare la struttura sintattica descritta in
+        Notare però che dopo l'approvazione di una pull request tutti i commit
+        relativi verranno raggruppati in un unico commit, il cui titolo deve rispettare la struttura sintattica descritta in
         seguito.
         \begin{center}
-            \textbf{Update: [NOME-DOCUMENTO]-[VERSONE]}
+            \textbf{Update: [NOME-DOCUMENTO]-[VERSIONE]}
         \end{center}
         dove:
 
@@ -295,23 +295,24 @@ di supporto e la gestione del personale.
             \item \textbf{NOME-DOCUMENTO}: indica il nome del documento nel quale sono state verificate le modifiche;
             \item \textbf{VERSIONE}: indica il numero di versione aggiornata.
         \end{itemize}
-        Per quanto riguarda il commento facoltativo, si lascia quello di default proposto da GitHub, ovvero un elenco puntato di tutti i commit che verranno raggruppate.\\
+        Per quanto riguarda il commento facoltativo, si lascia quello di default proposto da GitHub, 
+        ovvero un elenco puntato di tutti i commit che verranno raggruppati.\\
         
 
         Per aggiornare direttamente il main si è deciso di disabilitare temporaneamente
         il protection, eseguire un commit con delle modifiche, con la struttura sintattica elencata sopra, e in fine attivare nuovamente il protection.
         Questa soluzione è stata adottata perché il team ritiene sia più veloce e semplice apportare modifiche a template e action in questo modo
-        rispetto che alla creazione di un branch e ad un successivo Pull Request, inoltre il branch main una volta ultimate le automazioni non verrà più modificato se non dai merge
-        scatenati delle Pull Request.
+        rispetto che alla creazione di un branch e ad un successivo pull request, inoltre il branch main una volta ultimate le automazioni non verrà più modificato se non dai merge
+        scatenati dalle pull request.
 
-        \subsubsection{Pull requests}\label{inf:pr}
-        Per effettuare un merge su un branch protetto si deve aprire, da GitHub, una Pull Request. Questa
+        \subsubsection{Pull request}\label{inf:pr}
+        Per effettuare un merge su un branch protetto si deve aprire, da GitHub, una pull request. Questa
         permette di verificare il lavoro svolto prima di integrarlo con un branch protetto ed eseguire un veloce test di compilazione della sezione aggiunta.
-        Alla creazione di una Pull Request bisogna associare:
+        Alla creazione di una pull request bisogna associare:
         \begin{itemize}
             \item \textbf{Title}: [NOME-DOCUMENTO]-[ID-ISSUE];
             \item \textbf{Verificatori in carica}: coloro che hanno il compito di trovare eventuali errori o mancanze e fornire un feedback
-            riguardante il contenuto direttamente su GitHub attraverso un commento, sulla stessa Pull Request.
+            riguardante il contenuto direttamente su GitHub attraverso un commento, sulla stessa pull request.
             Non sarà possibile effettuare il merge finché tutti i commenti di revisione non saranno stati risolti
             con, al termine, l'approvazione di almeno uno dei verificatori e il test di build non dia esito positivo;
             \item \textbf{Descrizione}: contiene una lista riassuntiva di cio' che è stato fatto includendo le issue completate, e quindi da chiudere,
@@ -319,9 +320,9 @@ di supporto e la gestione del personale.
             \begin{center}
                 \textbf{\textit{close ID-ISSUE}}
             \end{center}
-            in modo tale che vengano tutte chiuse in automatico quando la Pull request verrà accettata;
+            in modo tale che vengano tutte chiuse in automatico quando la pull request verrà accettata;
             \item \textbf{Gli assegnatari}: coloro che hanno anche il compito di apportare le modifiche necessarie al documento;
-            \item \textbf{Label}: riassume di che natura è la Pull Request.
+            \item \textbf{Label}: riassume di che natura è la pull request.
         \end{itemize}
         dove:
 
@@ -332,7 +333,7 @@ di supporto e la gestione del personale.
 
         Per una descrizione più dettagliata delle issue si faccia riferimento a \nameref{inf:its}
 
-        Per i commit relativi alle Pull Requests seguire le regole descritte nella sezione \nameref{inf:pr}
+        Per i commit relativi alle pull request seguire le regole descritte nella sezione \nameref{inf:pr}
 
         \subsubsection{Milestones}
         Esistono 2 tipi di milestone:
@@ -347,15 +348,17 @@ di supporto e la gestione del personale.
 
 
         \subsubsection{Project board}\label{inf:pb}
-        Viene utilizzata un' unica project board per tracciare tutte le issue della repository, fungendo da backlog del progetto.
-        La project board è divisa in 4 pannelli i quali e mostrano e raggruppano le issue in base alle proprie caratteristiche.
+        Viene utilizzata un'unica project board per tracciare tutte le issue della repository, che funge da backlog del progetto.
+        La project board è divisa in 4 pannelli, che e mostrano e raggruppano le issue in base alle proprie caratteristiche.
         \begin{itemize}
             \item \textbf{Board}: rappresenta le issue con un modello kanban;
             \item \textbf{Priority board}: simile al Backlog ma ordina le issue in base alla loro priorità;
-            \item \textbf{Team items}: rappresenta le issue tramite una lista verticale e rende possibile la modifica delle loro proprietà in modo semplice e veloce;
-            \item \textbf{Roadmap}: rappresenta le issue seguendo un modello stile diagramma di Gantt, dove in questo caso le task sono le singole issue.
+            \item \textbf{Team items}: rappresenta le issue tramite una lista verticale e rende possibile 
+            la modifica delle loro proprietà in modo semplice e veloce;
+            \item \textbf{Roadmap}: rappresenta le issue in maniera simile a un diagramma di Gantt, 
+            dove in questo caso i task sono le singole issue.
         \end{itemize}
-        Ad ogni issue è legato, inoltre, uno stato che viene utilizzato specialmente dal panello Backlog e Priority board. 
+        Ad ogni issue è legato, inoltre, uno stato che viene utilizzato specialmente dal pannello Board e Priority board. 
         I possibili stati sono:
         \begin{itemize}
             \item \textbf{Backlog}: issue che non sono ancora state iniziate o assegnate;
@@ -368,8 +371,8 @@ di supporto e la gestione del personale.
         \begin{enumerate}
             \item Viene creata l'issue ed inserita all'interno della sezione ”Backlog” della project board
             \item Quando viene presa in carico, l'issue viene spostata nella sezione ”In Progress” fino al suo completamento
-            \item L'incaricato, una volta risolta, apre una Pull Request a cui assegna la issue, come descritto nella sezione \nameref{inf:pr}.
-            \item Dopo l'approvazione della Pull Request la issue verrà chiusa e spostata in modo automatico nella sezione ”Done”.
+            \item L'incaricato, una volta risolta, apre una pull request a cui assegna la issue, come descritto nella sezione \nameref{inf:pr}.
+            \item Dopo l'approvazione della pull request la issue verrà chiusa e spostata in modo automatico nella sezione ”Done”.
         \end{enumerate}
 
 
@@ -390,16 +393,16 @@ di supporto e la gestione del personale.
         Si faccia riferimento alla sezione \nameref{inf:pb}.
         Questi attributi sono:
         \begin{itemize}
-            \item \textbf{Estimate}: indica le ore stimate per completare la task descritta dalla issue;
-            \item \textbf{Effective}: indica le ore effettive per completare la task descritta dalla issue;
+            \item \textbf{Estimate}: indica le ore stimate per completare il task descritto dalla issue;
+            \item \textbf{Effective}: indica le ore effettive per completare il task descritto dalla issue;
             \item \textbf{Priority}: indica la priorità di una issue;
             \begin{itemize}
                 \item \textbf{P0}: priorità alta;
                 \item \textbf{P1}: priorità media;
                 \item \textbf{P2}: priorità bassa.
             \end{itemize}
-            \item \textbf{Begin}: indica la data entro la quale si deve iniziare a svolgere la task descritta dalla issue;
-            \item \textbf{Due by}: indica la data entro la quale la task descritta dalla issue deve essere terminata.
+            \item \textbf{Begin}: indica la data entro la quale si deve iniziare a svolgere il task descritto dalla issue;
+            \item \textbf{Due by}: indica la data entro la quale il task descritto dalla issue deve essere terminata.
         \end{itemize}
 
         Nel caso un membro del gruppo dovesse rendersi conto che l'issue che sta svolgendo potrebbe essere
@@ -419,14 +422,14 @@ di supporto e la gestione del personale.
             \end{itemize}
             \item  \textbf{To-DO per codice}
             \begin{itemize}
-                \item \textbf{Titolo} : [CODICE-CASO-USO]-[NOME-FEATURES];
+                \item \textbf{Titolo} : [CODICE-CASO-USO]-[NOME-FEATURE];
                 \item \textbf{Oggetto di discussione} (facoltativo): [NOME-VERBALE];
                 \item \textbf{Ruolo}: il ruolo che l'attività puntata della issue richiede;
                 \item \textbf{Informazione da implementare}: breve descrizione di cosa, la feature aggiunta, deve fare o quali requisiti deve soddisfare.
             \end{itemize}
             \item  \textbf{Bug nel codice}
             \begin{itemize}
-                \item \textbf{Titolo}: [CODICE-CASO-USO]-[NOME-FEATURES];
+                \item \textbf{Titolo}: [CODICE-CASO-USO]-[NOME-FEATURE];
                 \item \textbf{Descrizione bug}: breve descrizione del bug;
                 \item \textbf{Passi per riprodurlo}: lista numerata in \textit{Markdown} per riassumere i passi da eseguire in modo tale che un'altro programmatore lo possa replicare;
                 \item \textbf{Comportamento aspettato}: breve descrizione del comportamento aspettato;
@@ -455,7 +458,7 @@ di supporto e la gestione del personale.
             \item \textbf{NOME-VERBALE}: indica il nome del verbale nel quale si è discusso della relativa attività rappresentata successivamente tramite una issue;
             \item \textbf{NOME-SEZIONE}: indica la sezione relativa al documento;
             \item \textbf{CODICE-CASO-USO}: indica il nome del caso d'uso nel quale si sta lavorando;
-            \item \textbf{NOME-FEATURES}: indica il nome della feature relativa al caso d'uso.
+            \item \textbf{NOME-FEATURE}: indica il nome della feature relativa al caso d'uso.
         \end{itemize}
 
 
