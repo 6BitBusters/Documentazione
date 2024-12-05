@@ -1,6 +1,6 @@
 \section{Casi d'uso}
 \subsection{Attore}
-A seguito del fatto che per lo svolgimento del progetto, non è necessario gestire permessi differenti per l'accesso alle funzionalità, l'attore che interagisce con il nostro software è unico, denominato "Utente".\\
+Poiché per lo svolgimento del progetto non è necessario gestire permessi differenti per l'accesso alle funzionalità, l'attore che interagisce con il nostro software è unico, denominato "Utente".\\
 \textbf{Utente:} soggetto che utilizza la web application, sfruttandone le funzionalità.
 \subsection{UC1 - Visualizzazione lista dei dataset disponibili}
 \begin{figure}[h!]
@@ -14,7 +14,7 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     gli viene mostrato un elenco di dataset.\\ Da questa lista, può scegliere il dataset da rappresentare sotto forma di tabella e di grafico 3D.
     \item \textbf{Precondizioni:}
     \begin{itemize}
-        \item L'utente ha accesso all'applicazione e l'interfaccia è stata caricata correttamente.
+        \item L'utente ha accesso all'applicazione.
     \end{itemize}
     \item \textbf{Postcondizioni:}
     \begin{itemize}
@@ -128,7 +128,7 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     \item \textbf{Descrizione:} consente di visualizzare il dataset caricato sotto forma di tabella;
     \item \textbf{Precondizioni:}
     \begin{itemize}
-        \item Un dataset è stato caricato correttamente.
+        \item Il dataset selezionato è stato caricato correttamente.
     \end{itemize}
     \item \textbf{Postcondizioni:}
     \begin{itemize}
@@ -136,7 +136,7 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     \end{itemize}
     \item \textbf{Scenario:}
     \begin{itemize}
-        \item Il dataset viene caricato correttamente;
+        \item Il dataset selezionato viene caricato correttamente;
         \item L'applicazione elabora i dati e vengono mostrati in forma tabellare.
     \end{itemize}
 \end{itemize}
@@ -150,8 +150,8 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare il dataset caricato sotto forma di grafico a istogramma 3D verticale;
     \item \textbf{Precondizioni:}
-    \item \begin{itemize}
-        \item Un dataset è stato caricato correttamente.
+    \begin{itemize}
+        \item Il dataset selezionato è stato caricato correttamente.
     \end{itemize}
     \item \textbf{Postcondizioni:}
     \begin{itemize}
@@ -169,7 +169,7 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare dettagliatamente gli assi X, Y e Z del grafico;
     \item \textbf{Precondizioni:} 
-    \item \begin{itemize}
+    \begin{itemize}
         \item Il grafico 3D è stato generato correttamente;
         \item Gli assi sono correttamente configurati nel sistema.
     \end{itemize}
@@ -179,9 +179,7 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     \end{itemize}
     \item \textbf{Scenario:}
     \begin{itemize}
-        \item L'utente avvia il sistema;
-        \item L'utente seleziona un dataset;
-        \item Il dataset viene caricato correttamente;
+        \item L'utente visualizza il grafico 3D;
         \item L'utente visualizza gli assi X,Y e Z.
     \end{itemize}
 
@@ -191,7 +189,7 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare dettagliatamente l'asse X;
     \item \textbf{Precondizioni:} 
-    \item \begin{itemize}
+    \begin{itemize}
         \item L'asse X è configurato nel grafico.
     \end{itemize}
     \item \textbf{Postcondizioni:} 
@@ -211,7 +209,7 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare dettagliatamente l'asse Y;
     \item \textbf{Precondizioni:} 
-    \item \begin{itemize}
+    \begin{itemize}
         \item L'asse Y è configurato nel grafico.
     \end{itemize}
     \item \textbf{Postcondizioni:} 
@@ -231,7 +229,7 @@ A seguito del fatto che per lo svolgimento del progetto, non è necessario gesti
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare dettagliatamente l'asse Z;
     \item \textbf{Precondizioni:} 
-    \item \begin{itemize}
+    \begin{itemize}
         \item L'asse Z è configurato nel grafico.
     \end{itemize}
     \item \textbf{Postcondizioni:} 
