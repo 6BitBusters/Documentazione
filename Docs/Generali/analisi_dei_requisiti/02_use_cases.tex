@@ -10,7 +10,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} Visualizzare la lista dei dataset disponibili significa che quando un utente interagisce con l'applicazione web,
+    \item \textbf{Descrizione:} quando un utente interagisce con l'applicazione web,
     gli viene mostrato un elenco di dataset.\\ Da questa lista, può scegliere il dataset da rappresentare sotto forma di tabella e di grafico 3D.
     \item \textbf{Precondizioni:}
     \begin{itemize}
@@ -47,8 +47,8 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
 \end{itemize}
 \paragraph{UC1.1.1 - Visualizzazione nome del dataset}
 \begin{itemize}
-    \item \textbf{Attore:} Utente;
-    \item \textbf{Descrizione:} L'utente può visualizzare il nome del dataset presente nell'elenco;
+    \item \textbf{Attore:} utente;
+    \item \textbf{Descrizione:} l'utente può visualizzare il nome del dataset presente nell'elenco;
     \item \textbf{Precondizioni:}
     \begin{itemize}
         \item Il sistema ha accesso alle informazioni sul dataset.
@@ -64,8 +64,8 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
 \end{itemize}
 \paragraph{UC1.1.2 - Visualizzazione della descrizione contenuto del dataset}
 \begin{itemize}
-    \item \textbf{Attore:} Utente;
-    \item \textbf{Descrizione:} L'utente può visualizzare una descrizione del contenuto del dataset;
+    \item \textbf{Attore:} utente;
+    \item \textbf{Descrizione:} l'utente può visualizzare una descrizione del contenuto del dataset;
     \item \textbf{Precondizioni:}
     \begin{itemize}
         \item Il sistema ha accesso alle informazioni relative al contenuto del dataset.
@@ -81,11 +81,11 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
 \end{itemize}
 \paragraph{UC1.1.3 - Visualizzazione dimensioni tabella}
 \begin{itemize}
-    \item \textbf{Attore:} Utente;
-    \item \textbf{Descrizione:} L'utente può visualizzare le dimensioni della tabella relativa ai dati contenuti nel dataset;
+    \item \textbf{Attore:} utente;
+    \item \textbf{Descrizione:} l'utente può visualizzare le dimensioni della tabella relativa ai dati contenuti nel dataset;
     \item \textbf{Precondizioni:}
     \begin{itemize}
-        \item Il sistema ha accesso alle informazioni relative alla dimensione del dataset;
+        \item Il sistema ha accesso alle informazioni relative alla dimensione del dataset.
     \end{itemize}
     \item \textbf{Postcondizioni:}
     \begin{itemize}
@@ -198,10 +198,8 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \end{itemize}
     \item \textbf{Scenario:} 
     \begin{itemize}
-        \item L'utente avvia il sistema;
-        \item L'utente seleziona un dataset;
-        \item Il dataset viene caricato correttamente;
-        \item L'asse X è visibile e mostra i valori appropriati.
+        \item L'utente visualizza il grafico 3D;
+        \item L'utente visualizza l'asse X con i valori appropriati.
     \end{itemize}
 \end{itemize}
 \subsubsection{UC4.2 - Visualizzazione asse Y}
@@ -218,10 +216,8 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \end{itemize}
     \item \textbf{Scenario:} 
     \begin{itemize}
-        \item L'utente avvia il sistema;
-        \item L'utente seleziona un dataset;
-        \item Il dataset viene caricato correttamente;
-        \item L'asse Y è visibile e mostra i valori appropriati.
+        \item L'utente visualizza il grafico 3D;
+        \item L'utente visualizza l'asse Y con i valori appropriati.
     \end{itemize}
 \end{itemize}
 \subsubsection{UC4.3 - Visualizzazione asse Z}
@@ -238,13 +234,10 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \end{itemize}
     \item \textbf{Scenario:} 
     \begin{itemize}
-        \item L'utente avvia il sistema;
-        \item L'utente seleziona un dataset;
-        \item Il dataset viene caricato correttamente;
-        \item L'asse Z è visibile e mostra i valori appropriati.
+        \item L'utente visualizza il grafico 3D;
+        \item L'utente visualizza l'asse Z con i valori appropriati.
     \end{itemize}
 \end{itemize}
-\newpage
 \subsection{UC5 - Visualizzazione legenda}
 \begin{itemize}
     \item \textbf{Attore:} utente;
@@ -260,19 +253,15 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \end{itemize}
     \item \textbf{Scenario:} 
     \begin{itemize}
-        \item L'utente avvia il sistema;
-        \item L'utente seleziona un dataset;
-        \item Il dataset viene caricato correttamente;
         \item Il grafico viene generato correttamente;
         \item La legenda relativa al grafico è visibile.
     \end{itemize}
 \end{itemize}
-\newpage
 \subsection{UC6 - Pan}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.7]{template/images/UC6.png}
-    \caption{UC6 - Funzionalità PAN}
+    \caption{UC6 - PAN}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore:} utente;
@@ -312,8 +301,11 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \begin{itemize}
         \item La visualizzazione del grafico è stata aggiornata in base alla rotazione effettuata dall'utente.
     \end{itemize}
-    \item \textbf{Scenario:}  
-    L'utente interagisce con il grafico 3D usando i comandi per ruotare la visualizzazione. Il sistema aggiorna in tempo reale l'orientamento della camera, mostrando il grafico da una nuova angolazione.
+    \item \textbf{Scenario:} 
+    \begin{itemize}
+        \item L'utente interagisce con il grafico 3D usando i comandi per ruotare la visualizzazione. Il sistema aggiorna in tempo reale l'orientamento della camera, mostrando il grafico da una nuova angolazione.
+    \end{itemize}
+    
 \end{itemize}
 \subsubsection{UC7.1 - Rotazione camera asse X}
 \begin{itemize}
@@ -328,8 +320,11 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \begin{itemize}
         \item La camera è stata ruotata attorno all'asse X, aggiornando la vista in tempo reale.
     \end{itemize}
-    \item \textbf{Scenario:}  
-    L'utente usa comandi per spostare la vista verso l'alto o verso il basso. Il sistema ruota la camera attorno all'asse X, consentendo di osservare il grafico da un'angolazione più alta o più bassa.
+    \item \textbf{Scenario:}
+    \begin{itemize}
+        \item L'utente usa comandi per spostare la vista verso l'alto o verso il basso. Il sistema ruota la camera attorno all'asse X, consentendo di osservare il grafico da un'angolazione più alta o più bassa.
+    \end{itemize}
+    
 \end{itemize}
 \subsubsection{UC7.2 - Rotazione camera asse Y}
 \begin{itemize}
@@ -344,8 +339,10 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \begin{itemize}
         \item La camera è stata ruotata attorno all'asse Y, aggiornando la vista in tempo reale.
     \end{itemize}
-    \item \textbf{Scenario:}  
-    L'utente usa comandi per spostare la vista verso destra o sinistra. Il sistema ruota la camera attorno all'asse Y, consentendo di osservare il grafico da angolazioni diverse lateralmente.
+    \item \textbf{Scenario:} 
+    \begin{itemize}
+        \item L'utente usa comandi per spostare la vista verso destra o sinistra. Il sistema ruota la camera attorno all'asse Y, consentendo di osservare il grafico da angolazioni diverse lateralmente.
+    \end{itemize}
 \end{itemize}
 
 
