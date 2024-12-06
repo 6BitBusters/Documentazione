@@ -7,8 +7,7 @@
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} Compiere movimenti direzional significa che in ambiente di visualizzazione del grafico 3D l'utente, 
-    tramite comandi opportuni, può interagire con il grafico compiendo degli spostamenti lungo i tre assi principali.
+    \item \textbf{Descrizione:} Compiere movimenti direzionali significa che, in ambiente di visualizzazione del grafico 3D, l'utente può interagire con il grafico compiendo degli spostamenti lungo i tre assi principali tramite comandi opportuni.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -27,7 +26,7 @@
 \subsubsection{UC8.1 - Movimento direzionale asse X}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi in profondità.
+    \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi lungo l'asse X.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -46,8 +45,8 @@
 \subsubsection{UC8.2 - Movimento direzionale asse Y}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi in orizzontale.
-    \item \textbf{Precondizioni:}    
+    \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi lungo l'asse Y.
+    \item \textbf{Precondizioni:}   
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
             \item La generazione dell'ambiente 3D e del relativo grafico non hanno riscontrato errori;
@@ -65,7 +64,7 @@
 \subsubsection{UC8.3 - Movimento direzionale asse Z}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi in verticale.
+    \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi lungo l'asse Z.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -89,8 +88,7 @@
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} Effettuare un'azione di riposizionamento iniziale significa riportare la posizione della telecamera e la sua inquadratura ai valori iniziali di quando l'ambiente 3D 
-    era appena stato inizializzato e non era stato compiuto ancora nessuno spostamento.
+    \item \textbf{Descrizione:} Riposizionare inizialmente la telecamera significa ripristinare la sua posizione e angolazione alla configurazione di partenza, annullando qualsiasi modifica apportata successivamente all'inizializzazione dell'ambiente 3D.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -99,11 +97,11 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item La telecamera e la sua inquadratura si trovano in una posizione corrispondente a quella iniziale cioè quando l'ambiente 3D era appena stato inizializzato.
+            \item La posizione e angolazione della telecamera corrispondono alla configurazione di iniziale, uguale a quella di inizializzazione dell'ambiente 3D.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente interagisce con l'interfaccia per ripristinare la posizione della telecamera e la relativa inquadratura ai valori iniziali.
+            \item L'utente interagisce con l'interfaccia per ripristinare la posizione e angolazione della telecamera ai valori iniziali.
         \end{itemize}
 \end{itemize}
 
@@ -165,7 +163,7 @@
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} L'utente, tramite interazione opportuna, può selezionare una barra del grafico all'interno dell'ambiente 3D.
+    \item \textbf{Descrizione:} L'utente può selezionare una barra del grafico 3D.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -174,17 +172,17 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Viene evidenziata la selezione sia della barra del grafico selezionata sia della corrispetiva cella della tabella.
+            \item Viene evidenziata della barra del grafico 3D.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente interagisce con l'ambiente 3D e seleziona una barra del grafico.
+            \item L'utente interagisce con il grafico 3D e seleziona una barra.
         \end{itemize}
 \end{itemize}
 \paragraph{UC11.1.1: Enfatizzare selezione nella tabella}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} Viene evidenziata in maniera opportuna nella tabella la selezione compiuta dall'utente.
+    \item \textbf{Descrizione:} Viene evidenziata in maniera opportuna nella tabella la selezione compiuta dall'utente nel grafico 3D.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -193,11 +191,11 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Viene evidenziata la selezione nella tabella.
+            \item Viene evidenziata la cella nella tabella.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente interagisce con l'interfaccia e compie un'azione di selezione che viene evidenziata nella tabella.
+            \item L'utente interagisce con il grafico 3D, evidenziando la corrispondente cella della tabella.
         \end{itemize}
 \end{itemize}
 
@@ -210,7 +208,7 @@
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} L'utente, tramite interazione opportuna, può selezionare una cella all'interno della tabella.
+    \item \textbf{Descrizione:} L'utente può selezionare una cella all'interno della tabella.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -219,17 +217,17 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Viene evidenziata la selezione sia della cella della tabella selezionata sia della corrispetiva barra del grafico all'interno dell'ambiente 3D.
+            \item Viene evidenziata la cella della tabella.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente interagisce con la tabella selezionando una cella.
+            \item L'utente interagisce con la tabella selezionando una cella la quale verrà evidenziata.
         \end{itemize}
 \end{itemize}
 \paragraph{UC11.2.1: Enfatizzare selezione nel grafico}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} Viene evidenziata in maniera opportuna nel grafico all'interno dell'ambiente 3D la selezione compiuta dall'utente.
+    \item \textbf{Descrizione:} Viene evidenziata in maniera opportuna nel grafico 3D la selezione compiuta dall'utente nella tabella.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -238,17 +236,17 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Viene evidenziata la selezione nel grafico all'interno dell'ambiente 3D.
+            \item Viene evidenziata la barra del grafico 3D.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente interagisce con l'interfaccia e compie un'azione di selezione che viene evidenziata nel grafico all'interno dell'ambiente 3D.
+            \item L'utente interagisce con una cella della tabella, evidenziando la corrispondente barra del grafico 3D.
         \end{itemize}
 \end{itemize}
 \paragraph{UC11.2.2: Auto-positioning}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} La posizione della telecamera e l'inquadratura vengono posizinate in maniera consona in modo tale da ottenere in primo piano uno specifico oggetto all'interno dell'ambiente 3D.
+    \item \textbf{Descrizione:} In seguito alla selezione di una cella, la vista si sposta sulla corrispondente barra del grafico 3D, centrandola sullo schermo.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -257,7 +255,7 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item La telecamera e la relativa inquadratura saranno in una posizione diversa da quella iniziale e avranno inoltre in primo piano uno specifico oggetto dell'ambiente 3D.
+            \item La telecamera e la relativa inquadratura saranno in una posizione diversa da quella iniziale e avranno inoltre in primo piano la barra selezionata del grafico 3D.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
@@ -265,10 +263,10 @@
         \end{itemize}
 \end{itemize}
 
-\subsection{UC12: Opacizzare barra del grafico}
+\subsection{UC12: Modifica trasparenza barra del grafico}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC12.png}
-    \caption{UC12: Opacizzare barra del grafico}
+    \caption{Modifica trasparenza barra del grafico}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -280,17 +278,17 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Il valore di opacità di una barra del grafico nell'ambiente 3D è maggiore rispetto al valore iniziale.
+            \item Il valore di trasparenza delle altre barre del grafico 3D è maggiore rispetto a quello delle altre.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item Per evidenziare una determinata barra del grafico vengono opacizzate tutte le altre.
+            \item L'utente evidenzia una determinata barra del grafico viene aumentato il valore di trasparenza a tutte le altre.
         \end{itemize}
 \end{itemize}
 \subsubsection{UC12.1: Opacizzare le barre rispetto a valori superiori o inferiori}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'interfaccia impostando un valore rispetto al quale ogni barra con valore superiore o inferiore (parametro specificato dall'utente) verrà opacizzata.
+    \item \textbf{Descrizione:} L'utente può stabilire un valore limite al di sopra o al di sotto del quale alcune barre verranno evidenziate.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -300,11 +298,11 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Ogni barra con il rispettivo valore che non rispetta le condizioni poste dall'utente verrà opacizzata.
+            \item Ogni barra selezionata nel grafico 3D viene resa più visibile rendendo le altre barre più trasparenti.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente interagisce con l'interfaccia per evidenziare nel grafico all'interno dell'ambiente 3D solo le barre con un valore superiore/inferiore a quello indicato.
+            \item L'utente interagisce con l'interfaccia selezionando il numero di barre con i valori più elevati o più bassi da evidenziare nel grafico 3D.
         \end{itemize}
 \end{itemize}
 \subsubsection{UC12.2: Lasciare visibili solo le prime/ultime X barre}
@@ -320,17 +318,17 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Ogni barra del grafico nell'ambiente 3D con il rispettivo valore che non rientra nei primi X valori più piccoli/grandi viene opacizzata.
+            \item Ogni barra selezionata nel grafico 3D viene resa più visibile rendendo le altre barre più trasparenti.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente interagisce con l'interfaccia per evidenziare nel grafico all'interno dell'ambiente 3D le prime X barre con il corrispettivo valore che rientra nei primi X valori più piccoli/grandi.
+            \item L'utente interagisce con l'interfaccia selezionando il numero di barre con i valori più elevati o più bassi da evidenziare nel grafico 3D.
         \end{itemize}
 \end{itemize}
 \subsubsection{UC12.3: Opacizzare le barre con i valori superiori/inferiori al valore medio}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'interfaccia per opacizzare ogni barra del grafico all'interno dell'ambiente 3D con il rispettivo valore superiore/inferiore al valore medio.
+    \item \textbf{Descrizione:} L'utente può scegliere se evidenziare nel grafico 3D le barre il quale valore è superiore o inferiore al valore medio.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -344,7 +342,7 @@
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente interagisce con l'interfaccia per evidenziare nel grafico all'interno dell'ambiente 3D solo le barre con un valore superiore/inferiore al valore medio.
+            \item L'utente interagisce con l'interfaccia per evidenziare nel grafico 3D solo le barre con un valore superiore o inferiore al valore medio.
         \end{itemize}
 \end{itemize}
 
@@ -355,7 +353,7 @@
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} Viene generato nell'ambiente 3D un piano in mezzo al grafico parallelo alla base.
+    \item \textbf{Descrizione:} Un piano, parallelo alla base, viene inserito nel grafico 3D per evidenziare un valore di interesse, scelto dall'utente tra quelli ricavabili dai dati. Questo piano offre una rappresentazione visiva immediata del valore selezionato.
     \item \textbf{Precondizioni:}    
         \begin{itemize}
             \item Il caricamento del dataset è avvenuto con successo;
@@ -363,11 +361,11 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Viene generato un piano nell'ambiente 3D in mezzo al grafico parallelo alla base.
+            \item Viene generato un piano, nel grafico 3D, parallelo alla base che evidenzia il valore di interesse scelto dall'utente.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
-            \item L'utente può evidenziare un determinato valore nel grafico (ad esempio il valore medio) ed esso sarà rappresentato nel grafico dal piano generato nell'ambiente 3D.
+            \item L'utente può evidenziare un determinato valore di interesse (ad esempio il valore medio) ed esso sarà rappresentato nel grafico dal piano generato.
         \end{itemize}
 \end{itemize}
 
@@ -388,7 +386,7 @@
         \end{itemize}    
     \item \textbf{Postcondizioni:}
         \begin{itemize}
-            \item Viene visualizzato a schermo un messaggio di errore dovuto all'errore nel caricamento del dataset.
+            \item Viene visualizzato a schermo un messaggio di errore in seguito ad uno o più problemi riscontrati durante il caricamento del dataset selezionato.
         \end{itemize}    
     \item \textbf{Scenario:} 
         \begin{itemize}
