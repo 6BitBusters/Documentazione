@@ -3,9 +3,9 @@
     \subsection{Dettagli sull'incontro}
         \begin{itemize}
             \item \textbf{Luogo}: Discord
-            \item \textbf{Data}: 22-11-2024
-            \item \textbf{Ora di inizio}: 9:30
-            \item \textbf{Ora di fine}: 11:30
+            \item \textbf{Data}: 05-12-2024
+            \item \textbf{Ora di inizio}: 17:30
+            \item \textbf{Ora di fine}: 19:30
             \item \textbf{Partecipanti}:
                 \begin{itemize}
                     \item Bergamin Elia
@@ -18,77 +18,106 @@
         \end{itemize}
 
 \section{Motivo della riunione}
-    In questo incontro abbiamo discusso gli obiettivi raggiunti nel primo sprint\textsubscript{g},
-    considerando in particolare \textbf{come} li abbiamo raggiunti. Questo è
-    servito per poter valutare e migliorare il wow\textsubscript{g}. Poi abbiamo
-    pianificato le attività per il secondo sprint e assegnato i ruoli.
+    In questo incontro abbiamo discusso gli obiettivi raggiunti nel secondo sprint\textsubscript{g},
+    e quelli che avevamo pianificato, ma che non abbiamo raggiunto. 
+    Abbiamo valutato e cercato di migliorare il wow\textsubscript{g}, in particolare
+    nell'ambito della stesura dei documenti. 
+    Abbiamo valutato e scelto le tecnologie da adottare per lo sviluppo del PoC, 
+    tra le alternative proposte.
+    Abbiamo assegnato i ruoli e pianificato le attività per il terzo sprint.
+
 \section{Resoconto}
     \subsection{Retrospettiva}
-        \subsubsection{Verifica}
-            Abbiamo osservato che il precedente workflow\textsubscript{g} per la verifica\textsubscript{g}
-            dei documenti rallentava il processo, costringendo il redattore a chiedere quale verificatore avrebbe verificato il
-            documento. Abbiamo dunque deciso che sarà il verificatore stesso a inserire il
-            proprio nome nel changelog\textsubscript{g} e nella pagina iniziale dei documenti.
-        \subsubsection{Pull request}
-            Per evitare conflitti per il nome di una pull request\textsubscript{g}, abbiamo
-            deciso che una pull request avrà come nome \textbf{NOME\_DOCUMENTO-ID\_ISSUE} e
-            come messaggio di squash\textsubscript{g} \textbf{Update: NOME\_DOCUMENTO-VERSIONE}
-        \subsubsection{Rendicontazione ore}
-            Per rendere più facile la rendicontazione delle ore di lavoro e, di
-            conseguenza, la stesura del consuntivo\textsubscript{g}, abbiamo deciso di aggiungere alle
-            issue\textsubscript{g} il campo \textit{Effective} che indica le ore
-            effettivamente dedicate allo svolgimento di quella attività. Per motivi del
-            tutto analoghi, abbiamo aggiunto i campi \textit{Review
-                Estimate} e \textit{Review Effective}, per indicare il tempo preventivato e 
-                effettivo per la verifica.
-        \subsubsection{Daily scrum}
-            Data l'importanza del daily scrum\textsubscript{g} nel
-            framework\textsubscript{g} Scrum\textsubscript{g}, abbiamo deciso che lo
-            celebreremo su Telegram\textsubscript{g}. In un gruppo creato ad hoc,
-            all'inizio di ogni giorno lavorativo, ciascun membro del team risponderà alle
-            domande "Cosa ho fatto ieri?", "Cosa farò oggi?", "Cosa mi impedisce di andare
-            avanti?".
+        \subsubsection{Piano di qualifica}
+            Avevamo pianificato di redigere le sezioni Qualità di processo e Qualità di prodotto 
+            del \textit{Piano di qualifica}, ma ci siamo resi conto che, anche in seguito alle
+            lezioni tenute dal prof. Vardanega, ci mancavano degli elementi per poter completare
+            la stesura. Nello specifico, ci siamo informati maggiormente sulle cosiddette
+            "Metriche di progetto", a carattere prevalentemente economico, e sulle metriche
+            che riguardano il prodotto software.
+            Abbiamo quindi deciso di redigere tali sezioni nel prossimo sprint.
+        \subsubsection{Stesura documenti}
+            Ci siamo resi conto che, a causa delle diverse consuetudini di ciascun membro del team 
+            nella stesura di documenti, si sono verificate delle incoerenze stilistiche e grammaticali nei nostri
+            documenti. Abbiamo quindi deciso che la sezione delle \textit{Norme di progetto} che 
+            riguarda la documentazione dovrà essere sostanzialmente ampliata per disciplinare 
+            nel dettaglio questo processo. Inoltre, per assicurare concordanza di genere per i 
+            termini stranieri, andremo ad aggiungere nel \textit{Glossario}, per ogni vocabolo
+            straniero, un'indicazione sulla sua morfologia, ovvero se è un sostantivo,
+            un aggettivo o un verbo, e nel caso di un sostantivo, se è maschile o femminile.
+            
+        \subsubsection{Tecnologie}
+        Le tecnologie alternative proposte nel capitolato di progetto erano:
+        \begin{itemize}
+            \item D3.js o Three.js per la creazione di grafici 3D interattivi;
+            \item Angular o React come framework di sviluppo.       
+        \end{itemize}
+        A seguito dello studio individuale da parte di alcuni membri del gruppo,
+        è emerso che Three.js fornisce degli elementi che favoriscono in particolar
+        modo la creazione di ambienti 3D, grazie all'utilizzo di WebGL, 
+        anche se trascura in gran parte il concetto di dataset. 
+        Al contrario, D3.js è una libreria maggiormente orientata
+        alla visualizzazione di dati dinamici, che però trascura la terza dimensione,
+        in quanto è basata sostanzialmente su SVG, HTML5 e CSS. 
+        Considerato che il focus del progetto ricade sulla visualizzazione 3D dei 
+        dati tramite grafici navigabili e interattivi, e non è richiesto di modificare
+        tali dati, il gruppo ha scelto Three.js come libreria principale per la creazione 
+        della grafica 3D.\\
+        Per quanto riguarda la scelta del framework, è emerso che Angular è un framework
+        completo e strutturato, con varie funzionalità integrate che riducono la necessità di dipendenze esterne;
+        è dunque utilizzato prevalentemente per lo sviluppo di progetti grandi e complessi. 
+        Viceversa, React è una libreria per la costruzione di interfacce utente, 
+        che lascia maggiore libertà nella scelta delle librerie per le altre funzionalità,
+        come, ad esempio, il routing; quindi è preferibile per progetti piccoli o medi, con esigenze specifiche.
+        Inoltre, React si integra facilmente con Three.js, grazie alle 
+        librerie React Three Fiber e Drei, che forniscono dei componenti che ben si 
+        prestano alle esigenze del nostro progetto.
+        Quindi, considerato che il progetto non è di grandi dimensioni, in particolare per quanto 
+        riguarda la logica sottostante, e considerata la scelta di Three.js, il gruppo ha 
+        optato per l'utilizzo di React.        
     \subsection{Assegnazione ruoli}
         Abbiamo assegnato i ruoli secondo il criterio di rotazione stabilito inizialmente,
-        aggiungendo un analista e sottraendo un amministratore rispetto allo sprint precedente.
+        senza aggiungere o togliere nessun ruolo rispetto allo sprint precedente.
         \begin{itemize}
-            \item \textbf{Responsabile}: Djossa Edgar
-            \item \textbf{Analisti}: Diviesti Filippo, Pincin Matteo
-            \item \textbf{Amministratore}: Chilese Elena
-            \item \textbf{Verificatori}: Bergamin Elia, Soranzo Andrea
+            \item \textbf{Responsabile}: Diviesti Filippo
+            \item \textbf{Analisti}: Bergamin Elia, Soranzo Andrea
+            \item \textbf{Amministratore}: Pincin Matteo
+            \item \textbf{Verificatori}: Chilese Elena, Djossa Edgar
         \end{itemize}
+    
 
 \section{Prossimi obiettivi}
         \subsection{Norme di progetto}
             \begin{itemize}
-                \item Aggiornamento processi di supporto
-                \item Aggiornamento processi organizzativi
-                \item Aggiunta sottosezioni progettazione e codifica
+                \item Aggiornamento convenzioni
+                \item Aggiornamento nome requisiti
+                \item Accertamento della qualità
+                \item Aggiornamento verifica 
+                \item Aggiornamento validazione
             \end{itemize}
         \subsection{Piano di progetto}
             \begin{itemize}
-                \item Consuntivo sprint 1
-                \item Pianificazione e preventivo sprint 2
-                \item Aggiunta sezione modello di sviluppo
+                \item Consuntivo sprint 2
+                \item Pianificazione e preventivo sprint 3
             \end{itemize}
         \subsection{Piano di qualifica}
             \begin{itemize}
-                \item Introduzione
                 \item Qualità di processo
                 \item Qualità di prodotto
+                \item Testing
             \end{itemize}
         \subsection{Analisi dei requisiti}
             \begin{itemize}
-                \item Introduzione
-                \item Descrizione
-                \item Casi d'uso* 
+                \item Requisiti funzionali
+                \item Requisiti di qualità
+                \item Requisiti di vincolo*
+                \item Requisiti prestazionali* 
             \end{itemize}   
-            \begin{small}*In un foglio condiviso, ogni membro scriverà i casi d'uso 
-            individuati dalla lettura del capitolato\textsubscript{g} di progetto, 
-            per poi discuterli con il proponente\textsubscript{g}.
+            \begin{small}*Consultare il proponente\textsubscript{g}.
             \end{small} 
         \subsection{Glossario}
             \begin{itemize}
                 \item Inserimento nuovi vocaboli
+                \item Morfologia dei vocaboli stranieri
             \end{itemize}
         
