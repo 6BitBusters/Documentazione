@@ -44,21 +44,21 @@ verificaG e produzione.
 \subsection{Metriche}
 \input{template/metrics_table.tex}
 \metricsTable{
-    MPC1 & Planned Value (PV)& - & -\tabularnewline
-    MPC2 & Actual Cost (AC)& - & -\tabularnewline
-    MPC3 & Earned Value (EV)& - & -\tabularnewline
-    MPC4 & Budget at Completion (BAC)& - & -\tabularnewline
-    MPC5 & Estimated at Completion (EAC)& - & -\tabularnewline
-    MPC6 & Estimate to Complete (ETC)& - & -\tabularnewline
-    MPC7 & Cost Variance (CV)& - & -\tabularnewline
-    MPC8 & Schedule Variance (SV)& - & -\tabularnewline
-    MPC9 & Budget Variance (BV)& - & -\tabularnewline
-    MPC10 & Requirements Stability Index (RSI) & - & -\tabularnewline
-    MPC11 & Satisfied Obligatory Requirements (SOR) & - & -\tabularnewline
-    MPC12 & Code Coverage (CC) & - & -\tabularnewline
-    MPC13 & Passed Test Cases Percentage (PTCP) & - & -\tabularnewline
-    MPC14 & Quality Metrics Satisfied (QMS) & - & -\tabularnewline
-    MPC15 & Requirements stability index (RSI) & - & -\tabularnewline
+    MPC1 & Planned Value (PV)& $\geq 0$\texteuro & $\leq$ BAC\tabularnewline
+    MPC2 & Actual Cost (AC)& $\geq 0$\texteuro & $\leq$ EAC\tabularnewline
+    MPC3 & Earned Value (EV)& $\geq 0$\texteuro & $\leq$ EAC\tabularnewline
+    MPC4 & Budget at Completion (BAC)& - & - \tabularnewline
+    MPC5 & Estimated at Completion (EAC)& EAC $\geq$ BAC - 5\% \\ EAC $\leq$ BAC + 5\% & = BAC\tabularnewline
+    MPC6 & Estimate to Complete (ETC)& $\geq 0$\texteuro & $\leq$ EAC\tabularnewline
+    MPC7 & Cost Variance (CV)& $\geq 0$\texteuro & 0\texteuro\tabularnewline
+    MPC8 & Schedule Variance (SV)& $\geq -15$\% & $\leq$ -\tabularnewline
+    MPC9 & Budget Variance (BV)& $\geq 0$\texteuro & 0\%\tabularnewline
+    MPC10 & Requirements Stability Index (RSI) & $\geq 70$\% & 100\%\tabularnewline
+    MPC11 & Satisfied Obligatory Requirements (SOR) & 100\% & 100\%\tabularnewline
+    MPC12 & Code Coverage (CC) & $\geq 75$\% & $\geq 90$\%\tabularnewline
+    MPC13 & Passed Test Cases Percentage (PTCP) & $\geq 90$\% & 100\%\tabularnewline
+    MPC14 & Metriche soddisfatte & $\geq 90$\% & 100\%\tabularnewline
+    MPC15 & Rischi non previsti & $\leq 5$ & 0\tabularnewline
 
     \captionline\caption{Metriche di processo}
 }
