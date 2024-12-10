@@ -10,17 +10,23 @@ delle risorse, e prevede una costante integrazione tra ricerca, progettazione,
 verificaG e produzione.
 \subsection{Processi primari}
 \input{template/quality_table.tex}
+
 \qualityTable{
+
     Fornitura & 
      Determina le risorse e le procedure atte al perseguimento dello sviluppo del progetto & 
      MPC1, MPC2, MPC3, MPC4, MPC5, MPC6, MPC7, MPC8, MPC9\tabularnewline
     Sviluppo & 
      Contiene le attività relative alla realizzazione del prodotto software richiesto &
      MPC10, MPC11\tabularnewline
+
     \captionline\caption{Qualità processi primari}
 }
+
 \subsection{Processi di supporto}
+
 \qualityTable{
+
     Documentazione & 
      Registra le informazioni prodotte da un processo o da un'attività del ciclo di vita & 
      MPC11, MPC12\tabularnewline
@@ -32,29 +38,37 @@ verificaG e produzione.
      Determina se i prodotti software di un'attività soddisfano
      i requisiti o le condizioni imposte loro nelle attività precedenti &
      MPC14\tabularnewline
+
     \captionline\caption{Qualità processi di supporto}
 }
 \subsection{Processi organizzativi}
+
 \qualityTable{
+
     Gestione organizzativa & 
      Definisce, organizza, monitora e conclude le attività & 
      MPC15\tabularnewline
+
     \captionline\caption{Qualità processi organizzativi}
 }
 \subsection{Metriche}
 \input{template/metrics_table.tex}
+
 \metricsTable{
-    MPC1 & Planned Value (PV)& $\geq 0$\texteuro & $\leq$ BAC\tabularnewline
-    MPC2 & Actual Cost (AC)& $\geq 0$\texteuro & $\leq$ EAC\tabularnewline
-    MPC3 & Earned Value (EV)& $\geq 0$\texteuro & $\leq$ EAC\tabularnewline
+
+    MPC1 & Planned Value (PV)& $\geq$ \EUR{0} & $\leq$ BAC\tabularnewline
+    MPC2 & Actual Cost (AC)& $\geq$ \EUR{0} & $\leq$ EAC\tabularnewline
+    MPC3 & Earned Value (EV)& $\geq$ \EUR{0} & $\leq$ EAC\tabularnewline
     MPC4 & Budget at Completion (BAC)& - & - \tabularnewline
-    MPC5 & Estimated at Completion (EAC)& EAC $\geq$ BAC - 5\% \\ EAC $\leq$ BAC + 5\% & = BAC\tabularnewline
-    MPC6 & Estimate to Complete (ETC)& $\geq 0$\texteuro & $\leq$ EAC\tabularnewline
-    MPC7 & Cost Variance (CV)& $\geq 0$\texteuro & 0\texteuro\tabularnewline
-    MPC8 & Schedule Variance (SV)& $\geq -15$\% & $\leq$ -\tabularnewline
-    MPC9 & Budget Variance (BV)& $\geq 0$\texteuro & 0\%\tabularnewline
+    MPC5 & Estimated at Completion (EAC)& $\geq$ BAC - 5\% \\ $\leq$ BAC + 5\% & BAC\tabularnewline
+    MPC6 & Estimate to Complete (ETC)& $\geq$ \EUR{0} & $\leq$ EAC\tabularnewline
+    MPC7 & Cost Variance (CV)& $\geq$ \EUR{0} & $\geq$ \EUR{0}\tabularnewline
+    MPC8 & Schedule Variance (SV)& $\geq -10$\% & $\geq$ 0\%\tabularnewline
+    MPC9 & Budget Variance (BV)&  -10\% $\leq$ BV $\leq$ 10\%  & 0\%\tabularnewline
     MPC10 & Requirements Stability Index (RSI) & $\geq 70$\% & 100\%\tabularnewline
     MPC11 & Satisfied Obligatory Requirements (SOR) & 100\% & 100\%\tabularnewline
+    MPC11 & Indice Gulpease & $\geq 50$ & $\geq 80$\tabularnewline
+    MPC12 & Errori ortografici & 0\% & 0\%\tabularnewline
     MPC12 & Code Coverage (CC) & $\geq 75$\% & $\geq 90$\%\tabularnewline
     MPC13 & Passed Test Cases Percentage (PTCP) & $\geq 90$\% & 100\%\tabularnewline
     MPC14 & Metriche soddisfatte & $\geq 90$\% & 100\%\tabularnewline
