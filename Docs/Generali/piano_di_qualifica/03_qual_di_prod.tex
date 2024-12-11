@@ -1,0 +1,55 @@
+\section{Qualità di prodotto}
+Il gruppo ha deciso di utilizzare lo standard ISO/IEC 9126 selezionando le qualità necessarie per l'intero
+ciclo di vita del progetto selezionando delle metriche per il loro mantenimento.
+\subsection{Software}
+\input{template/quality_table.tex}
+
+\qualityTable{
+
+    Funzionalità & 
+     Capacità di un prodotto software di fornire le funzioni, espresse ed implicite, necessarie 
+     per operare in un determinato contesto & 
+     MPD1, MPD2, MPD3\tabularnewline
+    Affidabilità & 
+     Capacità di un prodotto software di mantenere il livello di prestazione 
+     quando viene utilizzato in condizioni specificate &
+     MPD10, MPD11\tabularnewline
+    Usabilità & 
+     Capacità di un prodotto software di essere comprensibile & 
+     MPD1, MPD2, MPD3, MPD4\tabularnewline
+    Efficienza & 
+     Capacità di un prodotto software di realizzare le funzioni richieste nel 
+     minor tempo possibile ed utilizzando nel miglior modo le risorse necessarie &
+     MPD10, MPD11\tabularnewline
+    Manutenibilità & 
+     Capacità di un prodotto software di essere modificato & 
+     MPD1, MPD2, MPD3, MPD4\tabularnewline
+    Portabilità & 
+     Capacità di un prodotto software di poter essere trasportato da un ambiente ad un altro &
+     MPD10, MPD11\tabularnewline
+
+    \captionline\caption{Obiettivi di qualità per il software}
+}
+
+\subsection{Metriche}
+\input{template/metrics_table.tex}
+
+\metricsTable{
+
+    MPD1 & Requisiti soddisfatti (PV)& $\geq$ \EUR{0} & $\leq$ BAC\tabularnewline
+    MPD2 & Densità dei fallimenti & $\geq$ \EUR{0} & $\leq$ EAC\tabularnewline
+    MPD3 & Tempo medio di risposta & $\geq$ \EUR{0} & $\leq$ EAC\tabularnewline
+    MPD4 & Tempo di caricamento & - & - \tabularnewline
+    MPD5 & Tempo di apprendimento & $\geq$ BAC - 5\% \\ $\leq$ BAC + 5\% & BAC\tabularnewline
+    MPD6 & Complessità ciclomatica & $\geq$ \EUR{0} & $\leq$ EAC\tabularnewline
+    MPD7 & Densità dei commenti& $\geq$ \EUR{0} & $\geq$ \EUR{0}\tabularnewline
+    MPD8 & Browser supportati & $\geq -10$\% & $\geq$ 0\%\tabularnewline
+    MPD9 & OS supportati &  -10\% $\leq$ BV $\leq$ 10\%  & 0\%\tabularnewline
+    MPD10 & Maturità dei test & $\geq 70$\% & 100\%\tabularnewline
+    MPD11 & Satisfied Obligatory Requirements (SOR) & 100\% & 100\%\tabularnewline
+    MPD11 & Gestione degli errori & $\geq 50$ & $\geq 80$\tabularnewline
+    MPD12 & Comprensibilità del codice & 0\% & 0\%\tabularnewline
+    MPD12 & Accoppiamento tra classi & $\geq 75$\% & $\geq 90$\%\tabularnewline
+
+    \captionline\caption{Metriche di prodotto}
+}
