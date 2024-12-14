@@ -1,12 +1,9 @@
 \section{Qualità di processo}
-Per garantire un prodotto stabile e di qualità entro i costi e tempi stabiliti
-nel \textit{Piano di Progetto}, il gruppo ha deciso di adottare lo standard SPICE.
-Esso fornisce una struttura sistematica per valutare i processi, lasciando 
-al team di lavoro la responsabilità di stabilire parametri adeguati 
-alle proprie necessità.\\
-Per il miglioramento continuo della qualità dei processi, il gruppo utilizza il 
-Ciclo Deming, che promuove un approccio iterativo per ottimizzare l'affidabilità 
-e l'efficienza dei processi.
+Per garantire la qualità dei processi, il gruppo usa la struttura definita 
+dallo standard ISO/IEC 12207:1995, adattandola alle specifiche esigenze del 
+progetto. Il quadro di riferimento delle metriche selezionate è definito nelle 
+\textit{Norme di Progetto}.
+
 \subsection{Processi primari}
 \input{template/proc_quality_table.tex}
 
@@ -17,7 +14,7 @@ e l'efficienza dei processi.
      MPC1, MPC2, MPC3, MPC4, MPC5, MPC6, MPC7, MPC8\tabularnewline
     Sviluppo & 
      Contiene le attività relative alla realizzazione del prodotto software richiesto &
-     MPC9, MPC10\tabularnewline
+     MPC9 \tabularnewline
 
     \captionline\caption{Qualità processi primari}
 }
@@ -28,15 +25,15 @@ e l'efficienza dei processi.
 
     Documentazione & 
      Registra le informazioni prodotte da un processo o da un'attività del ciclo di vita & 
-     MPC11\tabularnewline
+     MPC10\tabularnewline
     Accertamento della qualità & 
      Garantisce che i prodotti software e i processi del ciclo di vita siano 
      conformi ai requisiti specificati e aderiscano ai piani stabiliti &
-     MPC12\tabularnewline
+     MPC11\tabularnewline
     Verifica &
      Determina se i prodotti software di un'attività soddisfano
      i requisiti o le condizioni imposte loro nelle attività precedenti &
-     MPC13, MPC14\tabularnewline
+     MPC12, MPC13, MPC14\tabularnewline
 
     \captionline\caption{Qualità processi di supporto}
 }
@@ -44,12 +41,13 @@ e l'efficienza dei processi.
 
 \procQualityTable{
 
-    Gestione organizzativa & 
-     Definisce, organizza, monitora e conclude le attività di un processo& 
-     MPC15\tabularnewline
+    Gestione di progetto & 
+     Definisce, organizza, monitora e conclude le attività di ogni processo & 
+     MPC7, MPC8, MPC15\tabularnewline
 
     \captionline\caption{Qualità processi organizzativi}
 }
+\pagebreak
 \subsection{Metriche}
 \input{template/metrics_table.tex}
 
@@ -64,11 +62,11 @@ e l'efficienza dei processi.
     MPC7 & Schedule Variance (SV)& $\geq -10$\% & $\geq$ 0\%\tabularnewline
     MPC8 & Budget Variance (BV)&  -10\% $\leq$ BV $\leq$ 10\%  & 0\%\tabularnewline
     MPC9 & Requirements Stability Index (RSI) & $\geq 70$\% & 100\%\tabularnewline
-    MPC10 & Satisfied Obligatory Requirements (SOR) & 100\% & 100\%\tabularnewline
-    MPC11 & Tempo di produzione & $\leq 2$h & $\leq 1$h\tabularnewline
-    MPC12 & Metriche soddisfatte & $\geq 90$\% & 100\%\tabularnewline
-    MPC13 & Code Coverage (CC) & $\geq 75$\% & $\geq 90$\%\tabularnewline
-    MPC14 & Passed Test Cases Percentage (PTCP) & $\geq 90$\% & 100\%\tabularnewline
+    MPC10 & Completezza dei documenti & 100\% & 100\%\tabularnewline
+    MPC11 & Metriche soddisfatte & $\geq 80$\% & 100\%\tabularnewline
+    MPC12 & Code Coverage (CC) & $\geq 75$\% & $\geq 90$\%\tabularnewline
+    MPC13 & Statement Coverage (CC) & $\geq 80$\% & 100\%\tabularnewline
+    MPC14 & Branch Coverage (CC) & $\geq 80$\% & 100\%\tabularnewline
     MPC15 & Rischi non previsti & $\leq 5$ & 0\tabularnewline
 
     \captionline\caption{Metriche di processo}
