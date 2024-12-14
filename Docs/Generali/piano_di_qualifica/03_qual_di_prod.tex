@@ -1,6 +1,7 @@
 \section{Qualità di prodotto}
-Il gruppo adotta lo standard ISO/IEC 9126 selezionando le qualità necessarie per l'intero
-ciclo di vita del progetto selezionando delle metriche per il loro mantenimento.
+Per garantire la qualità del software, il gruppo adotta il modello
+definito dallo standard ISO/IEC 9126. Il quadro di riferimento 
+delle metriche selezionate è definito nelle \textit{Norme di Progetto}.
 \subsection{Documenti}
 \input{template/prod_quality_table.tex}
 
@@ -23,45 +24,49 @@ ciclo di vita del progetto selezionando delle metriche per il loro mantenimento.
     Funzionalità & 
      Capacità di un prodotto software di fornire le funzioni, espresse ed implicite, necessarie 
      per operare in un determinato contesto & 
-     MPD3\tabularnewline
+     MPD3, MPD4, MPD5\tabularnewline
     Affidabilità & 
      Capacità di un prodotto software di mantenere il livello di prestazione 
      quando viene utilizzato in condizioni specificate &
-     MPD4, MPD5, MPD6\tabularnewline
+     MPD6, MPD7, MPD8\tabularnewline
     Usabilità & 
-     Capacità di un prodotto software di essere comprensibile & 
-     MPD7\tabularnewline
+     Capacità di un prodotto software di essere compreso e appreso & 
+     MPD9\tabularnewline
     Efficienza & 
      Capacità di un prodotto software di realizzare le funzioni richieste nel 
      minor tempo possibile ed utilizzando nel miglior modo le risorse necessarie &
-     MPD8, MPD9\tabularnewline
+     MPD10, MPD11\tabularnewline
     Manutenibilità & 
      Capacità di un prodotto software di essere modificato & 
-     MPD10, MPD11\tabularnewline
+     MPD12, MPD13, MPD14, MPD15, MPD16\tabularnewline
     Portabilità & 
      Capacità di un prodotto software di poter essere trasportato da un ambiente ad un altro &
-     MPD12\tabularnewline
+     MPD17\tabularnewline
 
     \captionline\caption{Obiettivi di qualità per il software}
 }
-
+\pagebreak
 \subsection{Metriche}
-\input{template/metrics_table.tex}
 
 \metricsTable{
 
     MPD1 & Indice Gulpease & $\geq$ 50 & $\geq$ 80\tabularnewline
     MPD2 & Errori grammaticali & 0 & 0\tabularnewline
-    MPD3 & Copertura dei requisiti & 100\% obbligatori & 100\%\tabularnewline
-    MPD4 & Maturità dei test & $\geq 80$\% & 100\%\tabularnewline
-    MPD5 & Gestione degli errori & $\geq 60$\% & $\geq 80$\%\tabularnewline
-    MPD6 & Defect density & $\leq 5$\% & $\leq 1$\%\tabularnewline
-    MPD7 & Tempo di apprendimento & $\leq$ 5 minuti & $\leq$ 2 minuti\tabularnewline
-    MPD8 & Tempo di caricamento & $\leq$ 15 secondi & $\leq$ 10 secondi \tabularnewline
-    MPD9 & Tempo medio di risposta & $\leq$ 5 secondi & $\leq$ 1 secondi \tabularnewline
-    MPD10 & Complessità ciclomatica & $\leq$ 10 & $\leq$ 5\tabularnewline
-    MPD11 & Densità dei commenti& 20-45\% & 25-35\%\tabularnewline
-    MPD12 & Browser supportati & $\geq 80$\% & 100\%\tabularnewline
+    MPD3 & Requisiti obbligatori soddisfatti & 100\% & 100\%\tabularnewline
+    MPD4 & Requisiti desiderabili soddisfatti & $\geq$ 0\% & 100\%\tabularnewline
+    MPD5 & Requisiti opzionali soddisfatti & $\geq$ 0\% & 100\%\tabularnewline
+    MPD6 & Casi di test superati & $\geq$ 90\% & 100\%\tabularnewline
+    MPD7 & Casi di test falliti & $\leq$ 10\% & 0\%\tabularnewline
+    MPD8 & Densità errori & $\leq 5$\% & 0\%\tabularnewline
+    MPD9 & Tempo di apprendimento & $\leq$ 5 minuti & $\leq$ 2 minuti\tabularnewline
+    MPD10 & Tempo di caricamento & $\leq$ 15 secondi & $\leq$ 10 secondi \tabularnewline
+    MPD11 & Tempo medio di risposta & $\leq$ 5 secondi & $\leq$ 1 secondi \tabularnewline
+    MPD12 & Complessità ciclomatica & $\leq$ 8 & $\leq$ 4\tabularnewline
+    MPD13 & Parametri per metodo & $\leq$ 6 & $\leq$ 4\tabularnewline
+    MPD14 & Linee di codice per metodo & $\leq$ 30 & $\leq$ 20\tabularnewline    
+    MPD15 & Linee di codice per file & $\leq$ 120 & $\leq$ 80\tabularnewline    
+    MPD16 & Densità dei commenti & 20-45\% & 25-35\%\tabularnewline
+    MPD17 & Browser supportati & $\geq 80$\% & 100\%\tabularnewline
 
     \captionline\caption{Metriche di prodotto}
 }
