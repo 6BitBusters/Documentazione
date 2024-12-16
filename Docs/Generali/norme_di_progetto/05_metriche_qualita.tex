@@ -1,1 +1,61 @@
+\newcounter{M}
+
+\newcommand{\MPCQ}[1]{
+    \stepcounter{M}
+    \subsubsection{MPCQ\arabic{M} - #1}
+    }
+    \newcommand{\MPDQ}[1]{
+    \stepcounter{M}
+    \subsubsection{MPDQ\arabic{M} - #1}
+}
+
 \section{Metriche di qualità}
+\subsection{Introduzione}
+Le metriche di qualità sono strumenti fondamentali per
+valutare e migliorare l’efficacia e l’efficienza nello sviluppo del software. Queste metriche
+forniscono indicatori oggettivi e misurabili che consentono di valutare la conformità agli
+standard, identificare aree di miglioramento e monitorare la salute complessiva del processo
+di sviluppo.
+\subsection*{Codifica}
+\begin{center}
+    \textbf{M[Tipologia][Id numerico]}
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{Tipologia}: indica il tipo della metrica:
+    \begin{itemize}
+        \item \textbf{PCQ}: per il processo;
+        \item \textbf{PDQ}: per il prodotto.
+    \end{itemize}
+    \item \textbf{Id numerico}: indica un numero univoco incrementale separato per le due tipologie.
+\end{itemize}
+
+\subsection{Metriche per la qualità di processo}
+Di seguito sono descritte le metriche di qualità di processo che il gruppo intende adottare.
+\MPCQ{Planned Value (PV)}
+\MPCQ{Actual Cost (AC)}
+\MPCQ{Estimated at Completion (EAC)}
+\MPCQ{Earned Value (EV)}
+\MPCQ{Estimated to Complete (ETC)}
+\MPCQ{Cost Variance (CV)}
+\MPCQ{Schedule Variance (SV)}
+\MPCQ{Budget Variance (BV)}
+\MPCQ{Requirements Stability Index (RSI)}
+\MPCQ{Gulpease Index (GI)}
+\MPCQ{Metrics Met (MM)}
+\MPCQ{Code Coverage (COC)}
+\MPCQ{Unexpected Risks (UR)}
+
+
+\setcounter{M}{0}
+\subsection{Metriche per la qualità di prodotto}
+Di seguito sono descritte le metriche di qualità di prodotto che il gruppo intende adottare.
+\MPDQ{Met Requirements Percent (MRP)}
+\MPDQ{Fault Density(FD)}
+\MPDQ{Average Response Time (ART)}
+\MPDQ{Loading Time (LT)}
+\MPDQ{Ease Of Learning (EOL)}
+\MPDQ{Cyclomatic Complexity (CYC)}
+\MPDQ{Comment Density (CD)}
+\MPDQ{Supported Browser(SB)}
+
