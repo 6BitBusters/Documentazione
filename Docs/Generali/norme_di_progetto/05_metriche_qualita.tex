@@ -1,3 +1,6 @@
+% TODO : aggiungi i ref link, sistema questo file
+
+
 \newcounter{M}
 
 \newcommand{\MPCQ}[1]{
@@ -33,29 +36,268 @@ dove:
 \subsection{Metriche per la qualità di processo}
 Di seguito sono descritte le metriche di qualità di processo che il gruppo intende adottare.
 \MPCQ{Planned Value (PV)}
+    Costo pianificato (in \euro) per realizzare le attività di progetto alla data corrente.
+    \begin{itemize}
+        \item \textbf{Formula}: $PV = TPB * \frac{PH}{THP}$
+        \item \textbf{Valore minimo}: $\geq0$ \euro
+        \item \textbf{Valore massimo}:$\leq$ Buget at completion (BAC)
+    \end{itemize}  
+    Per eseguire il calcolo:
+    \begin{itemize}
+        \item \textbf{TPB} : il budget totale preventivato;
+        \item \textbf{PH}: ore di lavoro pianificate;
+        \item \textbf{THP}: ore di lavoro pianificate totali;
+    \end{itemize}
+
 \MPCQ{Actual Cost (AC)}
+Costo effettivamente sostenuto (in €) alla data corrente. 
+\begin{itemize}
+    \item \textbf{Formula}:$AC = \sum_{r}^{R}(THR_r*HC_r)$
+    \item \textbf{Valore minimo}: $\geq0$ \euro
+    \item \textbf{Valore massimo}:$\leq$ EAC
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{R}: insieme dei ruoli;
+    \item \textbf{THR}: ore di lavoro effettive per ruolo;
+    \item \textbf{HC}: costo fisso ad ora per il determinato ruolo;
+\end{itemize}
+
 \MPCQ{Estimated at Completion (EAC)}
+Revisione del costo (in \euro) stimato per la realizzazione del progetto alla data corrente. 
+\begin{itemize}
+    \item \textbf{Formula}:$EAC = AC*ETC$
+    \item \textbf{Valore minimo}: preventivo - 5\% $\leq$ EAC $\leq$  preventivo + 5\%
+    \item \textbf{Valore massimo}:Costo preventivato
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{\%}: percentuali del costo preventivato;
+\end{itemize}
+
 \MPCQ{Earned Value (EV)}
+Valore (in \euro) delle attività realizzate nel progetto fino alla data corrente. 
+\begin{itemize}
+    \item \textbf{Formula}: $EV=TPB*\frac{EH}{THP}$
+    \item \textbf{Valore minimo}: $\geq0$ \euro
+    \item \textbf{Valore massimo}: $\leq$ EAC
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{TPB} : il budget totale preventivato;
+    \item \textbf{EH}: ore di lavoro effettive;
+    \item \textbf{THP}: ore di lavoro pianificate totali;
+\end{itemize}
+
 \MPCQ{Estimated to Complete (ETC)}
+Valore (in \euro) stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto. 
+\begin{itemize}
+    \item \textbf{Formula}: $ETC=TPB*EV$
+    \item \textbf{Valore minimo}: $\geq0$ \euro
+    \item \textbf{Valore massimo}: $\leq$ EAC
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{TPB} : il budget totale preventivato;
+    \item \textbf{EV}: Earned Value;
+\end{itemize}
+
 \MPCQ{Cost Variance (CV)}
+Valore che indica se del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo.
+Se CV > 0 significa che il progetto produce con maggior efficienza (minor costo) rispetto a quanto pianificato, viceversa se negativo. 
+\begin{itemize}
+    \item \textbf{Formula}: $CV=EV-AC$
+    \item \textbf{Valore minimo}: $=0$ \euro
+    \item \textbf{Valore massimo}: $\leq$ EAC
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{AC} : Actual Cost;
+    \item \textbf{EV}: Earned Value;
+\end{itemize}
+
 \MPCQ{Schedule Variance (SV)}
+Percentuale che indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline. 
+% FIX
+Se SV > 0 significa che il progetto sta producendo con maggior velocità a quanto pianificato, viceversa se negativo. 
+\begin{itemize}
+    \item \textbf{Formula}: $SV=\frac{EV-PV}{PV}*100$
+    \item \textbf{Valore minimo}: $\geq$ -15\%
+    \item \textbf{Valore massimo}:0\%
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{AC} : Actual Cost;
+    \item \textbf{PV}: Planned Value;
+\end{itemize}
+
 \MPCQ{Budget Variance (BV)}
+Percentuale che indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto a budget alla data corrente. 
+% FIX
+Se BV > 0 significa che il progetto sta spendendo il proprio budget con minor velocità di quanto pianificato, viceversa se negativo.
+\begin{itemize}
+    \item \textbf{Formula}: $BV=\frac{PV-AC}{PV}*100$
+    \item \textbf{Valore minimo}: $=0$ \euro
+    \item \textbf{Valore massimo}: $\geq0$ \euro
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{AC} : Actual Cost;
+    \item \textbf{PV}: Planned Value;
+\end{itemize}
+
 \MPCQ{Requirements Stability Index (RSI)}
+Indice che traccia la variazione dei requisiti dell'arco del progetto
+\begin{itemize}
+    \item \textbf{Formula}: $RSI = 1 - \frac{CRN+DRN+ARN}{IR}*100$
+    \item \textbf{Valore minimo}: 70\%
+    \item \textbf{Valore massimo}: 100\%
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{CRN} : numero di requisiti cambiati;
+    \item \textbf{DRN}: numero di requisiti eliminati;
+    \item \textbf{ARN}: numero di requisiti aggiunti;
+    \item \textbf{IR}: numero totale di requisiti iniziali.
+\end{itemize}
+
 \MPCQ{Gulpease Index (GI)}
+Indice di leggibilità di un testo tarato sulla lingua italiana. I risultati sono compresi tra 0 e
+100, dove il valore 100 indica la leggibilità più alta e 0 la leggibilità più bassa. Ai seguenti valori si
+associano i seguenti significati:
+\begin{itemize}
+    \item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
+    \item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+    \item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
+\end{itemize}
+\begin{itemize}
+    \item \textbf{Formula}: $GI=89+\frac{300*PN-10*LN}{WN}$
+    \item \textbf{Valore minimo} $\geq50$:
+    \item \textbf{Valore massimo}: $\geq70$
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{PN} : numero di frasi;
+    \item \textbf{LN}: numero di lettere;
+    \item \textbf{WN}: numero di parole
+\end{itemize}
+
 \MPCQ{Metrics Met (MM)}
+Indice percentuale per tenere conto delle metriche soddisfatte. Una
+metrica si dice soddisfatta se raggiunge almeno il valore minimo imposto sul \textit{Piano di Qualifica}.
+\begin{itemize}
+    \item \textbf{Valore minimo}:$\geq70$;
+    \item \textbf{Valore massimo}:$\geq90$.
+\end{itemize}  
+
 \MPCQ{Code Coverage (COC)}
+Percentuale di linee di codice del progetto che sono state eseguite dai test dopo
+un’esecuzione.
+\begin{itemize}
+    \item \textbf{Valore minimo}:$\geq80$
+    \item \textbf{Valore massimo}:$\geq95$
+\end{itemize}  
+
+
 \MPCQ{Unexpected Risks (UR)}
+Valore intero che indica il numero di rischi non previsti durante il corso del progetto.
+\begin{itemize}
+    \item \textbf{Valore minimo}: $\geq0$;
+    \item \textbf{Valore massimo}: $=0$;
+\end{itemize}  
 
 
+\pagebreak
 \setcounter{M}{0}
 \subsection{Metriche per la qualità di prodotto}
 Di seguito sono descritte le metriche di qualità di prodotto che il gruppo intende adottare.
+
 \MPDQ{Met Requirements Percent (MRP)}
+Valore percentuale che serve per indicare i requisiti soddisfatti.
+\begin{itemize}
+    \item \textbf{Valore minimo}: 100\% dei requisiti obbligatori;
+    \item \textbf{Valore massimo}:100\% di tutti i requisiti (anche quelli facoltativi)
+\end{itemize}  
+
 \MPDQ{Fault Density(FD)}
+Percentuale di failure o di esecuzioni non andate a buon fine di determinate azioni. Le
+eventuali esecuzioni fallite o failure saranno segnate dai programmatori e di conseguenza verrà calcolato
+il valore della metrica.
+\begin{itemize}
+    \item \textbf{Formula}: $FD=\frac{FTN}{TN}*100$
+    \item \textbf{Valore minimo}: 20\%
+    \item \textbf{Valore massimo}: 10\%
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{FTN} : numero di test falliti;
+    \item \textbf{TN}: numero di test eseguiti in totale.
+\end{itemize}
+
+
+% CHIEDERE AL PROPONENTE
 \MPDQ{Average Response Time (ART)}
+Tempo medio impiegato dal software per rispondere a una richiesta utente o svolgere un’attività di sistema. 
+\begin{itemize}
+    \item \textbf{Valore minimo}:
+    \item \textbf{Valore massimo}:
+\end{itemize}  
+
+
+% CHIEDERE AL PROPONENTE
 \MPDQ{Loading Time (LT)}
+Tempo medio di attesa per il caricamento del sito.
+\begin{itemize}
+    \item \textbf{Valore minimo}:
+    \item \textbf{Valore massimo}:
+\end{itemize}  
+
+
 \MPDQ{Ease Of Learning (EOL)}
+Misura basata sul tempo che rapprresenta quando, in media, un' utente di impiega per imparare come si utilizza il programma.
+\begin{itemize}
+    \item \textbf{Valore minimo}: 10 minuti;
+    \item \textbf{Valore massimo}: 5 minuti;
+\end{itemize}  
+
 \MPDQ{Cyclomatic Complexity (CYC)}
+Metrica utilizzata per misurare la complessità di un programma. Calcolata sul grafo dei cammini linearmente indipendenti percorsi dal software ed i punti decisionali del programma.
+\begin{itemize}
+    \item \textbf{Formula}: $v(G)=\exp-n+2p$
+    \item \textbf{Valore minimo}: $\leq$ 10;
+    \item \textbf{Valore massimo}:$\leq$ 4;
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{$\exp$} : numero di archi nel grafo;
+    \item \textbf{n}: numero di punti decisionali (nodi) nel grafo.
+    \item \textbf{p}: numero di componenti connesse tra loro.
+\end{itemize}
+
 \MPDQ{Comment Density (CD)}
+Percentuale delle righe di commento sul totale delle righe di codice presenti in un modulo.
+\begin{itemize}
+    \item \textbf{Formula}: $CD=\frac{CMLN}{CLN}*100$
+    \item \textbf{Valore minimo}: 10\%;
+    \item \textbf{Valore massimo}: 20\%.
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{CMLN} : numero di righe di commento;
+    \item \textbf{CLN}: numero di righe di codice.
+\end{itemize}
+
+% CHIEDERE AL PROPONENTE
 \MPDQ{Supported Browser(SB)}
+Valore percentuale dei browser e loro relativa versione che supportano dal prodotto software.
+\begin{itemize}
+    \item \textbf{Formula}: $SB=\frac{BN}{TBN}*100$
+    \item \textbf{Valore minimo}:80\%
+    \item \textbf{Valore massimo}:100\%
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{BN} : numero di browser in cui il software funziona;
+    \item \textbf{TBN}: numero di browser testati.
+\end{itemize}
 
