@@ -1,14 +1,14 @@
 \newcounter{M}
 
-\newcommand{\MPCQ}[1]{
-    \stepcounter{M}
-    \subsubsection{MPCQ\arabic{M} - #1}
+\newcommand{\MPCQ}[2]{
+    \refstepcounter{M}
+    \subsubsection{MPCQ\arabic{M} - #1}\label{M:#2}
     }
-    \newcommand{\MPDQ}[1]{
-    \stepcounter{M}
-    \subsubsection{MPDQ\arabic{M} - #1}
+\newcommand{\MPDQ}[2]{
+    \refstepcounter{M}
+    \subsubsection{MPDQ\arabic{M} - #1}\label{M:#2}
 }
-
+\GetTitleStringSetup{expand}
 \section{Metriche di qualità}
 \subsection{Introduzione}
 Le metriche di qualità sono strumenti fondamentali per
@@ -29,24 +29,23 @@ dove:
     \end{itemize}
     \item \textbf{Id numerico}: indica un numero univoco incrementale separato per le due tipologie.
 \end{itemize}
-
 \subsection{Metriche per la qualità di processo}
 Di seguito sono descritte le metriche di qualità di processo che il gruppo intende adottare.
-\MPCQ{Planned Value (PV)}
-    Costo pianificato (in \euro) per realizzare le attività di progetto alla data corrente.
-    \begin{itemize}
-        \item \textbf{Formula}: $PV = TPB * \frac{PH}{THP}$
-        \item \textbf{Valore minimo}: $\geq0$ \euro
-        \item \textbf{Valore ottimo}: $\leq$ Buget at completion (BAC)
-    \end{itemize}  
-    Per eseguire il calcolo:
-    \begin{itemize}
-        \item \textbf{TPB} : il budget totale preventivato;
-        \item \textbf{PH}: ore di lavoro pianificate;
-        \item \textbf{THP}: ore di lavoro pianificate totali.
-    \end{itemize}
+\MPCQ{Planned Value (PV)}{PV}
+Costo pianificato (in \euro) per realizzare le attività di progetto alla data corrente.
+\begin{itemize}
+    \item \textbf{Formula}: $PV = TPB * \frac{PH}{THP}$
+    \item \textbf{Valore minimo}: $\geq0$ \euro
+    \item \textbf{Valore ottimo}: $\leq$ Buget at completion (BAC)
+\end{itemize}  
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{TPB} : il budget totale preventivato;
+    \item \textbf{PH}: ore di lavoro pianificate;
+    \item \textbf{THP}: ore di lavoro pianificate totali.
+\end{itemize}
 
-\MPCQ{Actual Cost (AC)}
+\MPCQ{Actual Cost (AC)}{AC}
 Costo effettivamente sostenuto (in €) alla data corrente. 
 \begin{itemize}
     \item \textbf{Formula}: $AC = \sum_{r}^{R}(THR_r*HC_r)$
@@ -60,7 +59,7 @@ Per eseguire il calcolo:
     \item \textbf{HC}: costo fisso ad ora per il determinato ruolo.
 \end{itemize}
 
-\MPCQ{Estimated at Completion (EAC)}
+\MPCQ{Estimated at Completion (EAC)}{EAC}
 Revisione del costo (in \euro) stimato per la realizzazione del progetto alla data corrente. 
 \begin{itemize}
     \item \textbf{Formula}:$EAC = AC*ETC$
@@ -72,7 +71,7 @@ Per eseguire il calcolo:
     \item \textbf{\%}: percentuali del costo preventivato.
 \end{itemize}
 
-\MPCQ{Earned Value (EV)}
+\MPCQ{Earned Value (EV)}{EV}
 Valore (in \euro) delle attività realizzate nel progetto fino alla data corrente. 
 \begin{itemize}
     \item \textbf{Formula}: $EV=TPB*\frac{EH}{THP}$
@@ -86,7 +85,7 @@ Per eseguire il calcolo:
     \item \textbf{THP}: ore di lavoro pianificate totali.
 \end{itemize}
 
-\MPCQ{Estimated to Complete (ETC)}
+\MPCQ{Estimated to Complete (ETC)}{ETC}
 Valore (in \euro) stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto. 
 \begin{itemize}
     \item \textbf{Formula}: $ETC=TPB*EV$
@@ -99,7 +98,7 @@ Per eseguire il calcolo:
     \item \textbf{EV}: Earned Value.
 \end{itemize}
 
-\MPCQ{Cost Variance (CV)}
+\MPCQ{Cost Variance (CV)}{CV}
 Valore che indica se del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo.
 Se CV > 0 significa che il progetto produce con maggior efficienza (minor costo) rispetto a quanto pianificato, viceversa se negativo. 
 \begin{itemize}
@@ -113,7 +112,7 @@ Per eseguire il calcolo:
     \item \textbf{EV}: Earned Value.
 \end{itemize}
 
-\MPCQ{Schedule Variance (SV)}
+\MPCQ{Schedule Variance (SV)}{SV}
 Percentuale che indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline. 
 Se SV > 0 significa che il progetto sta producendo con maggior velocità a quanto pianificato, viceversa se negativo. 
 \begin{itemize}
@@ -127,7 +126,7 @@ Per eseguire il calcolo:
     \item \textbf{PV}: Planned Value.
 \end{itemize}
 
-\MPCQ{Budget Variance (BV)}
+\MPCQ{Budget Variance (BV)}{BV}
 Percentuale che indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto a budget alla data corrente. 
 Se BV > 0 significa che il progetto sta spendendo il proprio budget con maggior velocità di quanto pianificato, viceversa se negativo.
 \begin{itemize}
@@ -141,7 +140,7 @@ Per eseguire il calcolo:
     \item \textbf{PV}: Planned Value.
 \end{itemize}
 
-\MPCQ{Requirements Stability Index (RSI)}
+\MPCQ{Requirements Stability Index (RSI)}{RSI}
 Indice che traccia la variazione dei requisiti dell'arco del progetto
 \begin{itemize}
     \item \textbf{Formula}: $RSI = 1 - \frac{CRN+DRN+ARN}{IR}*100$
@@ -156,7 +155,7 @@ Per eseguire il calcolo:
     \item \textbf{IR}: numero totale di requisiti iniziali.
 \end{itemize}
 
-\MPCQ{Gulpease Index (GI)}
+\MPCQ{Gulpease Index (GI)}{GI}
 Indice di leggibilità di un testo tarato sulla lingua italiana. I risultati sono compresi tra 0 e
 100, dove il valore 100 indica la leggibilità più alta e 0 la leggibilità più bassa. Ai seguenti valori si
 associano i seguenti significati:
@@ -177,7 +176,7 @@ Per eseguire il calcolo:
     \item \textbf{WN}: numero di parole.
 \end{itemize}
 
-\MPCQ{Metrics Met (MM)}
+\MPCQ{Metrics Met (MM)}{MM}
 Indice percentuale per tenere conto delle metriche soddisfatte. Una
 metrica si dice soddisfatta se raggiunge almeno il valore minimo imposto sul \textit{Piano di Qualifica}.
 \begin{itemize}
@@ -185,7 +184,7 @@ metrica si dice soddisfatta se raggiunge almeno il valore minimo imposto sul \te
     \item \textbf{Valore ottimo}:$\geq90$
 \end{itemize}  
 
-\MPCQ{Code Coverage (COC)}
+\MPCQ{Code Coverage (COC)}{COC}
 Percentuale di linee di codice del progetto che sono state eseguite dai test dopo
 un’esecuzione.
 \begin{itemize}
@@ -194,7 +193,7 @@ un’esecuzione.
 \end{itemize}  
 
 
-\MPCQ{Unexpected Risks (UR)}
+\MPCQ{Unexpected Risks (UR)}{UR}
 Valore intero che indica il numero di rischi non previsti durante il corso del progetto.
 \begin{itemize}
     \item \textbf{Valore minimo}: $\geq0$
@@ -207,14 +206,14 @@ Valore intero che indica il numero di rischi non previsti durante il corso del p
 \subsection{Metriche per la qualità di prodotto}
 Di seguito sono descritte le metriche di qualità di prodotto che il gruppo intende adottare.
 
-\MPDQ{Met Requirements Percent (MRP)}
+\MPDQ{Met Requirements Percent (MRP)}{MRP}
 Valore percentuale che serve per indicare i requisiti soddisfatti.
 \begin{itemize}
     \item \textbf{Valore minimo}: 100\% dei requisiti obbligatori;
     \item \textbf{Valore ottimo}: 100\% di tutti i requisiti (anche quelli facoltativi)
 \end{itemize}  
 
-\MPDQ{Fault Density(FD)}
+\MPDQ{Fault Density(FD)}{FD}
 Percentuale di failure o di esecuzioni non andate a buon fine di determinate azioni. Le
 eventuali esecuzioni fallite o failure saranno segnate dai programmatori e di conseguenza verrà calcolato
 il valore della metrica.
@@ -231,7 +230,7 @@ Per eseguire il calcolo:
 
 
 % CHIEDERE AL PROPONENTE
-\MPDQ{Average Response Time (ART)}
+\MPDQ{Average Response Time (ART)}{ART}
 Tempo medio impiegato dal software per rispondere a una richiesta utente o svolgere un’attività di sistema. 
 \begin{itemize}
     \item \textbf{Valore minimo}:
@@ -240,7 +239,7 @@ Tempo medio impiegato dal software per rispondere a una richiesta utente o svolg
 
 
 % CHIEDERE AL PROPONENTE
-\MPDQ{Loading Time (LT)}
+\MPDQ{Loading Time (LT)}{LT}
 Tempo medio di attesa per il caricamento del sito.
 \begin{itemize}
     \item \textbf{Valore minimo}:
@@ -248,14 +247,14 @@ Tempo medio di attesa per il caricamento del sito.
 \end{itemize}  
 
 
-\MPDQ{Ease Of Learning (EOL)}
+\MPDQ{Ease Of Learning (EOL)}{EOL}
 Misura basata sul tempo che rapprresenta quando, in media, un' utente di impiega per imparare come si utilizza il programma.
 \begin{itemize}
     \item \textbf{Valore minimo}: 10 minuti;
     \item \textbf{Valore ottimo}: 5 minuti.
 \end{itemize}  
 
-\MPDQ{Cyclomatic Complexity (CYC)}
+\MPDQ{Cyclomatic Complexity (CYC)}{CYC}
 Metrica utilizzata per misurare la complessità di un programma. Calcolata sul grafo dei cammini linearmente indipendenti percorsi dal software ed i punti decisionali del programma.
 \begin{itemize}
     \item \textbf{Formula}: $v(G)=\exp-n+2p$
@@ -269,7 +268,7 @@ Per eseguire il calcolo:
     \item \textbf{p}: numero di componenti connesse tra loro.
 \end{itemize}
 
-\MPDQ{Comment Density (CD)}
+\MPDQ{Comment Density (CD)}{CD}
 Percentuale delle righe di commento sul totale delle righe di codice presenti in un modulo.
 \begin{itemize}
     \item \textbf{Formula}: $CD=\frac{CMLN}{CLN}*100$
@@ -283,7 +282,7 @@ Per eseguire il calcolo:
 \end{itemize}
 
 % CHIEDERE AL PROPONENTE
-\MPDQ{Supported Browser(SB)}
+\MPDQ{Supported Browser(SB)}{SB}
 Valore percentuale dei browser e loro relativa versione che supportano dal prodotto software.
 \begin{itemize}
     \item \textbf{Formula}: $SB=\frac{BN}{TBN}*100$
