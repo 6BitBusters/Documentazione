@@ -1,5 +1,7 @@
 \section{Standard per la qualità}
 
+\subsection{ISO/IEC 12207:1995}
+
 \subsection{ISO/IEC 9126}
 Per definire, misurare e valutare il software prodotto, il gruppo adotta lo 
 standard ISO/IEC 9126, che definisce un modello di qualità del software. Tale 
@@ -7,55 +9,67 @@ modello è organizzato in sei caratteristiche principali,
 ognuna delle quali è suddivisa in sotto-caratteristiche.
 
 \subsubsection{Funzionalità}
-La funzionalità misura la capacità del software di soddisfare i requisiti specificati e di fornire funzioni corrette.
+La funzionalità misura la capacità del software di soddisfare i requisiti specificati e di fornire le funzioni,
+espresse e implicite, necessarie per operare in un determinato contesto.
 \begin{itemize}
     \item \textbf{Appropriatezza}: capacità di eseguire i compiti richiesti;
-    \item \textbf{Accuratezza}: capacità di fornire risultati corretti;
+    \item \textbf{Accuratezza}: livello di correttezza dei risultati;
     \item \textbf{Interoperabilità}: capacità di interagire con uno o più sistemi specificati;
-    \item \textbf{Sicurezza}: capacità di aderire a standard, convenzioni e regolamenti;
-    \item \textbf{Conformità}: capacità di aderire a standard, convenzioni e regolamenti.
+    \item \textbf{Sicurezza}: protezione delle informazioni e dei dati da accessi non autorizzati;
+    \item \textbf{Conformità}: adesione a standard, convenzioni e regolamenti relativi alla funzionalità.
 \end{itemize}
 
 \subsubsection{Affidabilità}
 L'affidabilità misura la capacità del software di svolgere correttamente il suo compito
-mantenendo un un certo livello di prestazioni quando usato in determinate condizioni.
+mantenendo un certo livello di prestazioni quando usato in determinate condizioni.
 \begin{itemize}
     \item \textbf{Maturità}: capacità di evitare errori, malfunzionamenti e guasti;
     \item \textbf{Tolleranza agli errori}: capacità di mantenere un certo livello di prestazioni anche in presenza di errori;
-    \item \textbf{Recuperabilità}: capacità di ripristinare un certo livello di prestazioni e di dati in seguito a un errore;
-    \item \textbf{Conformità}: capacità di aderire a standard, convenzioni e regolamenti.
+    \item \textbf{Recuperabilità}: capacità di ripristinare il livello di prestazioni e di recuperare
+        i dati in caso di errori;
+    \item \textbf{Conformità}: adesione a standard, convenzioni e regolamenti relativi all'affidabilità.
 \end{itemize}
 
 \subsubsection{Efficienza}
 L'efficienza misura la capacità del software di fornire prestazioni appropriate rispetto alla quantità di risorse utilizzate.
+Le risorse includono altri prodotti software e la configurazione hardware e software del sistema.
 \begin{itemize}
-    \item \textbf{Comportamento rispetto al tempo}: capacità di fornire tempi di risposta adeguati;
-    \item \textbf{Utilizzo delle risorse}: capacità di utilizzare un numero di risorse adeguato;
-    \item \textbf{Capacità}: capacità di aderire a standard, convenzioni e regolamenti.
+    \item \textbf{Comportamento rispetto al tempo}: velocità di risposta ed elaborazione;
+    \item \textbf{Utilizzo delle risorse}: capacità di utilizzare un appropriato numero e tipo di risorse;
+    \item \textbf{Conformità}: adesione a standard, convenzioni e regolamenti relativi all'efficienza.
 \end{itemize}
 
 \subsubsection{Usabilità}
-L'usabilità misura la capacità del software di essere compreso, appreso, usato e attraente per l'utente.
+L'usabilità misura la capacità del software di essere comprensibile, di poter essere
+studiato e di risultare attraente per un utente sotto determinate condizioni.
 \begin{itemize}
-    \item \textbf{Comprensibilità}: capacità di essere compreso;
-    \item \textbf{Apprendibilità}: capacità di essere appreso;
-    \item \textbf{Operabilità}: capacità di essere usato;
-    \item \textbf{Attrattività}: capacità di essere attraente.
+    \item \textbf{Comprensibilità}: capacità di essere compreso facilmente;
+    \item \textbf{Apprendibilità}: facilità di apprendimento delle funzionalità;
+    \item \textbf{Operabilità}: facilità di essere utilizzato e controllato;
+    \item \textbf{Attrattività}: capacità di essere attraente per l'utente;
+    \item \textbf{Conformità}: adesione a standard, convenzioni e regolamenti relativi all'usabilità.
 \end{itemize}
 
 \subsubsection{Manutenibilità}
-La manutenibilità misura la capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti.
+La manutenibilità misura la capacità del software di essere modificato.
+Le modifiche possono includere correzioni, miglioramenti o adattamenti del software
+a modifiche negli ambienti, nei requisiti e nelle specifiche funzionali.
 \begin{itemize}
-    \item \textbf{Analizzabilità}: capacità di essere analizzato;
+    \item \textbf{Analizzabilità}: facilità di diagnosticare problemi;
     \item \textbf{Modificabilità}: capacità di essere modificato;
-    \item \textbf{Stabilità}: capacità di evitare effetti indesiderati;
-    \item \textbf{Testabilità}: capacità di essere testato.
+    \item \textbf{Stabilità}: capacità di mantenere il funzionamento dopo modifiche;
+    \item \textbf{Testabilità}: facilità di eseguire test sul software;
+    \item \textbf{Conformità}: adesione a standard, convenzioni e regolamenti relativi alla manutenibilità.
 \end{itemize}
 
 \subsubsection{Portabilità}
-La portabilità misura la capacità del software di essere trasferito da un ambiente di lavoro a un altro.
+La portabilità misura la capacità del software di essere trasferito da un ambiente di lavoro ad un altro.
+L'ambiente include aspetti organizzativi e tecnologici (hardware e software).
 \begin{itemize}
-    \item \textbf{Adattabilità}: capacità di essere adattato;
-    \item \textbf{Installabilità}: capacità di essere installato;
-    \item \textbf{Sostituibilità}: capacità di essere sostituito.
+    \item \textbf{Adattabilità}: capacità di adattarsi a diversi ambienti di lavoro;
+    \item \textbf{Installabilità}: facilità di installazione;
+    \item \textbf{Coesistenza}: capacità di coesistere con altri software;
+    \item \textbf{Sostituibilità}: facilità con cui il software può sostituirne un altro, per lo 
+        stesso scopo e nello stesso ambiente;
+    \item \textbf{Conformità}: adesione a standard, convenzioni e regolamenti relativi alla portabilità.
 \end{itemize}
