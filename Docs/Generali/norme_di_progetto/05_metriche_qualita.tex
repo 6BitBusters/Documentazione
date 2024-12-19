@@ -38,7 +38,7 @@ Costo pianificato (in \euro) per realizzare le attività di progetto alla data c
 \begin{itemize}
     \item \textbf{Formula}: $PV = BAC * \frac{PH}{THP}$
     \item \textbf{Valore accettabile}: $\geq0$ \euro
-    \item \textbf{Valore ottimale}: $\leq$ Budget at completion (BAC)
+    \item \textbf{Valore ottimale}: $\leq$ BAC
 \end{itemize}  
 Per eseguire il calcolo:
 \begin{itemize}
@@ -52,7 +52,7 @@ Costo effettivamente sostenuto (in \euro) alla data corrente.
 \begin{itemize}
     \item \textbf{Formula}: $AC = \sum_{r}^{R}(THR_r*HC_r)$
     \item \textbf{Valore accettabile}: $\geq0$ \euro
-    \item \textbf{Valore ottimale}: $\leq$ EAC (Estimated at Completion)
+    \item \textbf{Valore ottimale}: $\leq$ EaC (Estimated at Completion)
 \end{itemize}  
 Per eseguire il calcolo:
 \begin{itemize}
@@ -66,7 +66,7 @@ Valore (in \euro) delle attività realizzate nel progetto fino alla data corrent
 \begin{itemize}
     \item \textbf{Formula}: $EV=BAC*\frac{EH}{THP}$
     \item \textbf{Valore accettabile}: $\geq0$ \euro
-    \item \textbf{Valore ottimale}: $\leq$ EAC
+    \item \textbf{Valore ottimale}: $\leq$ EaC
 \end{itemize}  
 Per eseguire il calcolo:
 \begin{itemize}
@@ -75,31 +75,31 @@ Per eseguire il calcolo:
     \item \textbf{THP}: ore di lavoro pianificate totali.
 \end{itemize}
 
-\MPC{Estimated at Completion (EAC)}{EAC}
+\MPC{Estimated at Completion (EaC)}{EAC}
 Revisione del costo (in \euro) stimato per la realizzazione del progetto alla data corrente. 
 \begin{itemize}
-    \item \textbf{Formula}:$EAC = AC+ETC$
+    \item \textbf{Formula}:$EaC = AC+EtC$
     \item \textbf{Valore accettabile}: $\geq BAC - 5\%$
     \item \textbf{Valore accettabile}: $\leq  BAC + 5\%$
-    \item \textbf{Valore ottimale}: = BAC
+    \item \textbf{Valore ottimale}: BAC
 \end{itemize}  
 Per eseguire il calcolo:
 \begin{itemize}
     \item \textbf{AC}: Actual Cost;
-    \item \textbf{ETC}: Estimated to Complete.
+    \item \textbf{EtC}: Estimated to Complete.
 \end{itemize}
 
 
-\MPC{Estimated to Complete (ETC)}{ETC}
+\MPC{Estimate to Complete (EtC)}{ETC}
 Valore (in \euro) stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto. 
 \begin{itemize}
-    \item \textbf{Formula}: $ETC=BAC-EV$
+    \item \textbf{Formula}: $EtC=BAC-EV$
     \item \textbf{Valore accettabile}: $\geq0$ \euro
-    \item \textbf{Valore ottimale}: $\leq$ EAC
+    \item \textbf{Valore ottimale}: $\leq$ EaC
 \end{itemize}  
 Per eseguire il calcolo:
 \begin{itemize}
-    \item \textbf{BAC} : il budget totale preventivato;
+    \item \textbf{BAC}: il budget totale preventivato;
     \item \textbf{EV}: Earned Value.
 \end{itemize}
 
@@ -165,14 +165,20 @@ Per eseguire il calcolo:
 \MPC{Completezza dei documenti}{DOCC}
 Percentuale che indica lo stato di completezza di un documento
 \begin{itemize}
+    \item \textbf{Formula}: $CD=\frac{SS}{TS}*100$
     \item \textbf{Valore accettabile}: $100\%$
     \item \textbf{Valore ottimale}: $100\%$
-\end{itemize}  
+\end{itemize} 
+Per eseguire il calcolo:
+\begin{itemize}
+    \item \textbf{SS}: sezioni del documento redatte;
+    \item \textbf{TS}: sezioni del documento da redigere;
+\end{itemize} 
 
 
 \MPC{Metriche soddisfatte}{MM}
 Indice percentuale per tenere conto delle metriche soddisfatte. Una
-metrica si dice soddisfatta se raggiunge almeno il Valore accettabile imposto sul \textit{Piano di Qualifica}.
+metrica si dice soddisfatta se raggiunge almeno il valore accettabile imposto sul \textit{Piano di Qualifica}.
 \begin{itemize}
     \item \textbf{Formula}: $MS = (1 - \frac{MS}{TM})*100$
     \item \textbf{Valore accettabile}:$\geq80\%$
@@ -184,9 +190,8 @@ Per eseguire il calcolo:
     \item \textbf{TM}: numero di metriche valutate.
 \end{itemize}
 
-\MPC{Code Coverage (COC)}{COC}
+\MPC{Code Coverage}{COC}
 Percentuale che indica quanta porzione di codice sorgente è stata eseguita tramite test.
-un’esecuzione.
 \begin{itemize}
     \item \textbf{Valore accettabile}:$\geq75\%$
     \item \textbf{Valore ottimale}:$\geq90\%$
@@ -252,7 +257,7 @@ Per eseguire il calcolo:
     \item \textbf{WN}: numero di parole.
 \end{itemize}
 
-\MPD{Errori Grammaticali}{GE}
+\MPD{Errori grammaticali}{GE}
 Numero di errori grammaticali presenti nei documenti.
 \begin{itemize}
     \item \textbf{Valore accettabile} $0$
@@ -262,7 +267,7 @@ Numero di errori grammaticali presenti nei documenti.
 \MPD{Requisiti obbligatori soddisfatti}{MR}
 Percentuale che indica i requisiti obbligatori soddisfatti.
 \begin{itemize}
-    \item \textbf{Formula}: $ROS=\frac{MR}{TMR}*100$
+    \item \textbf{Formula}: $CMR=\frac{MR}{TMR}*100$
     \item \textbf{Valore accettabile}: 100\%
     \item \textbf{Valore ottimale}: 100\%
 \end{itemize}
@@ -272,38 +277,38 @@ Per eseguire il calcolo:
     \item \textbf{TMR}: numero di requisiti obbligatori in totale.
 \end{itemize} 
 
-\MPD{Requisiti desiderabili soddisfatti}{OR}
+\MPD{Requisiti desiderabili soddisfatti}{DR}
 Percentuale che indica i requisiti desiderabili soddisfatti.
 \begin{itemize}
-    \item \textbf{Formula}: $RDS=\frac{DR}{TDR}*100$
+    \item \textbf{Formula}: $CDR=\frac{DR}{TDR}*100$
     \item \textbf{Valore accettabile}: $\geq0\%$
     \item \textbf{Valore ottimale}: $100\%$
 \end{itemize}  
 Per eseguire il calcolo:
 \begin{itemize}
-    \item \textbf{MR} : numero di requisiti desiderabili soddisfatti;
-    \item \textbf{TMR}: numero di requisiti desiderabili in totale.
+    \item \textbf{DR} : numero di requisiti desiderabili soddisfatti;
+    \item \textbf{TDR}: numero di requisiti desiderabili in totale.
 \end{itemize} 
 
 
 \MPD{Requisiti opzionali soddisfatti}{OR}
 Percentuale che indica i requisiti opzionali soddisfatti.
 \begin{itemize}
-    \item \textbf{Formula}: $ROS=\frac{OR}{TOR}*100$
+    \item \textbf{Formula}: $COR=\frac{OR}{TOR}*100$
     \item \textbf{Valore accettabile}: $\geq0\%$
     \item \textbf{Valore ottimale}: $100\%$
 \end{itemize}  
 Per eseguire il calcolo:
 \begin{itemize}
-    \item \textbf{MR} : numero di requisiti opzionali soddisfatti;
-    \item \textbf{TMR}: numero di requisiti opzionali in totale.
+    \item \textbf{OR} : numero di requisiti opzionali soddisfatti;
+    \item \textbf{TOR}: numero di requisiti opzionali in totale.
 \end{itemize} 
 
 \MPD{Casi di test superati}{PTC}
 Percentuale che indica i test che terminano con esisto positivo.
 \begin{itemize}
     \item \textbf{Formula}: $CTS=\frac{PTC}{TTC}*100$
-    \item \textbf{Valore accettabile}: $\geq0\%$
+    \item \textbf{Valore accettabile}: $\geq90\%$
     \item \textbf{Valore ottimale}: $100\%$
 \end{itemize}
 Per eseguire il calcolo:
@@ -336,7 +341,7 @@ Per eseguire il calcolo:
     \item \textbf{TN}: numero di test eseguiti in totale.
 \end{itemize}
 
-\MPD{Tempo di apprendimento (EOL)}{EOL}
+\MPD{Tempo di apprendimento}{EOL}
 Misura basata sul tempo che rappresenta quando, in media, un'utente ci impiega per imparare come si utilizza il programma.
 \begin{itemize}
     \item \textbf{Valore accettabile}: $\leq$ 5 minuti;
@@ -359,8 +364,8 @@ Tempo medio impiegato dal software per rispondere a una richiesta utente o svolg
     \item \textbf{Valore ottimale}:
 \end{itemize}  
 
-\MPD{Complessità ciclomatica (CYC)}{CYC}
-Metrica utilizzata per misurare la complessità di un programma. Calcolata sul grafo dei cammini linearmente indipendenti percorsi dal software ed i punti decisionali del programma.
+\MPD{Complessità ciclomatica}{CYC}
+Metrica utilizzata per misurare la complessità di un singolo metodo. Calcolata sul grafo dei cammini linearmente indipendenti percorsi dal software ed i punti decisionali del programma.
 \begin{itemize}
     \item \textbf{Formula}: $CC=v(G)=e-n+2p$
     \item \textbf{Valore accettabile}: $\leq8$
@@ -404,11 +409,10 @@ Percentuale delle righe di commento sul totale delle righe di codice presenti in
 \end{itemize}  
 Per eseguire il calcolo:
 \begin{itemize}
-    \item \textbf{CMLN} : numero di righe di commento;
+    \item \textbf{CMLN}: numero di righe di commento;
     \item \textbf{CLN}: numero di righe di codice.
 \end{itemize}
 
-% CHIEDERE AL PROPONENTE
 \MPD{Supported Browser(SB)}{SB}
 Valore percentuale dei browser e loro relativa versione che supportano dal prodotto software.
 \begin{itemize}
