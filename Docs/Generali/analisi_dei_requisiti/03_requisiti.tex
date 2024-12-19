@@ -87,8 +87,11 @@ Per la codifica dei requisiti si faccia riferimento alle \textit{Norme di Proget
     RP1.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni 100x100 non deve avere un tempo di caricamento superiore a 2 secondi & Decisione interna \tabularnewline
     RP1.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni 500x500 non deve avere un tempo di caricamento superiore a 5 secondi & Decisione interna \tabularnewline
     RP1.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni 1000x1000 non deve avere un tempo di caricamento superiore a 8 secondi & Decisione interna \tabularnewline
-    RP2.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni maggiori di 1000x1000 non deve avere un tempo di caricamento superiore a 13 secondi & Decisione interna \tabularnewline
+    RP2.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni maggiori di 1000x1000 non deve avere un tempo di caricamento superiore a 15 secondi & Decisione interna \tabularnewline
+    RP1.\arabic{R}\stepcounter{R} & Il software non deve avere un tempo di risposta superiore a 5 secondi & Decisione interna \tabularnewline
 }
+
+
 \subsection{Tracciamento requisiti}
 
 \subsubsection{Fonte - Requisiti}
@@ -107,6 +110,7 @@ Per la codifica dei requisiti si faccia riferimento alle \textit{Norme di Proget
                         RP1.2\par
                         RP1.3\par
                         RP2.4\par
+                        RP1.5\par
                         \tabularnewline
     UC1         & RF1.1 \tabularnewline
     UC1.1       & RF1.2 \tabularnewline
@@ -115,34 +119,35 @@ Per la codifica dei requisiti si faccia riferimento alle \textit{Norme di Proget
     UC1.1.3     & RF1.2 \tabularnewline
     UC1.2       & RF1.3 \tabularnewline
     UC2         & RF1.4\tabularnewline
-    UC3         & RF1.5 \tabularnewline
-    UC4         & RF1.6 \tabularnewline
-    UC4.1       & RF1.7    \tabularnewline
-    UC4.2       & RF1.8 \tabularnewline
-    UC4.3       & RF1.9 \tabularnewline
-    UC5         & RF1.10 \tabularnewline
-    UC6         & RF1.11 \tabularnewline
-    UC7         & RF1.12 \tabularnewline
-    UC7.1       & RF1.13 \tabularnewline
-    UC7.2       & RF1.14 \tabularnewline
-    UC8         & RF1.15 \tabularnewline
-    UC8.1       & RF1.16 \tabularnewline
-    UC8.2       & RF1.17 \tabularnewline
-    UC8.3       & RF1.18 \tabularnewline
-    UC9         & RF1.19 \tabularnewline
-    UC10        & RF1.20 \tabularnewline
-    UC11        & RF1.21 \tabularnewline
-    UC11.1      & RF1.22    \tabularnewline
-    UC11.1.1    & RF1.23  \tabularnewline
-    UC11.2      & RF1.24    \tabularnewline
-    UC11.2.1    & RF1.25  \tabularnewline
-    UC11.2.2    & RF1.26  \tabularnewline
-    UC12        & RF1.27 \tabularnewline
-    UC12.1      & RF1.28    \tabularnewline
-    UC12.2      & RF1.29    \tabularnewline
-    UC12.3      & RF1.30   \tabularnewline
-    UC13        & RF2.31 \tabularnewline
-    UC14        & RF1.32 \tabularnewline
+    UC2         & RF3.5\tabularnewline
+    UC3         & RF1.6 \tabularnewline
+    UC4         & RF1.7 \tabularnewline
+    UC4.1       & RF1.8    \tabularnewline
+    UC4.2       & RF1.9 \tabularnewline
+    UC4.3       & RF1.10 \tabularnewline
+    UC5         & RF1.11 \tabularnewline
+    UC6         & RF1.12 \tabularnewline
+    UC7         & RF1.13 \tabularnewline
+    UC7.1       & RF1.14 \tabularnewline
+    UC7.2       & RF1.15 \tabularnewline
+    UC8         & RF1.16 \tabularnewline
+    UC8.1       & RF1.17 \tabularnewline
+    UC8.2       & RF1.18 \tabularnewline
+    UC8.3       & RF1.19 \tabularnewline
+    UC9         & RF1.20 \tabularnewline
+    UC10        & RF1.21 \tabularnewline
+    UC11        & RF1.22 \tabularnewline
+    UC11.1      & RF1.23    \tabularnewline
+    UC11.1.1    & RF1.24  \tabularnewline
+    UC11.2      & RF1.25    \tabularnewline
+    UC11.2.1    & RF1.26  \tabularnewline
+    UC11.2.2    & RF1.27  \tabularnewline
+    UC12        & RF1.28 \tabularnewline
+    UC12.1      & RF1.29    \tabularnewline
+    UC12.2      & RF1.30    \tabularnewline
+    UC12.3      & RF1.31   \tabularnewline
+    UC13        & RF2.32 \tabularnewline
+    UC14        & RF1.33 \tabularnewline
     }
 
     \newpage
@@ -153,34 +158,35 @@ Per la codifica dei requisiti si faccia riferimento alle \textit{Norme di Proget
     RF1.2 & UC1.1\par UC1.1.1\par UC1.1.2\par UC1.1.3\tabularnewline
     RF1.3 & UC1.2 \tabularnewline
     RF1.4 & UC2 \tabularnewline
-    RF1.5 & UC3 \tabularnewline
-    RF1.6 & UC4 \tabularnewline
-    RF1.7 & UC4.1 \tabularnewline
-    RF1.8 & UC4.2 \tabularnewline
-    RF1.9 & UC4.3 \tabularnewline
-    RF1.10& UC5 \tabularnewline
-    RF1.11& UC6 \tabularnewline
-    RF1.12& UC7 \tabularnewline
-    RF1.13 & UC7.1 \tabularnewline
-    RF1.14 & UC7.2 \tabularnewline
-    RF1.15& UC8 \tabularnewline
-    RF1.16 & UC8.1 \tabularnewline
-    RF1.17 & UC8.2 \tabularnewline
-    RF1.18 & UC8.3 \tabularnewline
-    RF1.19& UC9 \tabularnewline
-    RF1.20 & UC10 \tabularnewline
-    RF1.21 & UC11 \tabularnewline
-    RF1.22 & UC11.1 \tabularnewline
-    RF1.23 & UC11.1.1 \tabularnewline
-    RF1.24 & UC11.2 \tabularnewline
-    RF1.25 & UC11.2.1 \tabularnewline
-    RF1.26 & UC11.2.2 \tabularnewline
-    RF1.27 & UC12 \tabularnewline
-    RF1.28 & UC12.1 \tabularnewline
-    RF1.29 & UC12.2 \tabularnewline
-    RF1.30 & UC12.3 \tabularnewline
-    RF2.31 & UC13 \tabularnewline
-    RF1.32 & UC14 \tabularnewline
+    RF3.5 & UC2 \tabularnewline
+    RF1.6 & UC3 \tabularnewline
+    RF1.7 & UC4 \tabularnewline
+    RF1.8 & UC4.1 \tabularnewline
+    RF1.9 & UC4.2 \tabularnewline
+    RF1.10 & UC4.3 \tabularnewline
+    RF1.11& UC5 \tabularnewline
+    RF1.12& UC6 \tabularnewline
+    RF1.13& UC7 \tabularnewline
+    RF1.14 & UC7.1 \tabularnewline
+    RF1.15 & UC7.2 \tabularnewline
+    RF1.16& UC8 \tabularnewline
+    RF1.17 & UC8.1 \tabularnewline
+    RF1.18 & UC8.2 \tabularnewline
+    RF1.19 & UC8.3 \tabularnewline
+    RF1.20& UC9 \tabularnewline
+    RF1.21 & UC10 \tabularnewline
+    RF1.22 & UC11 \tabularnewline
+    RF1.23 & UC11.1 \tabularnewline
+    RF1.24 & UC11.1.1 \tabularnewline
+    RF1.25 & UC11.2 \tabularnewline
+    RF1.26 & UC11.2.1 \tabularnewline
+    RF1.27 & UC11.2.2 \tabularnewline
+    RF1.28 & UC12 \tabularnewline
+    RF1.29 & UC12.1 \tabularnewline
+    RF1.30 & UC12.2 \tabularnewline
+    RF1.31 & UC12.3 \tabularnewline
+    RF2.32 & UC13 \tabularnewline
+    RF1.33 & UC14 \tabularnewline
 
     RQ1.1 & Decisione interna\tabularnewline
     RQ1.2& Decisione interna\tabularnewline
@@ -201,17 +207,18 @@ Per la codifica dei requisiti si faccia riferimento alle \textit{Norme di Proget
     RP1.2 & Decisione interna\tabularnewline
     RP1.3 & Decisione interna\tabularnewline
     RP2.4 & Decisione interna\tabularnewline
+    RP1.5 & Decisione interna\tabularnewline
 
 }
 
 \subsubsection{Riepilogo requisiti}
 \requirementsSummaryTable{
-    Funzionale & 32 & 1 & 1 & 33 \tabularnewline
+    Funzionale & 32 & 1 & 1 & 34 \tabularnewline
     Di qualità & 5 & 1 & 0 & 6 \tabularnewline
-    Di vincolo & 7 & 0 & 0 & 3 \tabularnewline
-    Prestazionali & 3 & 1 & 0 & 4 \tabularnewline
+    Di vincolo & 7 & 0 & 0 & 7 \tabularnewline
+    Prestazionali & 4 & 1 & 0 & 5 \tabularnewline
     \bottomrule
-    \textbf{Totale requisiti} & 46 & 3 & 1 & 50
+    \textbf{Totale requisiti} & 48 & 3 & 1 & 52
     
 }
 
