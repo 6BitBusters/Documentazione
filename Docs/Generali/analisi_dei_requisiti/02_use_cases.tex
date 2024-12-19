@@ -1,126 +1,168 @@
+\newcounter{UC}
+\newcounter{SUC}
+\newcounter{SSUC}
+
+\newcommand{\resetCounter}[1]{%
+    \setcounter{#1}{0}
+}
+
+\newcommand{\UseCase}[1]{%
+    \stepcounter{UC}
+    \resetCounter{SUC}
+    \resetCounter{SSUC}
+    \subsection{UC\arabic{UC} - #1}
+}
+
+\newcommand{\SubUseCase}[1]{%
+    \stepcounter{SUC}
+    \subsubsection{UC\arabic{UC}.\arabic{SUC} - #1}
+}
+
+\newcommand{\SubSubUseCase}[1]{%
+    \stepcounter{SSUC}  
+    \paragraph{UC\arabic{UC}.\arabic{SUC}.\arabic{SSUC} - #1}
+}
+
+% COME UTILIZZARE I CASI D`USO:
+% i comandi di use case vanno utilizzati al posto di subsectio, subsubsection e paragraph
+
+% \UseCase => rappresenta lo use case principale (UC1,UC2,UC3)
+% \SubUseCase => rappresenta il primo sotto livello dello use case principale (UC1.1,UC2.1,UC3.3)
+% \SubSubUseCase => rappresenta il secondo sotto livello dello lo use case principale (UC1.1.1,UC2.1.2,UC3.3.1)
+
+
+
 \section{Casi d'uso}
 \subsection{Attore}
 Poiché per lo svolgimento del progetto non è necessario gestire permessi differenti per l'accesso alle funzionalità, l'attore che interagisce con il nostro software è unico, denominato "Utente".\\
 \textbf{Utente:} soggetto che utilizza la web application, sfruttandone le funzionalità.
-\subsection{UC1 - Visualizzazione lista dei dataset disponibili}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.7]{template/images/UC1.png}
-    \caption{UC1 - Visualizzazione lista dei dataset disponibili}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} quando un utente interagisce con l'applicazione web,
-    gli viene mostrato un elenco di dataset.\\ Da questa lista, può scegliere il dataset da rappresentare sotto forma di tabella e di grafico 3D.
-    \item \textbf{Precondizioni:}
+\UseCase{Visualizzazione lista dei dataset disponibili}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.7]{template/images/UC1.png}
+        \caption{UC\arabic{UC} - Visualizzazione lista dei dataset disponibili}
+    \end{figure}
     \begin{itemize}
-        \item L'utente ha accesso all'applicazione.
+        \item \textbf{Attore:} utente;
+        \item \textbf{Descrizione:} quando un utente interagisce con l'applicazione web,
+        gli viene mostrato un elenco di dataset.\\ Da questa lista, può scegliere il dataset da rappresentare sotto forma di tabella e di grafico 3D.
+        \item \textbf{Precondizioni:}
+        \begin{itemize}
+            \item L'utente ha accesso all'applicazione.
+        \end{itemize}
+        \item \textbf{Postcondizioni:}
+        \begin{itemize}
+            \item L'utente vede una lista dei dataset disponibili.
+        \end{itemize}
+        \item \textbf{Scenario:} 
+        \begin{itemize}
+            \item L'utente avvia il sistema;
+            \item I dataset disponibili vengono presentati tramite un elenco;
+            \item L'utente può navigare l'elenco e scegliere il dataset che gli interessa.
+        \end{itemize}
     \end{itemize}
-    \item \textbf{Postcondizioni:}
-    \begin{itemize}
-        \item L'utente vede una lista dei dataset disponibili.
-    \end{itemize}
-    \item \textbf{Scenario:} 
-    \begin{itemize}
-        \item L'utente avvia il sistema;
-        \item I dataset disponibili vengono presentati tramite un elenco;
-        \item L'utente può navigare l'elenco e scegliere il dataset che gli interessa.
-    \end{itemize}
-\end{itemize}
-\newpage
-\subsubsection{UC1.1 - Visualizzazione dettagli del dataset}
-\begin{itemize}
-    \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} permette di visualizzare i dettagli del dataset selezionato;
-    \item \textbf{Precondizioni:}
-    \begin{itemize}
-        \item Il sistema ha accesso ai dettagli tecnici e descrittivi del dataset.
-    \end{itemize}
-    \item \textbf{Postcondizioni:}
-    \begin{itemize}
-        \item Le informazioni sul dataset vengono mostrate all'utente.
-    \end{itemize}
-    \item \textbf{Scenario:}
-    \begin{itemize}
-        \item Il sistema mostra i dettagli dei dataset presenti nell'elenco.
-    \end{itemize}
-\end{itemize}
-\paragraph{UC1.1.1 - Visualizzazione nome del dataset}
-\begin{itemize}
-    \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} l'utente può visualizzare il nome del dataset presente nell'elenco;
-    \item \textbf{Precondizioni:}
-    \begin{itemize}
-        \item Il sistema ha accesso alle informazioni sul dataset.
-    \end{itemize}
-    \item \textbf{Postcondizioni:}
-    \begin{itemize}
-        \item Il nome del dataset viene mostrato all'utente.
-    \end{itemize}
-    \item \textbf{Scenario:}
-    \begin{itemize}
-        \item Il sistema mostra il nome del dataset.
-    \end{itemize}
-\end{itemize}
-\paragraph{UC1.1.2 - Visualizzazione della descrizione contenuto del dataset}
-\begin{itemize}
-    \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} l'utente può visualizzare una descrizione del contenuto del dataset;
-    \item \textbf{Precondizioni:}
-    \begin{itemize}
-        \item Il sistema ha accesso alle informazioni relative al contenuto del dataset.
-    \end{itemize}
-    \item \textbf{Postcondizioni:}
-    \begin{itemize}
-        \item La descrizione del contenuto del dataset viene mostrata all'utente.
-    \end{itemize}
-    \item \textbf{Scenario:}
-    \begin{itemize}
-        \item Il sistema mostra una descrizione del contenuto del dataset.
-    \end{itemize}
-\end{itemize}
-\paragraph{UC1.1.3 - Visualizzazione dimensioni tabella}
-\begin{itemize}
-    \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} l'utente può visualizzare le dimensioni della tabella relativa ai dati contenuti nel dataset;
-    \item \textbf{Precondizioni:}
-    \begin{itemize}
-        \item Il sistema ha accesso alle informazioni relative alla dimensione del dataset.
-    \end{itemize}
-    \item \textbf{Postcondizioni:}
-    \begin{itemize}
-        \item Le dimensioni della tabella relativa ai dati contenuti nel dataset vengono mostrate all'utente.
-    \end{itemize}
-    \item \textbf{Scenario:}
-    \begin{itemize}
-        \item Il sistema mostra le dimensioni della tabella relativa ai dati contenuti nel dataset.
-    \end{itemize}
-\end{itemize}
+    \newpage
 
-\subsubsection{UC1.2 - Caricamento di un dataset dall'elenco di quelli disponibili}
-\begin{itemize}
-    \item \textbf{Attore:} utente;
-    \item \textbf{Descrizione:} consente di caricare il dataset selezionato nell'ambiente 3D dell'applicazione;
-    \item \textbf{Precondizioni:}
+    \SubUseCase{Visualizzazione dettagli del dataset}
     \begin{itemize}
-        \item L'elenco dei dataset disponibili è stato caricato correttamente;
+        \item \textbf{Attore:} utente;
+        \item \textbf{Descrizione:} permette di visualizzare i dettagli del dataset selezionato;
+        \item \textbf{Precondizioni:}
+        \begin{itemize}
+            \item Il sistema ha accesso ai dettagli tecnici e descrittivi del dataset.
+        \end{itemize}
+        \item \textbf{Postcondizioni:}
+        \begin{itemize}
+            \item Le informazioni del dataset vengono mostrate all'utente.
+        \end{itemize}
+        \item \textbf{Scenario:}
+        \begin{itemize}
+            \item Il sistema mostra i dettagli dei dataset presenti nell'elenco.
+        \end{itemize}
     \end{itemize}
-    \item \textbf{Postcondizioni:}
+
+    \SubSubUseCase{Visualizzazione nome del dataset}
     \begin{itemize}
-        \item Il dataset selezionato viene caricato nel sistema.
+        \item \textbf{Attore:} utente;
+        \item \textbf{Descrizione:} l'utente può visualizzare il nome del dataset presente nell'elenco;
+        \item \textbf{Precondizioni:}
+        \begin{itemize}
+            \item Il sistema ha accesso alle informazioni del dataset.
+        \end{itemize}
+        \item \textbf{Postcondizioni:}
+        \begin{itemize}
+            \item Il nome del dataset viene mostrato all'utente.
+        \end{itemize}
+        \item \textbf{Scenario:}
+        \begin{itemize}
+            \item Il sistema mostra il nome del dataset.
+        \end{itemize}
     \end{itemize}
-    \item \textbf{Scenario:}
+
+    \SubSubUseCase{Visualizzazione della descrizione contenuto del dataset}
     \begin{itemize}
-        \item L'utente seleziona un dataset dall'elenco disponibile;
-        \item Il sistema prepara i dati per la visualizzazione in forma tabellare e in grafico 3D.
+        \item \textbf{Attore:} utente;
+        \item \textbf{Descrizione:} l'utente può visualizzare una descrizione del contenuto del dataset;
+        \item \textbf{Precondizioni:}
+        \begin{itemize}
+            \item Il sistema ha accesso alle informazioni relative al contenuto del dataset.
+        \end{itemize}
+        \item \textbf{Postcondizioni:}
+        \begin{itemize}
+            \item La descrizione del contenuto del dataset viene mostrata all'utente.
+        \end{itemize}
+        \item \textbf{Scenario:}
+        \begin{itemize}
+            \item Il sistema mostra una descrizione del contenuto del dataset.
+        \end{itemize}
     \end{itemize}
-\end{itemize}
+
+    \SubSubUseCase{Visualizzazione dimensioni tabella}
+    \begin{itemize}
+        \item \textbf{Attore:} utente;
+        \item \textbf{Descrizione:} l'utente può visualizzare le dimensioni della tabella relativa ai dati contenuti nel dataset;
+        \item \textbf{Precondizioni:}
+        \begin{itemize}
+            \item Il sistema ha accesso alle informazioni relative alla dimensione del dataset.
+        \end{itemize}
+        \item \textbf{Postcondizioni:}
+        \begin{itemize}
+            \item Le dimensioni della tabella relativa ai dati contenuti nel dataset vengono mostrate all'utente.
+        \end{itemize}
+        \item \textbf{Scenario:}
+        \begin{itemize}
+            \item Il sistema mostra le dimensioni della tabella relativa ai dati contenuti nel dataset.
+        \end{itemize}
+    \end{itemize}
+
+    \SubUseCase{Caricamento di un dataset dall'elenco di quelli disponibili}
+    \begin{itemize}
+        \item \textbf{Attore:} utente;
+        \item \textbf{Descrizione:} consente di caricare il dataset selezionato nell'ambiente 3D dell'applicazione;
+        \item \textbf{Precondizioni:}
+        \begin{itemize}
+            \item L'elenco dei dataset disponibili è stato caricato correttamente;
+        \end{itemize}
+        \item \textbf{Postcondizioni:}
+        \begin{itemize}
+            \item Il dataset selezionato viene caricato nel sistema.
+        \end{itemize}
+        \item \textbf{Scenario:}
+        \begin{itemize}
+            \item L'utente seleziona un dataset dall'elenco disponibile;
+            \item Il sistema prepara i dati per la visualizzazione in forma tabellare e in grafico 3D.
+        \end{itemize}
+    \end{itemize}
 \newpage
-\subsection{UC2 - Visualizzazione dati in forma tabellare}
+
+
+
+
+\UseCase{Visualizzazione dati in forma tabellare}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.7]{template/images/UC2.png}
-    \caption{UC2 - Visualizzazione dati in forma tabellare}
+    \caption{UC\arabic{UC} - Visualizzazione dati in forma tabellare}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore:} utente;
@@ -139,11 +181,14 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \item L'applicazione elabora i dati e vengono mostrati in forma tabellare.
     \end{itemize}
 \end{itemize}
-\subsection{UC3 - Visualizzazione dati in forma di grafico a istogramma 3D verticale}
+
+
+
+\UseCase{Visualizzazione dati in forma di grafico a istogramma 3D verticale}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.7]{template/images/UC3.png}
-    \caption{UC3 - Visualizzazione dati in forma di grafico a istogramma 3D verticale}
+    \caption{UC\arabic{UC} - Visualizzazione dati in forma di grafico a istogramma 3D verticale}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore:} utente;
@@ -163,7 +208,10 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \item L'interfaccia visualizza il grafico 3D verticale in una vista interattiva, consentendo all'utente di analizzare i dati.
     \end{itemize}
 \end{itemize}
-\subsection{UC4 - Visualizzazione assi}
+
+
+
+\UseCase{Visualizzazione assi}
 \begin{itemize}
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare dettagliatamente gli assi X, Y e Z del grafico;
@@ -183,7 +231,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \end{itemize}
 
 \end{itemize}
-\subsubsection{UC4.1 - Visualizzazione asse X}
+\SubUseCase{Visualizzazione asse X}
 \begin{itemize}
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare dettagliatamente l'asse X;
@@ -201,7 +249,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \item L'utente visualizza l'asse X con i valori appropriati.
     \end{itemize}
 \end{itemize}
-\subsubsection{UC4.2 - Visualizzazione asse Y}
+\SubUseCase{Visualizzazione asse Y}
 \begin{itemize}
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare dettagliatamente l'asse Y;
@@ -219,7 +267,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \item L'utente visualizza l'asse Y con i valori appropriati.
     \end{itemize}
 \end{itemize}
-\subsubsection{UC4.3 - Visualizzazione asse Z}
+\SubUseCase{Visualizzazione asse Z}
 \begin{itemize}
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare dettagliatamente l'asse Z;
@@ -237,7 +285,10 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \item L'utente visualizza l'asse Z con i valori appropriati.
     \end{itemize}
 \end{itemize}
-\subsection{UC5 - Visualizzazione legenda}
+
+
+
+\UseCase{Visualizzazione legenda}
 \begin{itemize}
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} consente di visualizzare una legenda con dettagli e informazioni sul grafico;
@@ -256,11 +307,14 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \item La legenda relativa al grafico è visibile.
     \end{itemize}
 \end{itemize}
-\subsection{UC6 - Pan}
+
+
+
+\UseCase{Pan}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.7]{template/images/UC6.png}
-    \caption{UC6 - PAN}
+    \caption{UC\arabic{UC} - PAN}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore:} utente;
@@ -282,11 +336,14 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \item La nuova vista viene aggiornata in tempo reale e mostrata all'utente.
     \end{itemize}
 \end{itemize}
-\subsection{UC7 - Rotazione camera}
+
+
+
+\UseCase{Rotazione camera}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.7]{template/images/UC7_7.1_7.2.png}
-    \caption{UC7 - Rotazione camera}
+    \caption{UC\arabic{UC} - Rotazione camera}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore:} utente;
@@ -306,7 +363,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \end{itemize}
     
 \end{itemize}
-\subsubsection{UC7.1 - Rotazione camera asse X}
+\SubUseCase{Rotazione camera asse X}
 \begin{itemize}
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} l'utente ruota la visualizzazione del grafico 3D attorno all'asse X, modificando l'altezza della prospettiva.
@@ -325,7 +382,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \end{itemize}
     
 \end{itemize}
-\subsubsection{UC7.2 - Rotazione camera asse Y}
+\SubUseCase{Rotazione camera asse Y}
 \begin{itemize}
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} l'utente ruota la visualizzazione del grafico 3D attorno all'asse Y, modificando l'orientamento laterale della prospettiva;
@@ -344,10 +401,12 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
     \end{itemize}
 \end{itemize}
 
-\subsection{UC8 - Movimenti direzionali}
+
+
+\UseCase{Movimenti direzionali}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC8.png}
-    \caption{UC8 - Movimenti direzionali}
+    \caption{UC\arabic{UC} - Movimenti direzionali}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -367,7 +426,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente interagisce con l'ambiente 3D per compiere un movimento direzionale.
         \end{itemize}
 \end{itemize}
-\subsubsection{UC8.1 - Movimento direzionale asse X}
+\SubUseCase{Movimento direzionale asse X}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi lungo l'asse X.
@@ -386,7 +445,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente interagisce con l'ambiente 3D per compiere un movimento direzionale lungo l'asse X.
         \end{itemize}
 \end{itemize}
-\subsubsection{UC8.2 - Movimento direzionale asse Y}
+\SubUseCase{Movimento direzionale asse Y}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi lungo l'asse Y.
@@ -405,7 +464,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente interagisce con l'ambiente 3D per compiere un movimento direzionale lungo l'asse Y.
         \end{itemize}
 \end{itemize}
-\subsubsection{UC8.3 - Movimento direzionale asse Z}
+\SubUseCase{Movimento direzionale asse Z}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} L'utente interagisce opportunamente con l'ambiente 3D per spostarsi lungo l'asse Z.
@@ -425,10 +484,12 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \end{itemize}
 \end{itemize}
 
-\subsection{UC9 - Riposizionamento iniziale}
+
+
+\UseCase{Riposizionamento iniziale}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC9.png}
-    \caption{UC9 - Riposizionamento iniziale}
+    \caption{UC\arabic{UC} - Riposizionamento iniziale}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -449,10 +510,12 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \end{itemize}
 \end{itemize}
 
-\subsection{UC10 - Visualizzazione dei valori di una barra del grafico}
+
+
+\UseCase{Visualizzazione dei valori di una barra del grafico}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC10.png}
-    \caption{UC10 - Visualizzazione dei valori di una barra del grafico}
+    \caption{UC\arabic{UC} - Visualizzazione dei valori di una barra del grafico}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -473,10 +536,12 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \end{itemize}
 \end{itemize}
 
-\subsection{UC11 - Selezione elementi}
+
+
+\UseCase{Selezione elementi}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC11.png}
-    \caption{UC11 - Selezione elementi}
+    \caption{UC\arabic{UC} - Selezione elementi}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -500,10 +565,10 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
 
 \pagebreak
 
-\subsubsection{UC11.1 - Selezione di un elemento del grafico}
+\SubUseCase{Selezione di un elemento del grafico}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC11.1.png}
-    \caption{UC11.1 - Selezione di un elemento del grafico}
+    \caption{UC\arabic{UC}.\arabic{SUC} - Selezione di un elemento del grafico}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -523,7 +588,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente interagisce con il grafico 3D e seleziona una barra.
         \end{itemize}
 \end{itemize}
-\paragraph{UC11.1.1 - Enfatizzazione della selezione nella tabella}
+\SubSubUseCase{Enfatizzazione della selezione nella tabella}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} Viene evidenziata in maniera opportuna nella tabella la selezione compiuta dall'utente nel grafico 3D.
@@ -545,10 +610,10 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
 
 \pagebreak
 
-\subsubsection{UC11.2 - Selezione di una cella della tabella}
+\SubUseCase{Selezione di una cella della tabella}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC11.2.png}
-    \caption{UC11.2: Selezione di una cella della tabella}
+    \caption{UC\arabic{UC}.\arabic{SUC}: Selezione di una cella della tabella}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -568,7 +633,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente interagisce con la tabella selezionando una cella la quale verrà evidenziata.
         \end{itemize}
 \end{itemize}
-\paragraph{UC11.2.1 - Enfatizzazione selezione nel grafico}
+\SubSubUseCase{Enfatizzazione selezione nel grafico}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} Viene evidenziata in maniera opportuna nel grafico 3D la selezione compiuta dall'utente nella tabella.
@@ -587,7 +652,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente interagisce con una cella della tabella, evidenziando la corrispondente barra del grafico 3D.
         \end{itemize}
 \end{itemize}
-\paragraph{UC11.2.2 - Auto-positioning}
+\SubSubUseCase{Auto-positioning}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} In seguito alla selezione di una cella, la vista si sposta sulla corrispondente barra del grafico 3D, centrandola sullo schermo.
@@ -607,10 +672,13 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \end{itemize}
 \end{itemize}
 
-\subsection{UC12 - Modifica trasparenza barra del grafico}
+
+
+
+\UseCase{Modifica trasparenza barra del grafico}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC12.png}
-    \caption{Modifica trasparenza barra del grafico}
+    \caption{UC\arabic{UC} - Modifica trasparenza barra del grafico}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -629,7 +697,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente evidenzia una determinata barra del grafico viene aumentato il valore di trasparenza a tutte le altre.
         \end{itemize}
 \end{itemize}
-\subsubsection{UC12.1 - Modifica trasparenza delle barre rispetto a valori superiori o inferiori}
+\SubUseCase{Modifica trasparenza delle barre rispetto a valori superiori o inferiori}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} L'utente può stabilire un valore limite al di sopra o al di sotto del quale alcune barre verranno evidenziate.
@@ -649,7 +717,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente interagisce con l'interfaccia selezionando il numero di barre con i valori più elevati o più bassi da evidenziare nel grafico 3D.
         \end{itemize}
 \end{itemize}
-\subsubsection{UC12.2 - Lasciare visibili solo le prime/ultime X barre}
+\SubUseCase{Lasciare visibili solo le prime/ultime X barre}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} L'utente può selezionare quante barre con i valori più elevati o più bassi evidenziare.
@@ -669,7 +737,7 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
             \item L'utente interagisce con l'interfaccia selezionando il numero di barre con i valori più elevati o più bassi da evidenziare nel grafico 3D.
         \end{itemize}
 \end{itemize}
-\subsubsection{UC12.3 - Modifica trasparenza delle barre con i valori superiori/inferiori al valore medio}
+\SubUseCase{Modifica trasparenza delle barre con i valori superiori/inferiori al valore medio}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
     \item \textbf{Descrizione:} L'utente può scegliere se evidenziare nel grafico 3D le barre il quale valore è superiore o inferiore al valore medio.
@@ -690,10 +758,13 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
         \end{itemize}
 \end{itemize}
 
-\subsection{UC13 - Visualizzazione di un piano parallelo alla base}
+
+
+
+\UseCase{Visualizzazione di un piano parallelo alla base}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC13.png}
-    \caption{UC13 - Visualizzazione di un piano parallelo alla base}
+    \caption{UC\arabic{UC} - Visualizzazione di un piano parallelo alla base}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
@@ -715,10 +786,11 @@ Poiché per lo svolgimento del progetto non è necessario gestire permessi diffe
 
 \pagebreak
 
-\subsection{UC14 - Visualizzazione errore nel caricamento del dataset}
+
+\UseCase{Visualizzazione errore nel caricamento del dataset}
 \begin{figure}[h!]\centering
     \includegraphics[scale=0.7]{template/images/UC14.png}
-    \caption{UC14: Visualizzazione errore nel caricamento del dataset}
+    \caption{UC\arabic{UC}: Visualizzazione errore nel caricamento del dataset}
 \end{figure}
 \begin{itemize}    
     \item \textbf{Attore:} utente;
