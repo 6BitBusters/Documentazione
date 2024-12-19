@@ -1,3 +1,7 @@
+\newcounter{R}
+\stepcounter{R}
+
+
 \input{template/requirements.tex}
 \section{Requisiti}
 \subsection{Introduzione}
@@ -7,84 +11,103 @@ requisito.
 Per la codifica dei requisiti si faccia riferimento alle \textit{Norme di Progetto}
 \subsection{Requisiti funzionali}
 \requirementsTable{
-    RF1.1 & L’utente deve poter visualizzare i dataset proposti   & UC1 \tabularnewline
-    RF1.2 & L’utente deve poter visualizzare i dettagli dataset selezionato   & UC1.1\par UC1.1.1\par UC1.1.2\par UC1.1.3\par \tabularnewline
-    RF1.3 & L’utente deve poter caricare il dataset selezionato   & UC1.2 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare i dataset proposti   & UC1 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare i dettagli dataset selezionato   & UC1.1\par UC1.1.1\par UC1.1.2\par UC1.1.3\par \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter caricare il dataset selezionato   & UC1.2 \tabularnewline
 
-    RF1.4 & L’utente deve poter visualizzare i dati del dataset selezionato in forma tabellare   & UC2 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare i dati del dataset selezionato in forma tabellare   & UC2 \tabularnewline
+    RF3.\arabic{R}\stepcounter{R} & Le barre de grafico 3D devono avere una colorazione appropriata che rendano i valori più veloci da comprendere   & UC2 \tabularnewline
     
-    RF1.5 & L’utente deve poter visualizzare i dati del dataset selezionato in forma di grafico tridimensionale a barre verticali   & UC3 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare i dati del dataset selezionato in forma di grafico tridimensionale a barre verticali   & UC3 \tabularnewline
     
-    RF1.6 & L’utente deve poter visualizzare gli assi del grafico tridimensionale    & UC4 \tabularnewline
-    RF1.7 & L’utente deve poter visualizzare l`asse globale X del grafico tridimensionale    & UC4.1 \tabularnewline
-    RF1.8 & L’utente deve poter visualizzare l`asse globale Y del grafico tridimensionale    & UC4.2 \tabularnewline
-    RF1.9 & L’utente deve poter visualizzare l`asse globale Z del grafico tridimensionale    & UC4.3 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare gli assi del grafico tridimensionale    & UC4 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare l`asse globale X del grafico tridimensionale    & UC4.1 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare l`asse globale Y del grafico tridimensionale    & UC4.2 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare l`asse globale Z del grafico tridimensionale    & UC4.3 \tabularnewline
     
-    RF1.10 & L’utente deve poter visualizzare la legenda del grafico tridimensionale    & UC5 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare la legenda del grafico tridimensionale    & UC5 \tabularnewline
  
-    RF1.11 & L’utente deve poter effettuare un`azione di pan nell` ambiente, spostando la telecamera sugli assi locali Y e X   & UC6 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter effettuare un`azione di pan nell` ambiente, spostando la telecamera sugli assi locali Y e X   & UC6 \tabularnewline
     
-    RF1.12 & L’utente deve poter ruotare la telecamera a suo piacimento per visualizzare meglio il grafico tridimensionale   & UC7 \tabularnewline
-    RF1.13 & L’utente deve poter ruotare la telecamera attorno all`asse globale X   & UC7.1 \tabularnewline
-    RF1.14 & L’utente deve poter ruotare la telecamera attorno all`asse globale Y   & UC7.2 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter ruotare la telecamera a suo piacimento per visualizzare meglio il grafico tridimensionale   & UC7 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter ruotare la telecamera attorno all`asse globale X   & UC7.1 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter ruotare la telecamera attorno all`asse globale Y   & UC7.2 \tabularnewline
     
-    RF1.15 & L’utente deve poter muovere la telecamera all`interno dell` ambiente   & UC8 \tabularnewline
-    RF1.16 & L’utente deve poter muovere la telecamera sull`asse globale X   & UC8.1 \tabularnewline
-    RF1.17 & L’utente deve poter muovere la telecamera sull`asse globale Y   & UC8.2 \tabularnewline
-    RF1.18 & L’utente deve poter muovere la telecamera sull`asse globale Z   & UC8.3 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter muovere la telecamera all`interno dell` ambiente   & UC8 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter muovere la telecamera sull`asse globale X   & UC8.1 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter muovere la telecamera sull`asse globale Y   & UC8.2 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter muovere la telecamera sull`asse globale Z   & UC8.3 \tabularnewline
     
-    RF1.19 & L’utente deve poter riposizionare la telecamera alla sua posizione iniziale   & UC9 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter riposizionare la telecamera alla sua posizione iniziale   & UC9 \tabularnewline
     
-    RF1.20 & L’utente deve poter visualizzare i valori del dataset selezionando le barre opportune verticali del grafico tridimensionale   & UC10 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter visualizzare i valori del dataset selezionando le barre opportune verticali del grafico tridimensionale   & UC10 \tabularnewline
     
-    RF1.21 & L’utente deve poter selezionare elementi rappresentanti i dati del dataset   & UC11 \tabularnewline
-    RF1.22 & L’utente deve poter selezionare le barre verticali del grafico tridimensionale   & UC11.1 \tabularnewline
-    RF1.23 & L’utente selezionando una barra verticale del grafico tridimensionale fa si che la corrispondente cella della tabella venga evidenziata   & UC11.1.1 \tabularnewline
-    RF1.24 & L’utente deve poter selezionare le celle della tabella   & UC11.2 \tabularnewline
-    RF1.25 & L’utente deve poter selezionare una cella della tabella, così facendo la corrispondente barra del grafico tridimensionale venga evidenziata    & UC11.2.1 \tabularnewline
-    RF1.26 & L’utente deve poter selezionare una cella della tabella, così facendo la telecamera cambi posizione mettendo in primo piano la corrispondente barra del grafico tridimensionale   & UC11.2.2 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter selezionare elementi rappresentanti i dati del dataset   & UC11 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter selezionare le barre verticali del grafico tridimensionale   & UC11.1 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente selezionando una barra verticale del grafico tridimensionale fa si che la corrispondente cella della tabella venga evidenziata   & UC11.1.1 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter selezionare le celle della tabella   & UC11.2 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter selezionare una cella della tabella, così facendo la corrispondente barra del grafico tridimensionale venga evidenziata    & UC11.2.1 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter selezionare una cella della tabella, così facendo la telecamera cambi posizione mettendo in primo piano la corrispondente barra del grafico tridimensionale   & UC11.2.2 \tabularnewline
 
-    RF1.27 & Il sistema modifica la trasparenza delle barre del grafico secondo azioni dell'utente   & UC12 \tabularnewline
-    RF1.28 & L’utente deve poter selezionare una barra la mette in evidenza andando a rendere piu` trasparenti quelle che hanno un valore maggiore o minore  & UC12.1 \tabularnewline
-    RF1.29 & L’utente deve poter scegliere un numero "X" che verrà utilizzato per rendere piu` trasparenti le barre, i quali valori non rientrano tra i primi o ultimi X   & UC12.2 \tabularnewline
-    RF1.30 & L’utente deve poter scegliere se rendere piu` trasparenti le barre con valori superiori o inferiori rispetto al valor medio globale   & UC12.3 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & Il sistema modifica la trasparenza delle barre del grafico secondo azioni dell'utente   & UC12 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter selezionare una barra la mette in evidenza andando a rendere piu` trasparenti quelle che hanno un valore maggiore o minore  & UC12.1 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter scegliere un numero "X" che verrà utilizzato per rendere piu` trasparenti le barre, i quali valori non rientrano tra i primi o ultimi X   & UC12.2 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente deve poter scegliere se rendere piu` trasparenti le barre con valori superiori o inferiori rispetto al valor medio globale   & UC12.3 \tabularnewline
     
-    RF2.31 & L’utente deve poter di scegliere visualizzare il piano parallelo alla base che rappresenta il valor medio globale   & UC13 \tabularnewline
+    RF2.\arabic{R}\stepcounter{R} & L’utente deve poter di scegliere visualizzare il piano parallelo alla base che rappresenta il valor medio di un singolo elemento dell'asse   & UC13 \tabularnewline
     
-    RF1.32 & L’utente riceve un errore se il caricamento di un dataset fallisce   & UC14 \tabularnewline
+    RF1.\arabic{R}\stepcounter{R} & L’utente riceve un errore se il caricamento di un dataset fallisce   & UC14 \tabularnewline
     }
-
+\setcounter{R}{1}
 \subsection{Requisiti qualitativi}
     
 \requirementsTable{
-    RQ1.1 & Il software deve essere sviluppato seguendo le metriche e il modello di qualità descritti nel documento \textit{Norme di Progetto}   & Decisione interna \tabularnewline
-    RQ1.2 & Il software deve essere sviluppato pubblicando il codice sorgente sul repository Github dedicato   & Decisione interna \tabularnewline
-    RQ1.3 & Il software deve essere sviluppato in modo tale da supportare grandi volumi di dati   & Capitolato \tabularnewline
-    RQ1.4 & L'architettura del software deve permettere con agilità di poter aggiungere nuove funzionalità e possibilità di iterazione con il grafico    & Capitolato \tabularnewline
-    RQ1.5 & La suite di test deve essere robusta per garantire ciò specificato in RQ4   & Capitolato \tabularnewline
-    RQ2.6 & Il software deve essere testato attraverso test di tipo e2e   & Capitolato \tabularnewline
-    % CHIEDERE AL PROPONENTE  
+    RQ1.\arabic{R}\stepcounter{R} & Il software deve essere sviluppato seguendo le metriche e il modello di qualità descritti nel documento \textit{Norme di Progetto}   & Decisione interna \tabularnewline
+    RQ1.\arabic{R}\stepcounter{R} & Il software deve essere sviluppato pubblicando il codice sorgente sul repository Github dedicato   & Decisione interna \tabularnewline
+    RQ1.\arabic{R}\stepcounter{R} & Il software deve essere sviluppato in modo tale da supportare grandi volumi di dati   & Capitolato \tabularnewline
+    RQ1.\arabic{R}\stepcounter{R} & L'architettura del software deve permettere con agilità di poter aggiungere nuove funzionalità e possibilità di iterazione con il grafico    & Capitolato \tabularnewline
+    RQ1.\arabic{R}\stepcounter{R} & La suite di test deve essere robusta per garantire ciò specificato in RQ4   & Capitolato \tabularnewline
+    RQ2.\arabic{R}\stepcounter{R} & Il software deve essere testato attraverso test di tipo e2e   & Capitolato \tabularnewline  
 }
-        
+\setcounter{R}{1}  
 \subsection{Requisiti di vincolo}
 \requirementsTable{
-    RV1.1 & Il software deve essere sviluppato utilizzando Typescript come linguaggio di programmazione primario   & Decisione interna \tabularnewline
-    RV1.2 & Il software deve essere sviluppato utilizzando la libreria React per la creazione di un interfaccia visiva sempice   & Decisione interna \tabularnewline
-    RV1.3 & Il software deve essere sviluppato utilizzando la libreria Three.js   & Decisione interna \tabularnewline
-    
-    % PLACEHOLDER -> CHIEDERE AL PROPONENTE
-    RV1.4 & Il software deve essere compatibile dalla versione 110 del browser Chrome    & Decisione interna \tabularnewline
+    RV1.\arabic{R}\stepcounter{R} & Il software deve essere sviluppato utilizzando Typescript come linguaggio di programmazione primario   & Decisione interna \tabularnewline
+    RV1.\arabic{R}\stepcounter{R} & Il software deve essere sviluppato utilizzando la libreria React per la creazione di un interfaccia visiva sempice   & Decisione interna \tabularnewline
+    RV1.\arabic{R}\stepcounter{R} & Il software deve essere sviluppato utilizzando la libreria Three.js   & Decisione interna \tabularnewline
+    RV1.\arabic{R}\stepcounter{R} & Il software deve essere compatibile dalla versione 131 del browser Chrome  & Decisione interna \tabularnewline
+    RV1.\arabic{R}\stepcounter{R} & Il software deve essere compatibile dalla versione 133 del browser Firefox  & Decisione interna \tabularnewline
+    RV1.\arabic{R}\stepcounter{R} & Il software deve essere compatibile dalla versione 115 del browser Opera  & Decisione interna \tabularnewline
+    RV1.\arabic{R}\stepcounter{R} & Il software deve essere compatibile dalla versione 131 del browser Microsoft Edge  & Decisione interna \tabularnewline
 }
+\newpage
+\setcounter{R}{1}
 \subsection{Requisiti prestazionali}
 \requirementsTable{
-    % CHIEDERE AL PROPONENTE
+    RP1.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni 100x100 non deve avere un tempo di caricamento superiore a 2 secondi & Decisione interna \tabularnewline
+    RP1.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni 500x500 non deve avere un tempo di caricamento superiore a 5 secondi & Decisione interna \tabularnewline
+    RP1.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni 1000x1000 non deve avere un tempo di caricamento superiore a 8 secondi & Decisione interna \tabularnewline
+    RP2.\arabic{R}\stepcounter{R} & Il software quando carica un dataset di dimensioni maggiori di 1000x1000 non deve avere un tempo di caricamento superiore a 13 secondi & Decisione interna \tabularnewline
 }
 \subsection{Tracciamento requisiti}
 
 \subsubsection{Fonte - Requisiti}
 \SrcToReqTable{
     Capitolato & RQ1.3\par RQ1.4\par RQ1.5\par RQ2.6\tabularnewline
-    Decisione interna & RQ1.1\par RQ1.2\par RV1.1\par RV1.2\par RV1.3\tabularnewline
+    Decisione interna & RQ1.1\par
+                        RQ1.2\par 
+                        RV1.1\par 
+                        RV1.2\par 
+                        RV1.3\par 
+                        RV1.4\par
+                        RV1.5\par
+                        RV1.6\par
+                        RV1.7\par
+                        RP1.1\par
+                        RP1.2\par
+                        RP1.3\par
+                        RP2.4\par
+                        \tabularnewline
     UC1         & RF1.1 \tabularnewline
     UC1.1       & RF1.2 \tabularnewline
     UC1.1.1     & RF1.2 \tabularnewline
@@ -121,6 +144,8 @@ Per la codifica dei requisiti si faccia riferimento alle \textit{Norme di Proget
     UC13        & RF2.31 \tabularnewline
     UC14        & RF1.32 \tabularnewline
     }
+
+    \newpage
 \subsubsection{Requisiti - Casi d'uso}
 \ReqToUCTable{
 
@@ -167,17 +192,26 @@ Per la codifica dei requisiti si faccia riferimento alle \textit{Norme di Proget
     RV1.1 & Decisione interna\tabularnewline
     RV1.2 & Decisione interna\tabularnewline
     RV1.3 & Decisione interna\tabularnewline
+    RV1.4 & Decisione interna\tabularnewline
+    RV1.5 & Decisione interna\tabularnewline
+    RV1.6 & Decisione interna\tabularnewline
+    RV1.7 & Decisione interna\tabularnewline
+
+    RP1.1 & Decisione interna\tabularnewline
+    RP1.2 & Decisione interna\tabularnewline
+    RP1.3 & Decisione interna\tabularnewline
+    RP2.4 & Decisione interna\tabularnewline
 
 }
 
 \subsubsection{Riepilogo requisiti}
 \requirementsSummaryTable{
-    Funzionale & 31 & 1 & 0 & 32 \tabularnewline
+    Funzionale & 32 & 1 & 1 & 33 \tabularnewline
     Di qualità & 5 & 1 & 0 & 6 \tabularnewline
-    Di vincolo & 3 & 0 & 0 & 3 \tabularnewline
-    Prestazionali & - & - & - & - \tabularnewline
+    Di vincolo & 7 & 0 & 0 & 3 \tabularnewline
+    Prestazionali & 3 & 1 & 0 & 4 \tabularnewline
     \bottomrule
-    \textbf{Totale requisiti} & - & - & - & -
+    \textbf{Totale requisiti} & 46 & 3 & 1 & 50
     
 }
 
